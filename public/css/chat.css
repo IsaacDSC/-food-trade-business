@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+}
+
+#chat {
+    background-color: #505050;
+    height: 350px;
+    width: 16%;
+    position: fixed;
+    bottom: 0;
+    right: 5px;
+    border: 1px #505050 solid;
+    border-radius: 6px;
+    transition: 350ms;
+    z-index: 99999;
+}
+
+.painel {
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    /*background-color: rgba(0, 0, 0, 0.671);*/
+    background-color: rgb(192, 54, 3);
+    right: 0;
+    border-radius: 6px;
+}
+
+.painel h2 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.painel span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    cursor: pointer;
+}
+
+.msg {
+    position: absolute;
+    height: 248px;
+    width: 96%;
+    left: 2%;
+    margin-top: 32px;
+    background-color: white;
+    border: grey 1px solid;
+    border-radius: 6px;
+}
+
+.escrevendo {
+    height: 62px;
+    width: 96%;
+    background-color: rgba(255, 255, 255, 0.856);
+    bottom: 5px;
+    left: 2%;
+    position: absolute;
+    border-radius: 6px;
+    border: grey 1px solid;
+}
+
+.escrevendo ul li {
+    display: inline;
+}
+
+.escrevendo input {
+    height: 50px;
+    width: 67%;
+    margin-left: 1.5%;
+    margin-top: 1%;
+    font-size: 14px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.user {
+    height: 116px;
+}
+
+.roboot {
+    height: 116px;
+}

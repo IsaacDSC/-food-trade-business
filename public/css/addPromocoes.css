@@ -1,0 +1,67 @@
+#addPromocoes {
+    height: 100px;
+    width: 100%;
+    /*background-color: blanchedalmond;*/
+}
+
+#addPromocoes h2 {
+    text-align: center;
+    margin-top: 15px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 54px;
+}
+
+#addPromocoes hr {
+    width: 60%;
+    height: 2px;
+    background-color: brown;
+    margin: 0 20%;
+}
+
+.form {
+    height: 500px;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.74);
+    margin: 100px 35%;
+    border-radius: 20px;
+    color: white;
+}
+
+.form ul li {
+    display: block;
+    margin-top: 5px;
+}
+
+.form ul {
+    margin: 50px 20%;
+}
+
+.form input {
+    border: black 1px solid;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.inputFile {
+    background-color: rgb(197, 197, 197);
+}
+
+.form select {
+    width: 100%;
+}
+
+.form textarea {
+    width: 100%;
+    text-align: center;
+}
+
+.formPromocoes {
+    top: 100px;
+    position: relative;
+}
+
+#textareaPromocoes {
+    height: 60px;
+}
