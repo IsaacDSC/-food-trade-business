@@ -9,3 +9,6 @@ Negócio de Comércio  de Alimentos
         tamanho da Imagem dos Menus : =>
         Tamanho da Imagens da Galeria: =>
         Tamanho da imagem de fundo do footer: =>
+        
+        
+        teste....
