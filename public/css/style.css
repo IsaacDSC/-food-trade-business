@@ -149,6 +149,7 @@ button:focus{
     opacity: 1;
 }
 
+
 /*------------------------------------------------------------------
     LOADER 
 -------------------------------------------------------------------*/
@@ -159,11 +160,15 @@ button:focus{
 -------------------------------------------------------------------*/
 .top-navbar{
 	position: relative;
-	z-index: 10;
+    z-index: 10;
+    
+}
+ .top-navbar .navbar  .navbar-brand{
+    padding-left: 0px 0px;
 }
 
 .top-navbar .navbar{
-	padding: 15px 0px;
+    padding: 15px 0px;
 	position: fixed;
 	width: 100%;
 	transition: height .3s ease-out, background .3s ease-out, box-shadow .3s ease-out;
@@ -311,7 +316,7 @@ button:focus{
 	padding: 70px 0px;
 }
 .about-section-box .img-fluid{
-	box-shadow: -10px -10px 0px #d0a772;
+	box-shadow: -10px -10px 0px #ff0008;
 }
 .inner-column{}
 .inner-column h1{
@@ -320,7 +325,7 @@ button:focus{
 	color: #010101;
 }
 .inner-column h1 span{
-	color: #d0a772;
+	color: #ff0008;
 }
 .inner-column h4{
 	font-size: 16px;
@@ -330,7 +335,7 @@ button:focus{
 	font-size: 18px;
 }
 .inner-column .btn-outline-new-white{
-	color: #d0a772;
+	color: #ff0008;
 }
 .inner-column .btn-outline-new-white:hover{
 	color: #ffffff;
@@ -372,6 +377,7 @@ button:focus{
 	padding: 70px 0px;
 }
 
+
 .heading-title{
 	margin-bottom: 50px;
 }
@@ -407,7 +413,7 @@ button:focus{
 }
 
 .filter-button-group button.active {
-    background: #cfa671;
+    background: #ff1a22;
     color: #fff;
     box-shadow: 2px 20px 45px 5px rgba(0,0,0,.2);
 }
@@ -429,7 +435,7 @@ button:focus{
     bottom: -100%;
     right: 0;
     height: 100%;
-    background: rgba(207, 166, 113, 0.9);
+    background: #ff1a22;
     padding: 12px 12px;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
@@ -504,7 +510,7 @@ button:focus{
 }
 
 .text-warning{
-	color: #d0a772 !important;
+	color: #ff1a22 !important;
 	font-size: 24px;
 }
 
@@ -524,7 +530,7 @@ button:focus{
 }
 
 #reviews .carousel-control-prev{
-	background: #d0a772;
+	background: #ff1a22;
 	color: #ffffff;
 	display: block;
 	position: absolute;
@@ -536,11 +542,11 @@ button:focus{
 }
 #reviews .carousel-control-prev:hover{
 	background: #010101;
-	color: #ffffff;
+	color: #ff1a22;
 }
 
 #reviews .carousel-control-next{
-	background: #d0a772;
+	background: #ff1a22;
 	color: #ffffff;
 	display: block;
 	position: absolute;
@@ -561,7 +567,7 @@ button:focus{
 -------------------------------------------------------------------*/
 
 .contact-imfo-box{
-	background: #d0a772;
+	background: #ff1a22;
 	padding: 30px 0;
 }
 
@@ -577,7 +583,7 @@ button:focus{
 	line-height: 60px;
 	text-align: center;
 	background: #fff;
-	color: #d0a772;
+	color: #ff1a22;
 	font-size: 30px;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
@@ -639,7 +645,7 @@ button:focus{
 	color: #ffffff;
 	text-transform: uppercase;
 	font-size: 24px;
-	border-bottom: 1px dashed rgba(207, 166, 113, 0.5);
+	border-bottom: 1px dashed #ff1a22;
 	margin-bottom: 10px;
 }
 .footer-area p{
@@ -659,14 +665,14 @@ button:focus{
 	margin-bottom: 15px;
 }
 .footer-area p.lead a:hover{
-	color: #d0a772;
+	color: #ff1a22;
 }
 .footer-area p a{
 	font-size: 18px;
 	color: #ffffff;
 }
 .footer-area p a:hover{
-	color: #d0a772;
+	color: #ff1a22;
 }
 
 .subscribe_form {
@@ -689,7 +695,7 @@ button:focus{
 }
 
 .subscribe_form .submit {
-    background-color: #d0a772;
+    background-color: #ff1a22;
     color: #fff;
     font-size: 16px;
     font-weight: 600;
@@ -722,7 +728,7 @@ button:focus{
 	position: relative;
 	display: block;
 	background-color: #010101;
-	border-top: 1px dashed rgba(207, 166, 113);
+	border-top: 1px dashed #ff1a22;
 	padding: 30px 0;
 	z-index: 1;
 }
@@ -781,7 +787,7 @@ button:focus{
 }
 
 .our-team{
-    border: 2px solid #d0a772;
+    border: 2px solid #ff1a22;
     border-radius: 0px;
     text-align: center;
     margin: 10px;
@@ -793,7 +799,7 @@ button:focus{
     content: "";
     width: 100%;
     height: 104%;
-    background: #d0a772;
+    background: #ff1a22;
     position: absolute;
     top: 50%;
     left: 0;
@@ -817,7 +823,7 @@ button:focus{
 .our-team .team-content{
     width: 93%;
     padding: 25px 0 10px;
-    background: #d0a772;
+    background: #ff1a22;
     position: absolute;
     bottom: 50px;
     left: 50%;
@@ -861,13 +867,13 @@ button:focus{
     border-radius: 50%;
     background: #fff;
     font-size: 20px;
-    color: #d0a772;
+    color: #ff1a22;
     transition: all 0.3s ease 0s;
 }
 .our-team .social li a:hover{
     background: #ffffff;
     box-shadow: 0 0 0 5px rgba(255,255,255,0.3);
-    color: #d0a772;
+    color: #ff1a22;
 }
 @media only screen and (max-width: 990px){
     .our-team{ margin-bottom: 30px; }
@@ -885,7 +891,7 @@ button:focus{
 }
 
 .help-block ul li{
-	color: red;
+	color: blue;
 }
 
 .form-control[readonly]{
@@ -897,27 +903,27 @@ button:focus{
 	min-height: 50px;
 }
 .form-control:focus{
-	border: 1px solid #d0a772;
+	border: 1px solid #ff1a22;
 	box-shadow: none;
 }
 
 .form-group .picker__input.picker__input--active{
-	border-color: #d0a772;
+	border-color: #ff1a22;
 }
 
 .submit-button{
 	margin-top: 20px;
 }
 .btn.btn-common{
-	color: #d0a772;
+	color: #ff1a22;
 	background-color: transparent;
 	background-image: none;
-	border-color: #cfa671;
+	border-color: #ff1a22;
 }
 .btn.btn-common:hover{
 	color: #ffffff;
-	background-color: #cfa671;
-	border-color: #cfa671;
+	background-color: #ff1a22;
+	border-color: #ff1a22;
 }
 .blog-box{
 	padding: 70px 0px;
@@ -953,7 +959,7 @@ button:focus{
     padding: 0px 5px;
 }
 .blog-detail ul li span{
-	color: #d0a772;
+	color: #ff1a22;
 	cursor: pointer;
 }
 .blog-detail ul li span:hover{
@@ -970,7 +976,7 @@ button:focus{
 }
 
 .blog-detail a{
-	color: #d0a772;
+	color: #ff1a22;
 	margin-top: 20px;
 }
 
@@ -994,7 +1000,7 @@ button:focus{
     position: absolute;
     right: 0px;
     top: 0px;
-    background: #cfa671;
+    background: #ff1a22;
     font-size: 18px;
     color: #ffffff;
     padding: 5px 15px 5px 5px;
@@ -1016,13 +1022,13 @@ button:focus{
     color: #222222;
 }
 .inner-blog-detail ul li span {
-    color: #cfa671;
+    color: #ff1a22;
 }
 .inner-blog-detail p {
     padding: 10px 0px;
 }
 .details-page blockquote {
-    border-left: 5px solid #cfa671;
+    border-left: 5px solid #ff1a22;
 }
 .details-page blockquote {
     padding: 20px;
@@ -1070,11 +1076,11 @@ blockquote {
     font-size: 12px;
 }
 .line-left-social ul li a:hover {
-    background: #cfa671;
+    background: #ff1a22;
     color: #ffffff;
 }
 .line-right-social ul li a:hover {
-    background: #cfa671;
+    background: #ff1a22;
     color: #ffffff;
 }
 .line-right-social h5 {
@@ -1133,7 +1139,7 @@ blockquote {
     border-radius: 6px;
 }
 .right-btn-re:hover {
-    background: #cfa671;
+    background: #ff1a22;
     color: #ffffff !important;
 }
 .comment-respond-box {
@@ -1163,15 +1169,15 @@ blockquote {
 }
 
 .btn-submit{
-	color: #d0a772;
+	color: #ff1a22;
 	background-color: transparent;
 	background-image: none;
-	border-color: #cfa671;
+	border-color: #ff1a22;
 }
 .btn-submit:hover{
 	color: #ffffff;
-	background-color: #cfa671;
-	border-color: #cfa671;
+	background-color: #ff1a22;
+	border-color: #ff1a21;
 }
 
 .right-side-blog h3 {
@@ -1223,7 +1229,7 @@ blockquote {
     width: 100%;
 }
 .blog-categories ul li a:hover{
-	color: #cfa671;
+	color: #ff1a22;
 }
 .recent-box-blog {
     margin-bottom: 20px;
@@ -1241,7 +1247,7 @@ blockquote {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #cfa671;
+    background-color: #ff1a22;
     opacity: 0.4;
     transform: scale(0);
     -webkit-transform: scale(0);
@@ -1290,7 +1296,7 @@ blockquote {
 }
 .blog-tag-box ul li a:hover {
     color: #ffffff;
-    background: #cfa671;
+    background: #ff1a22;
 }
 
 
@@ -1314,7 +1320,7 @@ blockquote {
     height: 32px;
     text-align: center;
     line-height: 30px;
-    background: #d0a772;
+    background: #ff1a22;
     color: #ffffff;
     cursor: pointer;
     border: 0;

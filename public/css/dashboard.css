@@ -1,8 +1,8 @@
 body {
-    background-color: #eaeef3;
+    background-color: #0D0D0D;
 }
 .menu-header{
-    color: #FFF !important;
+    color: #0D0D0D !important;
 }
 .menu-per{
     background-color: #65bd77 !important;
@@ -17,11 +17,11 @@ body {
 .sidebar ul li a{
     display: block;
     padding: 0.75rem 1rem;
-    color: #c7cace;
+    color: #0D0D0D;
     text-decoration: none;
 }
 .sidebar ul li a:hover, .sidebar ul .active a{
-    color: #ecedee;
+    color: #0D0D0D;
     background-color: #3e5468;
 }
 .sidebar ul ul a{
