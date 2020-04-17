@@ -85,11 +85,11 @@ const PagHome = db.sequelize.define('pagHome_slideshow', {
         type: db.Sequelize.STRING,
         require: true
     },
-    btnNext: {
+    iconbtnNext: {
         type: db.Sequelize.STRING,
         require: true
     },
-    btnPrev: {
+    iconbtnPrev: {
         type: db.Sequelize.STRING,
         require: true
     }

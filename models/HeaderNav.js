@@ -69,11 +69,15 @@ const HeaderNav = db.sequelize.define('headerNav', {
         type: db.Sequelize.STRING,
         require: true
     },
-    url_sbNav5_2: {
+    url_subNav5_2: {
         type: db.Sequelize.STRING,
         require: true
     },
     nav6: {
+        type: db.Sequelize.STRING,
+        require: true
+    },
+    urlNav6: {
         type: db.Sequelize.STRING,
         require: true
     }
