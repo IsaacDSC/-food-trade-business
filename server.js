@@ -6,8 +6,6 @@ const path = require('path')
 
 //adionando rotas
 const home = require('./routes/home')
-    //adionando tela de cardápio
-const cardapio = require('./routes/cardapio')
     //adicionando tela de adm
 const adm = require('./routes/adm')
 
@@ -23,7 +21,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 
 app.use('/', home)
-app.use('/cardapio', cardapio)
 app.use('/adm', adm)
 
 const PORT = 3000
