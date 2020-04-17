@@ -1,6 +1,5 @@
-# food-trade-business
-Negócio de Comércio  de Alimentos
-Configuration DB- mysql-server
+# food-trade-business - Negócio de Comércio  de Alimentos
+        Configuration DB- mysql-server
         user: root,
         senha: root,
         name database: ftb,
