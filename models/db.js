@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize('siteBurger', 'root', 'root', {
+const sequelize = new Sequelize('ftb', 'root', 'root', {
     host: 'localhost',
     dialect: 'mysql'
 })
