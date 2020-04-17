@@ -1,3 +1,5 @@
+
+=======
 # food-trade-business - Negócio de Comércio  de Alimentos
         Configuration DB- mysql-server
         user: root,
@@ -6,7 +8,8 @@
         tables import paste:food-trade-business\db.mysql
         
         
-        Tamanho da Imagem  do Logotipo: =>
+        Tamanho da Imagem  do Logotipo:a logo dever ter no maxímo 100px de Altura e no minímo 80px
+        e largura no maximo 200px (não existe minimo de largura) =>
         Tamanho das Imagens Do SlideShow: =>
         Tamanho da Imagem do Welcome_ Little Story: =>
         Tamanho da Imagem de Fundo Estática do prato com a frase: " If you're not the one cooking, stay out of the way and compliment the chef. "
@@ -17,3 +20,4 @@
         
         
         
+>>>>>>> 55bde97c9f00a6fb9c6a25d90fb479549abc1504
