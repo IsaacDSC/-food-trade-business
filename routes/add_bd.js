@@ -5,6 +5,8 @@ const router = express.Router()
 const HeaderNav = require('../models/HeaderNav')
     //add models PagHome_slideshow
 const PagHome_slideshow = require('../models/PagHome_Slideshow')
+    // add models Footer
+const Footer_models = require('../models/Footer_models')
 
 router.get('/headernav', (req, res) => {
     HeaderNav.create({
@@ -66,6 +68,33 @@ router.get('/homeslideshow', (req, res) => {
         res.send('Pagina Resetada Com Sucesso!')
     }).catch((err) => {
         res.send('Error ao resetar: ' + err)
+    })
+})
+
+router.get('/footer', (req, res) => {
+    Footer_models.create({
+        title_sobre: 'ABOUT US',
+        describe_sobre: 'Integer cursus scelerisque ipsum id efficitur. Donec a dui fringilla, gravida lorem ac, semper magna. Aenean rhoncus ac lectus a interdum. Vivamus semper posuere dui, at ornare turpis ultrices sit amet. Nulla cursus lorem ut nisi porta, ac eleifend arcu ultrices.',
+        title_funcionamento: 'HORÁRIO DE FUNCIONAMENTO',
+        Hr_funcionamento: 'De 18 as 00 Hrs',
+        status_funcionamento: 'Site disponível 24 horas',
+        feriados_funcionamento: 'Funcionamos de Domingo a Domingo',
+        endereço_completo: 'Ipsum Street, Lorem Tower, MO, Columbia, 508000',
+        googlemapslocation: 'google maps location',
+        number_email: '(XX)000000000 - info@admin.com',
+        icon_contact1: '',
+        icon_contact2: '',
+        icon_contact3: '',
+        icon_contact4: '',
+        icon_contact5: '',
+        title_recEmail: 'CADASTRE E RECEBA AS PROMOSSÕES',
+        placeholder_subcribe: 'SUBSCRIBE',
+        title_btn_subscribe: 'SUBSCRIBE'
+
+    }).then(() => {
+        res.send('Pagina Resetada Com Sucesso!')
+    }).catch((err) => {
+        res.send('Error ao Resetar: ' + err)
     })
 })
 
