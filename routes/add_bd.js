@@ -7,6 +7,8 @@ const HeaderNav = require('../models/HeaderNav')
 const PagHome_slideshow = require('../models/PagHome_Slideshow')
     // add models Footer
 const Footer_models = require('../models/Footer_models')
+    // add models HistoryHome
+const Hystoryhome_models = require('../models/HistoyHome_models')
 
 router.get('/headernav', (req, res) => {
     HeaderNav.create({
@@ -90,6 +92,26 @@ router.get('/footer', (req, res) => {
         title_recEmail: 'CADASTRE E RECEBA AS PROMOSSÕES',
         placeholder_subcribe: 'SUBSCRIBE',
         title_btn_subscribe: 'SUBSCRIBE'
+
+    }).then(() => {
+        res.send('Pagina Resetada Com Sucesso!')
+    }).catch((err) => {
+        res.send('Error ao Resetar: ' + err)
+    })
+})
+
+router.get('/hystory', (req, res) => {
+    Hystoryhome_models.create({
+        title1: 'Bem vindo ao',
+        title2: 'Site Burguer',
+        subtitle: 'Little Story',
+        paragraph1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor suscipit feugiat. Ut at pellentesque ante, sed convallis arcu. Nullam facilisis, eros in eleifend luctus, odio ante sodales augue, eget lacinia lectus erat et sem.',
+        paragraph2: 'Sed semper orci sit amet porta placerat. Etiam quis finibus eros. Sed aliquam metus lorem, a pellentesque tellus pretium a. Nulla placerat elit in justo vestibulum, et maximus sem pulvinar.',
+        images: '/images/about-img.jpg',
+        btnTile: 'DELIVERY',
+        url_btn: '/sobre',
+        vision_mission: '" Visão e missão da empresa..... "',
+        author: 'Site Burguer',
 
     }).then(() => {
         res.send('Pagina Resetada Com Sucesso!')
