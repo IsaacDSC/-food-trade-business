@@ -7,13 +7,15 @@ const path = require('path')
 //adionando rotas
 const home = require('./routes/home')
     //adicionando tela de adm
-const adm = require('./routes/adm')
+const admin = require('./routes/admin')
     //adionando pagina Menu
 const menu = require('./routes/menu')
     //adionando pagina sobre
 const sobre = require('./routes/sobre')
     //adionando pagina Contato
 const contato = require('./routes/contato')
+    //adionando login Administrador Site
+const loginAdmin = require('./routes/loginAdmin')
     //adionando pagina de login
 const login_register = require('./routes/login_register')
     //adionando paginas para  add_bd
@@ -31,10 +33,11 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 
 app.use('/', home)
-app.use('/adm', adm)
+app.use('/admin', admin)
 app.use('/menu', menu)
 app.use('/sobre', sobre)
 app.use('/contato', contato)
+app.use('/superuser', loginAdmin)
 app.use('/login', login_register)
 app.use('/add_bd', add_bd)
 
