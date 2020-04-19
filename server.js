@@ -14,6 +14,8 @@ const menu = require('./routes/menu')
 const sobre = require('./routes/sobre')
     //adionando pagina Contato
 const contato = require('./routes/contato')
+    //adionando pagina de login
+const login_register = require('./routes/login_register')
     //adionando paginas para  add_bd
 const add_bd = require('./routes/add_bd')
 
@@ -30,10 +32,11 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', home)
 app.use('/adm', adm)
-app.use('/add_bd', add_bd)
 app.use('/menu', menu)
 app.use('/sobre', sobre)
 app.use('/contato', contato)
+app.use('/login', login_register)
+app.use('/add_bd', add_bd)
 
 const PORT = 3000
 app.listen(PORT, () => {

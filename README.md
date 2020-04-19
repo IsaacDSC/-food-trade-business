@@ -8,8 +8,9 @@
         tables import paste:food-trade-business\db.mysql
         
         
-        Tamanho da Imagem  do Logotipo:a logo dever ter no maxímo 100px de Altura e no minímo 80px
-        e largura no maximo 200px (não existe minimo de largura) =>
+        Tamanho da Imagem  do Logotipo: => A logo dever ter no maxímo 100px de Altura e no minímo 80px
+        e largura no maximo 200px (não existe minimo de largura) 
+        
         Tamanho das Imagens Do SlideShow: =>
         Tamanho da Imagem do Welcome_ Little Story: =>
         Tamanho da Imagem de Fundo Estática do prato com a frase: " If you're not the one cooking, stay out of the way and compliment the chef. "
