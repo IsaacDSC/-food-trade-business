@@ -161,11 +161,8 @@ button:focus{
 .top-navbar{
 	position: relative;
     z-index: 10;
-    
 }
- .top-navbar .navbar  .navbar-brand{
-    padding-left: 0px 0px;
-}
+
 
 .top-navbar .navbar{
     padding: 15px 0px;
@@ -376,7 +373,6 @@ button:focus{
 .menu-box{
 	padding: 70px 0px;
 }
-
 
 .heading-title{
 	margin-bottom: 50px;
