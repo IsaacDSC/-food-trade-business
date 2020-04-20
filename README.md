@@ -1,6 +1,13 @@
 
 =======
 # food-trade-business - Negócio de Comércio  de Alimentos
+
+
+===================================================================================================
+=        Controll desenvolment method SCRUM                                                       =              
+=       https://trello.com/b/tENZgmsP/food-trade-business                                         =
+ ================================================================================================== 
+
         Configuration DB- mysql-server
         user: root,
         senha: root,
