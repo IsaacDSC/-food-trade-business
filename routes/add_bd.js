@@ -9,6 +9,8 @@ const PagHome_slideshow = require('../models/PagHome_Slideshow')
 const Footer_models = require('../models/Footer_models')
     // add models HistoryHome
 const Hystoryhome_models = require('../models/HistoyHome_models')
+    //adionando models do cardapio da pagina home
+const CardapioHome_models = require('../models/CardapiosHome_models')
 
 router.get('/headernav', (req, res) => {
     HeaderNav.create({
@@ -119,5 +121,57 @@ router.get('/hystory', (req, res) => {
         res.send('Error ao Resetar: ' + err)
     })
 })
+
+router.get('/cardapiohome', (req, res) => {
+    CardapioHome_models.create({
+        title: 'Promoções do Cardápio',
+        subtitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting',
+        nav2: 'BEBIBDAS',
+        url2: '.drinks',
+        img_item2_1: 'img-01.jpg',
+        title_item2_1: 'Mantiqueira 2L',
+        desc_item2_1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        valor_item2_1: ' R$ 8,00',
+        img_item2_2: 'img-02.jpg',
+        title_item2_2: 'Coca Lata',
+        desc_item2_2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        valor_item2_2: ' R$ 5,00',
+        img_item2_3: 'img-03.jpg',
+        title_item2_3: 'Ativ plus',
+        desc_item2_3: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        valor_item2_3: ' R$ 2,00',
+        url3: '.lunch',
+        img_item3_1: 'img-04.jpg',
+        title_item3_1: 'Special Lunch 1',
+        desc_item3_1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        valor_item3_1: ' R$ 2,00',
+        img_item3_2: 'img-05.jpg',
+        title_item3_2: 'Special Lunch 2',
+        desc_item3_2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        valor_item3_2: ' R$ 2,00',
+        img_item3_3: 'img-06.jpg',
+        title_item3_3: 'Special Lunch 3',
+        desc_item3_3: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        valor_item3_3: ' R$ 2,00',
+        url4: '.dinner',
+        img_item4_1: 'img-07.jpg',
+        title_item4_1: 'Special Dinner 1',
+        desc_item4_1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        valor_item4_1: ' R$ 2,00',
+        img_item4_2: 'img-08.jpg',
+        title_item4_2: 'Special Dinner 2',
+        desc_item4_2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        valor_item4_2: ' R$ 2,00',
+        img_item4_3: 'img-09.jpg',
+        title_item4_3: 'Special Dinner 3',
+        desc_item4_3: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        valor_item4_3: ' R$ 2,00',
+    }).then(() => {
+        res.send('Pagina Resetada Com Sucesso!')
+    }).catch((err) => {
+        res.send('Erro ao Resetar Pagina : ' + err)
+    })
+})
+
 
 module.exports = router
