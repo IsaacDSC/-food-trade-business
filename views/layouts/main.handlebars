@@ -12,9 +12,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
-    <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">    
 	<!-- Site CSS -->
@@ -23,9 +21,6 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    
     <title>Burguer Restaurant</title>
 </head>
 <body>
@@ -50,6 +45,38 @@
 	<script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
+    <!-- COMMON SCRIPTS -->
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/common_scripts_min.js"></script>
+<script src="js/functions.js"></script>
+<script src="js/validate.js"></script>
+
+<!-- SPECIFIC SCRIPTS -->
+<script  src="js/cat_nav_mobile.js"></script>
+<script>$('#cat_nav').mobileMenu();</script>
+<script src="js/ResizeSensor.min.js"></script>
+<script src="js/theia-sticky-sidebar.min.js"></script>
+<script>
+    jQuery('#sidebar').theiaStickySidebar({
+      additionalMarginTop: 80
+    });
+</script>
+<!-- SMOOTH SCROLL -->
+<script>
+	$('#cat_nav a[href^="#"]').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+			|| location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			   if (target.length) {
+				 $('html,body').animate({
+					 scrollTop: target.offset().top -75
+				}, 800);
+				return false;
+			}
+		}
+	});
+</script>
 </body> 
 
 </html>
