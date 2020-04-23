@@ -2024,7 +2024,7 @@ a.btn_filter#search_bt:before{font-family:fontello;content:"\ee33";font-size:17p
 
 .search-overlay-menu .search-overlay-close{position:absolute;top:5px;right:20px;opacity:1;font-size:40px;color:#fff}
 
-.search-overlay-menu .search-overlay-close:hover{color:#ff1a22c;cursor:pointer}
+.search-overlay-menu .search-overlay-close:hover{color:#ff1a22; cursor:pointer}
 
 .thumb_menu_list{width:60px;height:60px;overflow:hidden;text-align:center;display:inline-block;float:left;margin-right:15px;border:1px solid #fff;border-radius:3px}
 
