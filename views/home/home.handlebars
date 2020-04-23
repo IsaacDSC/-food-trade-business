@@ -8,10 +8,10 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<h1 class="m-b-20"><strong>Hamburguer artesanal <br> Refil de refrigerante</strong></h1>
-							<p class="m-b-40">Texto base usado para o produto.  <br> 
-							Texto usado para conseguir a atenção do cliente</p>
-							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Delivery</a></p>
+							<h1 class="m-b-20"><strong>{{slideshow.dataValues.title1_1}} <br> {{slideshow.dataValues.title1_2}}</strong></h1>
+							<p class="m-b-40">{{slideshow.dataValues.text1_1}}  <br> 
+							{{slideshow.dataValues.text1_2}}</p>
+							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="{{slideshow.dataValues.urlbtn1}}">{{slideshow.dataValues.btn1}}</a></p>
 						</div>
 					</div>
 				</div>
@@ -22,10 +22,10 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<h1 class="m-b-20"><strong>X- Picanha Bacon <br> Artesanal </strong></h1>
-							<p class="m-b-40">Texto base usado para o produto.  <br> 
-							Texto usado para conseguir a atenção do cliente</p>
-							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Delivery</a></p>
+							<h1 class="m-b-20"><strong>{{slideshow.dataValues.title2_1}}<br> {{slideshow.dataValues.title2_2}} </strong></h1>
+							<p class="m-b-40">{{slideshow.dataValues.text2_1}}  <br> 
+							{{slideshow.dataValues.text2_2}}</p>
+							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="{{slideshow.dataValues.urlbtn2}}">{{slideshow.dataValues.btn2}}</a></p>
 						</div>
 					</div>
 				</div>
@@ -36,18 +36,18 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<h1 class="m-b-20"><strong>Combo Hamburguer  <br> + Batata Frita</strong></h1>
-							<p class="m-b-40">Texto base usado para o produto.  <br> 
-							Texto usado para conseguir a atenção do cliente</p>
-							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Delivery</a></p>
+							<h1 class="m-b-20"><strong>{{slideshow.dataValues.title3_1}}<br> {{slideshow.dataValues.title3_2}}</strong></h1>
+							<p class="m-b-40">{{slideshow.dataValues.text3_1}}  <br> 
+							{{slideshow.dataValues.text3_2}}</p>
+							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="{{slideshow.dataValues.urlbtn3}}">{{slideshow.dataValues.btn3}}</a></p>
 						</div>
 					</div>
 				</div>
 			</li>
 		</ul>
 		<div class="slides-navigation">
-			<a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-			<a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+			<a href="#" class="next"><i class="{{slideshow.dataValues.iconbtnNext}}" aria-hidden="true"></i></a>
+			<a href="#" class="prev"><i class="{{slideshow.dataValues.iconbtnPrev}}" aria-hidden="true"></i></a>
 		</div>
 	</div>
 	<!-- End slides -->
@@ -61,11 +61,11 @@
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12 text-center">
 					<div class="inner-column">
-						<h1>Bem vindo ao <span>Site Burguer</span></h1>
-						<h4>Little Story</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor suscipit feugiat. Ut at pellentesque ante, sed convallis arcu. Nullam facilisis, eros in eleifend luctus, odio ante sodales augue, eget lacinia lectus erat et sem. </p>
-						<p>Sed semper orci sit amet porta placerat. Etiam quis finibus eros. Sed aliquam metus lorem, a pellentesque tellus pretium a. Nulla placerat elit in justo vestibulum, et maximus sem pulvinar.</p>
-						<a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Delivery</a>
+						<h1>{{hisHome.dataValues.title1}} <span>{{hisHome.dataValues.title2}}</span></h1>
+						<h4>{{hisHome.dataValues.subtitle}}</h4>
+						<p>{{hisHome.dataValues.paragraph1}}</p>
+						<p>{{hisHome.dataValues.paragraph2}}</p>
+						<a class="btn btn-lg btn-circle btn-outline-new-white" href="{{hisHome.dataValues.url_btn}}">{{hisHome.dataValues.btnTitle}}</a>
 					</div>
 				</div>
 			</div>
@@ -79,9 +79,9 @@
 			<div class="row">
 				<div class="col-md-8 ml-auto mr-auto text-left">
 					<p class="lead ">
-						" Visão e missão da empresa..... "
+						{{hisHome.dataValues.vision_mission}}
 					</p>
-					<span class="lead">Site Burguer</span>
+					<span class="lead">{{hisHome.dataValues.author}}</span>
 				</div>
 			</div>
 		</div>
@@ -94,8 +94,8 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="heading-title text-center">
-						<h2>Cardapio</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+						<h2>{{cardHome.dataValues.title}}</h2>
+						<p>{{cardHome.dataValues.subtitle}}</p>
 					</div>
 				</div>
 			</div>
@@ -104,9 +104,9 @@
 					<div class="special-menu text-center">
 						<div class="button-group filter-button-group">
 							<button class="active" data-filter="*">Todos</button>
-							<button data-filter=".drinks">Bebidas</button>
-							<button data-filter=".lunch">Lanches</button>
-							<button data-filter=".dinner">Combos</button>
+							<button data-filter=".drinks">{{cardHome.dataValues.nav2}}</button>
+							<button data-filter=".lunch">{{cardHome.dataValues.nav3}}</button>
+							<button data-filter=".dinner">{{cardHome.dataValues.nav4}}</button>
 						</div>
 					</div>
 				</div>
@@ -115,99 +115,99 @@
 			<div class="row special-list">
 				<div class="col-lg-4 col-md-6 special-grid drinks">
 					<div class="gallery-single fix">
-						<img src="/images/img-01.jpg" class="img-fluid" alt="Image">
+						<img src="/images/{{cardHome.dataValues.img_item2_1}}" class="img-fluid" alt="Image">
 						<div class="why-text">
-							<h4>Mantiqueira 2L</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							<h5> R$ 8,00</h5>
+							<h4>{{cardHome.dataValues.title2_1}}</h4>
+							<p>{{cardHome.dataValues.desc_item2_1}}</p>
+							<h5>{{cardHome.dataValues.valor_item2_1}}</h5>
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-lg-4 col-md-6 special-grid drinks">
 					<div class="gallery-single fix">
-						<img src="/images/img-02.jpg" class="img-fluid" alt="Image">
+						<img src="/images/{{cardHome.dataValues.img_item2_2}}" class="img-fluid" alt="Image">
 						<div class="why-text">
-							<h4>Coca Lata</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							<h5> R$ 5,00</h5>
+							<h4>{{cardHome.dataValues.title2_2}}</h4>
+							<p>{{cardHome.dataValues.desc_item2_2}}</p>
+							<h5>{{cardHome.dataValues.valor_item2_2}}</h5>
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-lg-4 col-md-6 special-grid drinks">
 					<div class="gallery-single fix">
-						<img src="/images/img-03.jpg" class="img-fluid" alt="Image">
+						<img src="/images/{{cardHome.dataValues.img_item2_3}}" class="img-fluid" alt="Image">
 						<div class="why-text">
-							<h4>Ativ plus</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							<h5> R$ 2,00</h5>
+							<h4>{{cardHome.dataValues.title2_3}}</h4>
+							<p>{{cardHome.dataValues.desc_item2_3}}</p>
+							<h5>{{cardHome.dataValues.valor_item2_3}}</h5>
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-lg-4 col-md-6 special-grid lunch">
 					<div class="gallery-single fix">
-						<img src="/images/img-04.jpg" class="img-fluid" alt="Image">
+						<img src="/images/{{cardHome.dataValues.img_item3_1}}" class="img-fluid" alt="Image">
 						<div class="why-text">
-							<h4>Special Lunch 1</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $15.79</h5>
+							<h4>{{cardHome.dataValues.title3_1}}</h4>
+							<p>{{cardHome.dataValues.desc_item3_1}}</p>
+							<h5>{{cardHome.dataValues.valor_item3_1}}</h5>
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-lg-4 col-md-6 special-grid lunch">
 					<div class="gallery-single fix">
-						<img src="/images/img-05.jpg" class="img-fluid" alt="Image">
+						<img src="/images/{{cardHome.dataValues.img_item3_2}}" class="img-fluid" alt="Image">
 						<div class="why-text">
-							<h4>Special Lunch 2</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $18.79</h5>
+							<h4>{{cardHome.dataValues.title3_2}}</h4>
+							<p>{{cardHome.dataValues.desc_item3_2}}</p>
+							<h5>{{cardHome.dataValues.valor_item3_2}}</h5>
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-lg-4 col-md-6 special-grid lunch">
 					<div class="gallery-single fix">
-						<img src="/images/img-06.jpg" class="img-fluid" alt="Image">
+						<img src="/images/{{cardHome.dataValues.img_item3_3}}" class="img-fluid" alt="Image">
 						<div class="why-text">
-							<h4>Special Lunch 3</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $20.79</h5>
+							<h4>{{cardHome.dataValues.title3_3}}</h4>
+							<p>{{cardHome.dataValues.desc_item3_3}}</p>
+							<h5>{{cardHome.dataValues.valor_item3_3}}</h5>
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-lg-4 col-md-6 special-grid dinner">
 					<div class="gallery-single fix">
-						<img src="/images/img-07.jpg" class="img-fluid" alt="Image">
+						<img src="/images/{{cardHome.dataValues.img_item4_1}}" class="img-fluid" alt="Image">
 						<div class="why-text">
-							<h4>Special Dinner 1</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $25.79</h5>
+							<h4>{{cardHome.dataValues.title4_1}}</h4>
+							<p>{{cardHome.dataValues.desc_item4_1}}</p>
+							<h5>{{cardHome.dataValues.valor_item4_1}}</h5>
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-lg-4 col-md-6 special-grid dinner">
 					<div class="gallery-single fix">
-						<img src="/images/img-08.jpg" class="img-fluid" alt="Image">
+						<img src="/images/{{cardHome.dataValues.img_item4_2}}" class="img-fluid" alt="Image">
 						<div class="why-text">
-							<h4>Special Dinner 2</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $22.79</h5>
+							<h4>{{cardHome.dataValues.title4_3}}</h4>
+							<p>{{cardHome.dataValues.desc_item4_3}}</p>
+							<h5>{{cardHome.dataValues.valor_item4_3}}</h5>
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-lg-4 col-md-6 special-grid dinner">
 					<div class="gallery-single fix">
-						<img src="/images/img-09.jpg" class="img-fluid" alt="Image">
+						<img src="/images/{{cardHome.dataValues.img_item4_3}}" class="img-fluid" alt="Image">
 						<div class="why-text">
-							<h4>Special Dinner 3</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $24.79</h5>
+							<h4>{{cardHome.dataValues.title2_1}}</h4>
+							<p>{{cardHome.dataValues.desc_item2_1}}</p>
+							<h5>{{cardHome.dataValues.valor_item2_1}}</h5>
 						</div>
 					</div>
 				</div>
@@ -329,27 +329,27 @@
 				<div class="col-md-4">
 					<i class="fa fa-volume-control-phone"></i>
 					<div class="overflow-hidden">
-						<h4>Phone</h4>
+						<h4>{{footer.dataValues.title1}}</h4>
 						<p class="lead">
-							+55 0800 4512 3254
+							{{footer.dataValues.desc1}}
 						</p>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<i class="fa fa-envelope"></i>
 					<div class="overflow-hidden">
-						<h4>Email</h4>
+						<h4>{{footer.dataValues.title2}}</h4>
 						<p class="lead">
-							seuemail@hotamil.com
+							{{footer.dataValues.desc2}}
 						</p>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<i class="fa fa-map-marker"></i>
 					<div class="overflow-hidden">
-						<h4>Localização</h4>
+						<h4>{{footer.dataValues.title3}}</h4>
 						<p class="lead">
-							rua: x | n°: 0000 | Bairro | Cidade/Rj | Cep: 00000-000
+							{{footer.dataValues.desc3}}
 						</p>
 					</div>
 				</div>
