@@ -21,6 +21,7 @@ const login_register = require('./routes/login_register')
     //adionando paginas para  add_bd
 const add_bd = require('./routes/add_bd')
 
+
 //configurando body-parser
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
