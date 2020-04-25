@@ -1,26 +1,31 @@
-<section id="chat">
 
-    <div class="container">
-        <div class="painel">
-            <h2 onclick="abrirChat()">Chat </h2>
-            <span onclick="fecharChat()">Fechar</span>
-        </div>
-        <div id="modalChat">
-            <div class="msg">
-                <div class="user">
 
-                </div>
-                <hr>
-                <div class="roboot">
-
-                </div>
-            </div>
-            <div class="escrevendo" id="escrevendo">
-                <ul>
-                    <li><input type="text"></li>
-                    <li><button class="btn btn-success">Enviar</button></li>
-                </ul>
-            </div>
-        </div>
+  
+    <div id="chat-circle" class="btn btn-raised">
+        <div id="chat-overlay"></div>
+            <p id="letra" class="material-icons">Duvidas?</p>
     </div>
-</section>
+  
+  <div class="chat-box">
+    <div class="chat-box-header">
+      Fale conosco
+      <span class="chat-box-toggle"><i class="material-icons">X</i></span>
+    </div>
+    <div class="chat-box-body">
+      <div class="chat-box-overlay">   
+      </div>
+      <div class="chat-logs">
+       
+      </div><!--chat-log -->
+    </div>
+    <div class="chat-input">      
+      <form>
+        <input type="text" id="chat-input" placeholder="Escreva..."/>
+      <button type="submit" class="chat-submit" id="chat-submit"><i class="material-icons">enviar</i></button>
+      </form>      
+    </div>
+  </div>
+  
+  
+  
+  
