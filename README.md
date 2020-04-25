@@ -9,10 +9,9 @@
  ================================================================================================== 
 
         Configuration DB- mysql-server
-        user: root,
-        senha: root,
-        name database: ftb,
-        tables import paste:food-trade-business\db.mysql
+        user: dev,
+        senha: secret,
+        name database: ftb
         
         Sobre o Carregamento da Pagina: 
                         1º# adionanar banco de dados com a config acima + create table (models)
