@@ -1,9 +1,10 @@
 <!-- Start header -->
+
 <header class="top-navbar">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="images/logotipo2.png" alt="" />
+                <img src="{{nav.dataValues.logotipo}}" alt="" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food"
                 aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,27 +12,28 @@
             </button>
             <div class="collapse navbar-collapse" id="navbars-rs-food">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link" href="/">inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/menu">Menu</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="{{nav.dataValues.url_nav1}}">{{nav.dataValues.nav1}}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{nav.dataValues.url_nav2}}">{{nav.dataValues.nav2}}</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Paginas</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">{{nav.dataValues.nav3}}</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown-a">
-                            <a class="dropdown-item" href="reservation.html">Reservas</a>
-                            <a class="dropdown-item" href="stuff.html">Cardapio</a>
-                            <a class="dropdown-item" href="gallery.html">Galeria</a>
+                            <a class="dropdown-item" href="{{nav.dataValues.url_subNav3_1}}">{{nav.dataValues.subNav3_1}}</a>
+                            <a class="dropdown-item" href="{{nav.dataValues.url_subNav3_2}}">{{nav.dataValues.subNav3_2}}</a>
+                            <a class="dropdown-item" href="{{nav.dataValues.url_subNav3_3}}">{{nav.dataValues.subNav3_3}}</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Login</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">{{nav.dataValues.nav4}}</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown-a">
-                            <a class="dropdown-item" href="/login">Acessar Login</a>
-                            <a class="dropdown-item" href="/login/register">Cadastre-se</a>                            
+                            <a class="dropdown-item" href="{{nav.dataValues.url_subNav4_1}}">{{nav.dataValues.nav4_1}}</a>
+                            <a class="dropdown-item" href="{{nav.dataValues.url_subNav4_2}}">{{nav.dataValues.nav4_2}}</a>                            
                         </div>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="/contato">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{nav.dataValues.urlNav5}}">{{nav.dataValues.nav5}}</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
+
 <!-- End header -->

@@ -3,41 +3,39 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6">
-                <h3>About Us</h3>
-                <p>Integer cursus scelerisque ipsum id efficitur. Donec a dui fringilla, gravida lorem ac, semper magna.
-                    Aenean rhoncus ac lectus a interdum. Vivamus semper posuere dui, at ornare turpis ultrices sit amet.
-                    Nulla cursus lorem ut nisi porta, ac eleifend arcu ultrices.</p>
+                <h3>{{footer.dataValues.title1}}</h3>
+                <p>{{footer.dataValues.describe1}}</p>
             </div>
             <div class="col-lg-3 col-md-6">
-                <h3>Opening hours</h3>
-                <p><span class="text-color">Monday: </span>Closed</p>
-                <p><span class="text-color">Tue-Wed :</span> 9:Am - 10PM</p>
-                <p><span class="text-color">status funcionamento</span> close - open</p>
-                <p><span class="text-color">Sat-Sun :</span> 5:PM - 10PM</p>
+                <h3>{{footer.dataValues.title2}}</h3>
+                <p><span class="text-color">{{footer.dataValues.Hr_funcionamento}}</span>Closed</p>
+                <p><span class="text-color">{{footer.dataValues.status_funcionamento}}</span></p>
+                <p><span class="text-color">{{footer.dataValues.feriados_funcionamento}}</span> close - open</p>
+                <p><span class="text-color">PEGAR HORA REAL E DIZER SE ESTÁ FECHADO OU ABERTO A LOJA: </span> Closed</p>
             </div>
             <div class="col-lg-3 col-md-6">
-                <h3>Contato</h3>
-                <p class="lead">Ipsum Street, Lorem Tower, MO, Columbia, 508000</p>
-                <p class="lead"><a href="#">google maps location</a></p>
-                <p><a href="#"> info@admin.com</a></p>
+                <h3>{{footer.dataValues.title3}}</h3>
+                <p class="lead">{{footer.dataValues.endereco_completo}}</p>
+                <p class="lead"><a href="{{footer.dataValues.urlMaps}}">{{footer.dataValues.googlemapslocation}}</a></p>
+                <p><a href="{{footer.dataValues.url_number}}">{{footer.dataValues.number}}</a></p>
+                <p><a href="{{footer.dataValues.url_email}}">{{footer.dataValues.email}}</a></p>
             </div>
             <div class="col-lg-3 col-md-6">
-                <h3>Subscribe</h3>
+                <h3>{{footer.dataValues.title4}}</h3>
                 <div class="subscribe_form">
                     <form class="subscribe_form">
-                        <input name="EMAIL" id="subs-email" class="form_input" placeholder="Email Address..."
+                        <input name="EMAIL" id="subs-email" class="form_input" placeholder="{{footer.dataValues.placeholder}}"
                             type="email">
-                        <button type="submit" class="submit">SUBSCRIBE</button>
+                        <button type="submit" class="submit">{{footer.dataValues.titlebtn}}</button>
                         <div class="clearfix"></div>
                     </form>
                 </div>
                 <ul class="list-inline f-social">
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                    </li>
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li class="list-inline-item"><a href="{{footer.dataValues.url_icon1}}"><i class="{{footer.dataValues.icon1}}" aria-hidden="true"></i></a></li>
+                    <li class="list-inline-item"><a href="{{footer.dataValues.url_icon2}}"><i class="{{footer.dataValues.icon2}}" aria-hidden="true"></i></a></li>
+                    <li class="list-inline-item"><a href="{{footer.dataValues.url_icon3}}"><i class="{{footer.dataValues.icon3}}" aria-hidden="true"></i></a></li>
+                    <li class="list-inline-item"><a href="{{footer.dataValues.url_icon4}}"><i class="{{footer.dataValues.icon4}}" aria-hidden="true"></i></a></li>
+                    <li class="list-inline-item"><a href="{{footer.dataValues.url_icon5}}"><i class="{{footer.dataValues.icon5}}" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
         </div>

@@ -25,11 +25,35 @@ const HeaderNav = db.sequelize.define('headerNav', {
         type: db.Sequelize.STRING,
         require: true
     },
+    subNav3_1: {
+        type: db.Sequelize.STRING,
+        require: true
+    },
+    url_subNav3_1: {
+        type: db.Sequelize.STRING,
+        require: true
+    },
+    subNav3_2: {
+        type: db.Sequelize.STRING,
+        require: true
+    },
+    url_subNav3_2: {
+        type: db.Sequelize.STRING,
+        require: true
+    },
+    subNav3_3: {
+        type: db.Sequelize.STRING,
+        require: true
+    },
+    url_subNav3_3: {
+        type: db.Sequelize.STRING,
+        require: true
+    },
     nav4: {
         type: db.Sequelize.STRING,
         require: true
     },
-    subNav4_1: {
+    nav4_1: {
         type: db.Sequelize.STRING,
         require: true
     },
@@ -37,7 +61,7 @@ const HeaderNav = db.sequelize.define('headerNav', {
         type: db.Sequelize.STRING,
         require: true
     },
-    subNav4_2: {
+    nav4_2: {
         type: db.Sequelize.STRING,
         require: true
     },
@@ -45,39 +69,11 @@ const HeaderNav = db.sequelize.define('headerNav', {
         type: db.Sequelize.STRING,
         require: true
     },
-    subNav4_3: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    url_subNav4_3: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
     nav5: {
         type: db.Sequelize.STRING,
         require: true
     },
-    nav5_1: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    url_subNav5_1: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    nav5_2: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    url_subNav5_2: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    nav6: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    urlNav6: {
+    urlNav5: {
         type: db.Sequelize.STRING,
         require: true
     }

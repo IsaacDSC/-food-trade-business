@@ -20,6 +20,9 @@ const loginAdmin = require('./routes/loginAdmin')
 const login_register = require('./routes/login_register')
     //adionando paginas para  add_bd
 const add_bd = require('./routes/add_bd')
+//adionando addbd dahsboard rotas post
+const addBd = require('./routes/addBd')
+
 
 //configurando body-parser
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -40,6 +43,7 @@ app.use('/contato', contato)
 app.use('/superuser', loginAdmin)
 app.use('/login', login_register)
 app.use('/add_bd', add_bd)
+app.use('/addbd', addBd)
 
 const PORT = 3000
 app.listen(PORT, () => {
