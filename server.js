@@ -32,8 +32,7 @@ app.use(bodyParser.json())
     //configurando handlebars
 app.engine('handlebars', handlebars({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
-
-//adionando pasta public
+    //adionando pasta public
 app.use(express.static(path.join(__dirname, 'public')))
 
 

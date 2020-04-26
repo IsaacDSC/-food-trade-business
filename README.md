@@ -27,9 +27,10 @@
         Sobre as Libs: 
                         #bootstrap 4.4.1 dist
                                 link Documentação:https://getbootstrap.com/docs/4.4/getting-started/introduction/
+                                css(min) - js(min)
                         #fontawesome-free-5.13.0-web
                                 link Documentação:https://fontawesome.com/
-
+                                css(min) - js(min)
         
 
 
