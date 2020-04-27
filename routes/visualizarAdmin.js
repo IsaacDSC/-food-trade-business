@@ -13,11 +13,14 @@ router.get('/vis-headernav', (req, res) => {
     })
 })
 
+/*router.get('/vis-history', (req, res) => {
+     res.send('ok')
+ })*/
 router.get('/vis-history', (req, res) => {
-    History.findOne().then((history) => {
-        res.send('vis-admin/', { layout: 'dashboard.handlebars', history: history })
+    History.findOne().then((hisHome) => {
+        res.render('vis-admin/vis-history', { layout: 'dashboard.handlebars', hisHome: hisHome })
     }).catch((err) => {
-        res.send('Error ao Carregar models history')
+        res.send('Error ao Carregar models header history na rota vis-history' + err)
     })
 })
 

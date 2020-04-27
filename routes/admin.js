@@ -30,7 +30,7 @@ router.get('/edit-home', (req, res) => {
 
 router.get('/edit-history', (req, res) => {
     HistoryHome.findOne().then((history) => {
-        res.render('edit-admin/edit-history', { layout: 'dashboard.handlebars', history: history })
+        res.render('edit-admin/edit-history', { layout: 'dashboard.handlebars', hisHome: history })
     }).catch((err) => {
         res.send('Error: ' + err)
     })
