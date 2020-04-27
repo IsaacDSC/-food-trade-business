@@ -45,6 +45,13 @@
                 tamanho da Imagem dos Menus : =>800px por 480px 
                 Tamanho da imagem de fundo do footer: =>
         
-        
+        Documentação de Rotas 
+                #Pagina responsável (routes)
+                        add_bd.js => resposável por resetar as paginas;
+                        addBd.js => responsável por receber os formulários de editar vindo do dashboard;
+                        admin.js => responsável por carregar dashboard e paginas para editar no dashboard;
+                        visualizarAdmin.js => responsável por carregar as prés visualizações de cada pagina edit-dashboard;
+                        
+                        
         
 >>>>>>> 55bde97c9f00a6fb9c6a25d90fb479549abc1504
