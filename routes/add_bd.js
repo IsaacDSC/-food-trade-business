@@ -12,8 +12,8 @@ const Hystoryhome_models = require('../models/HistoryHome_models')
     //adionando models do cardapio da pagina home
 const CardapioHome_models = require('../models/CardapiosHome_models')
 
-router.get('/', (req, res)=>{
-    res.render('add_bd/reset', {layout: 'dashboard.handlebars'})
+router.get('/', (req, res) => {
+    res.render('add_bd/reset', { layout: 'dashboard.handlebars' })
 })
 
 router.get('/headernav', (req, res) => {

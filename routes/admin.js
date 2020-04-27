@@ -5,6 +5,7 @@ const router = express.Router()
 const HeaderNav = require('../models/HeaderNav')
 const PagHome_slideshow = require('../models/PagHome_Slideshow')
 const HistoryHome = require('../models/HistoryHome_models')
+const Footer = require('../models/Footer_models')
 
 router.get('/', (req, res) => {
     res.render('admin/dashboard', { layout: 'dashboard.handlebars' })
@@ -33,6 +34,14 @@ router.get('/edit-history', (req, res) => {
         res.render('edit-admin/edit-history', { layout: 'dashboard.handlebars', hisHome: history })
     }).catch((err) => {
         res.send('Error: ' + err)
+    })
+})
+
+router.get('/edit-footer', (req, res) => {
+    Footer.findOne().then((footer) => {
+        res.render('edit-admin/edit-footer', { layout: 'dashboard.handlebars', footer: footer })
+    }).catch((err) => {
+        res.send('Erro ao carregar models footer: ' + err)
     })
 })
 
