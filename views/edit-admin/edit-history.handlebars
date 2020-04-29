@@ -62,23 +62,23 @@
                     <hr>
                     <!-- ============================ Segundo Form ========================================= -->
                     <h4 class="mt-5">Formulário para Editar História da Empresa</h4>
-                    <form action="/addbd/slideshow" method="post">
+                    <form action="/addBd/history" method="post">
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label><span class="text-danger">* </span>Titulo(parte-um)</label>
-                                <input name="title1_1" type="text" class="form-control" id="title1_1"
+                                <input name="title1" type="text" class="form-control" id="title1"
                                     placeholder="Digite o nome da navegação" value="{{hisHome.dataValues.title1}}"
                                     required>
                             </div>
                             <div class="form-group col-md-4">
                                 <label><span class="text-danger">* </span>Titulo(parte-dois)</label>
-                                <input name="title1_2" type="text" class="form-control" id="title1_2"
+                                <input name="title2" type="text" class="form-control" id="title2"
                                     placeholder="Digite o nome da navegação" value="{{hisHome.dataValues.title2}}"
                                     required>
                             </div>
                             <div class="form-group col-md-4">
                                 <label><span class="text-danger">* </span>Subtitulo</label>
-                                <input name="title1_1" type="text" class="form-control" id="title1_1"
+                                <input name="subtitle" type="text" class="form-control" id="subtitle"
                                     placeholder="Digite o nome da navegação" value="{{hisHome.dataValues.subtitle}}"
                                     required>
                             </div>
@@ -86,12 +86,12 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label><span class="text-danger">* </span>Primeiro Paragrafo</label>
-                                <textarea name="" id="" cols="30" rows="10" class="form-control"
+                                <textarea name="paragraph1" id="paragraph1" cols="30" rows="10" class="form-control"
                                     placeholder="Digite seu primeiro paragrafo">{{hisHome.dataValues.paragraph1}}</textarea>
                             </div>
                             <div class="form-group col-md-6">
                                 <label><span class="text-danger">* </span>Segundo Paragrafo</label>
-                                <textarea name="" id="" cols="30" rows="10" class="form-control"
+                                <textarea name="paragraph2" id="paragraph2" cols="30" rows="10" class="form-control"
                                     placeholder="Digite seu Segundo paragrafo">{{hisHome.dataValues.paragraph2}}</textarea>
                             </div>
                         </div>
@@ -99,13 +99,13 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label><span class="text-danger">* </span>Titulo do Botão</label>
-                                <input name="title1_1" type="text" class="form-control" id="title1_1"
+                                <input name="btnTitle" type="text" class="form-control" id="btnTitle"
                                     placeholder="Digite o titulo do botão" value="{{hisHome.dataValues.btnTitle}}"
                                     required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label><span class="text-danger">* </span>URL do Botão</label>
-                                <input name="title1_1" type="text" class="form-control" id="title1_1"
+                                <input name="url_btn" type="text" class="form-control" id="url_btn"
                                     placeholder="Digite a URL do botão" value="{{hisHome.dataValues.url_btn}}"
                                     required>
                             </div>
@@ -114,17 +114,21 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label><span class="text-danger">* </span>Frase</label>
-                                <input name="title1_1" type="text" class="form-control" id="title1_1"
+                                <input name="vision_mission" type="text" class="form-control" id="vision_mission"
                                     placeholder="Digite a Frase" value="{{hisHome.dataValues.vision_mission}}"
                                     required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label><span class="text-danger">* </span>Autor</label>
-                                <input name="title1_1" type="text" class="form-control" id="title1_1"
+                                <input name="author" type="text" class="form-control" id="author"
                                     placeholder="Digite a Autor" value="{{hisHome.dataValues.author}}"
                                     required>
                             </div>
                         </div>
+                        <p class="mt-4">
+                            <span class="text-danger">* </span>Todos os campos são obrigatórios
+                        </p>
+                        <button type="submit" class="btn btn-warning">Salvar</button>
                     </form>
                 </div>
             </div>
