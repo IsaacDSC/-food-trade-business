@@ -7,7 +7,7 @@ const sequelize = new Sequelize('ftb', 'dev', 'secret', {
 sequelize.authenticate().then(function() {
     console.log('Conectado com Sucesso')
 }).catch(function(erro) {
-    console.log('Erro ao se conectar' + erro)
+    console.log('Erro ao se conectar' + erro )
 })
 
 module.exports = {
