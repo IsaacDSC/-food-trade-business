@@ -4,6 +4,7 @@ const sequelize = new Sequelize('ftb', 'dev', 'secret', {
     dialect: 'mysql'
 })
 
+
 sequelize.authenticate().then(function() {
     console.log('Conectado com Sucesso')
 }).catch(function(erro) {
