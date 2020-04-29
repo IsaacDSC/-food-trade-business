@@ -9,7 +9,6 @@ const Footer = require('../models/Footer_models')
 router.get('/', (req, res) => {
     Headernav.findOne().then((nav) => {
         Footer.findOne().then((footer) => {
-
             res.render('contato/contato', { nav: nav, footer: footer })
         })
     })
