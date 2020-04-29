@@ -27,6 +27,9 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
     <title>Burguer Restaurant</title>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/demo.css"> <!-- Demo style -->
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
@@ -39,6 +42,7 @@
     {{{body}}}
     {{>_footer}}
     {{>_chat}}
+    {{>login}}
 </body>
     <!-- adionando CDN Fonte-awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/brands.min.js"></script>
@@ -67,6 +71,9 @@
     <script>$('#cat_nav').mobileMenu();</script>
     <script src="js/ResizeSensor.min.js"></script>
     <script src="js/theia-sticky-sidebar.min.js"></script>
+     <script src="js/placeholders.min.js"></script> <!-- polyfill for the HTML5 placeholder attribute -->
+<script src="js/main.js"></script> <!-- Resource JavaScript -->
+
 <script>
     jQuery('#sidebar').theiaStickySidebar({
       additionalMarginTop: 80
