@@ -11,6 +11,16 @@ const Footer_models = require('../models/Footer_models')
 const Hystoryhome_models = require('../models/HistoryHome_models')
     //adionando models do cardapio da pagina home
 const CardapioHome_models = require('../models/CardapiosHome_models')
+    //adionando Models Menu
+const MenuAlmoco = require('../models/MenuAlmoco')
+const MenuBebidas = require('../models/MenuBebidas')
+const MenuBurger = require('../models/MenuBurger')
+const MenuBuger1 = require('../models/MenuBurger1')
+const MenuCombos = require('../models/MenuCombos')
+const MenuDoces = require('../models/MenuDoces')
+const MenuPizza = require('../models/MenuPizza')
+const MenuPromocoes = require('../models/MenuProcoes')
+const MenuSorvetes = require('../models/MenuSorvetes')
 
 router.get('/', (req, res) => {
     res.render('add_bd/reset', { layout: 'dashboard.handlebars' })
