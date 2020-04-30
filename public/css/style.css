@@ -165,21 +165,21 @@ button:focus{
 
 
 .top-navbar .navbar{
-    margin-top: -25px;
+  padding: 0px 0px;
 	position: fixed;
-    width: 100%;
-	transition: height .3s ease-out, .3s ease-out,  .3s ease-out;
+	width: 100%;
+	transition: height .3s ease-out, background .3s ease-out, box-shadow .3s ease-out;
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
-    z-index: 100;
-    background-color: #ff1a22;
+	z-index: 100;
     
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-link{
 	color: #010101;
-	font-size: 18px;
-	border-radius: 4px;
+  font-size: 18px;
+  border-radius: 4px;
+  padding: 2px 13px;
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-item .nav-link:hover{
@@ -316,7 +316,7 @@ button:focus{
 .about-section-box .img-fluid{
 	box-shadow: -10px -10px 0px #ff0008;
 }
-.inner-column{}
+
 .inner-column h1{
 	font-family: 'Arbutus Slab', serif;
 	font-size: 30px;
@@ -2348,20 +2348,23 @@ Primary style
   
   /* -------------------------------- 
   
-  Login/Signup modal window - by CodyHouse.co
+  Login/Signup modal window 
   
   -------------------------------- */
- 
   
   
+  .cd-main-nav__item--signin{
+    border: none;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 0px 13px;
+  }
   
   .cd-main-nav__item {
-    background-color: #e42323;
-	color: #f7f5f5;
-    font-size: 18px;
-    border-radius: 4px;
-    font-family: sans-serif;
-    padding-bottom: 9px;
+
+    color: #010101;
+  font-size: 18px;
+	border-radius: 4px;
   }
   
   
