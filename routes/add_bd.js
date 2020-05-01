@@ -203,5 +203,63 @@ router.get('/cardapiohome', (req, res) => {
     })
 })
 
+router.get('/menuburger', (req, res) => {
+    MenuBurger.create({
+        title: 'BURGUER RESTAURANTE',
+        desc: 'Todos os produtos são de extrema qualidade e confiabilidade, tratados e seguindo um rigoroso padão de qualidade. Compre sem medo.',
+        tabela1: 'Item',
+        tabela2: 'Valor',
+        tabela3: 'Alteração',
+        title1: 'X-Tudo',
+        title2: 'X-salada-Bacon',
+        title3: 'X-Bacon',
+        title4: 'X-Salada',
+        title5: 'X-Burger',
+        title6: 'X-Egg-Bacon',
+        title7: 'X-Egg-Burger',
+        title8: 'X-Parmegiana',
+        title9: 'X-Parmegiana',
+        title10: 'X-Frango-Catupiry',
+        title11: 'Frango Tudo',
+        title12: 'Hamburger',
+        title13: 'X-Tudo Duplo',
+        title14: 'X-Alguma-Coisa',
+        title15: 'X-Alguma-Coisa',
+        desc1: 'Pão, carne bovina , presunto, maionese, queijo prato, alface, tomate, ovo, bacon, milho, batata palha ou frita e molho gourmet especial. Acompanha molho verde.',
+        desc2: 'Pão, carne bovina , presunto, maionese, queijo prato, alface, tomate, bacon, milho, batata palha ou frita e molho gourmet especial. Acompanha molho verde.',
+        desc3: 'Pão, carne bovina , presunto, maionese, queijo prato, bacon, milho, batata palha ou frita e molho gourmet especial. Acompanha molho verde.',
+        desc4: 'Pão, carne bovina , presunto, maionese, queijo prato, alface, tomate, milho, batata palha ou frita e molho gourmet especial. Acompanha molho verde.',
+        desc5: 'Pão, carne bovina , presunto, maionese, queijo prato, milho, batata palha ou frita e molho gourmet especial. Acompanha molho verde.',
+        desc6: 'Pão, carne bovina , presunto, maionese, queijo prato, bacon, ovo, milho, batata palha ou frita e molho gourmet especial. Acompanha molho verde.',
+        desc7: 'Pão, carne bovina , presunto, maionese, queijo prato, ovo, milho, batata palha ou frita e molho gourmet especial. Acompanha molho verde.',
+        desc8: 'Contra filé, queijo , presunto,pomarola, maionese , alface , tomate , milho , queijo parmessão e batata frita',
+        desc9: 'Contra filé, queijo , presunto,pomarola, maionese , alface , tomate , milho , queijo parmessão e batata frita',
+        desc10: 'Frango desfiado com Catupiry, queijo, presunto, milho, molho especial e batata frita',
+        desc11: 'Peito de frango grelhado, queijo , presunto , maionese , ovo, milho , molho especial , batata frita',
+        desc12: 'Pão, carne bovina , presunto, maionese, milho, batata palha e molho gourmet especial. Acompanha molho verde.',
+        desc13: '2 carnes , 2 ovos, 2 queijos , 2 presunto, dobro bacon, alface ,tomate , milho , molho especial, batata frita .',
+        desc14: '2 carnes goumet Picanha 120 g , queijo cheedar, alface, tomate , cebola roxa , molho especial e batata frita .',
+        desc15: '2 carnes goumet Picanha 120 g , queijo cheedar, alface, tomate , cebola roxa , molho especial e batata frita .',
+        valor1: 'R$:11,98',
+        valor2: 'R$:11,98',
+        valor3: 'R$:11,98',
+        valor4: 'R$:11,98',
+        valor5: 'R$:11,98',
+        valor6: 'R$:11,98',
+        valor7: 'R$:11,98',
+        valor8: 'R$:11,98',
+        valor9: 'R$:11,98',
+        valor10: 'R$:11,98',
+        valor11: 'R$:11,98',
+        valor12: 'R$:11,98',
+        valor13: 'R$:11,98',
+        valor14: 'R$:11,98',
+        valor15: 'R$:11,98'
+    }).then(() => {
+        res.send('Pagina Resetada com Sucesso!')
+    }).catch((err) => {
+        res.send('Erro ao Resetar : ' + err)
+    })
+})
 
 module.exports = router
