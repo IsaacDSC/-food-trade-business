@@ -11,7 +11,6 @@ router.get('/', (req, res) => {
         Footer.findOne().then((footer) => {
             MenuBurger.findOne().then((burger) => {
                 res.render('menu/menu', { nav: nav, footer: footer, burger: burger })
-
             })
         })
     })
