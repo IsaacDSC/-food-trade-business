@@ -1,21 +1,21 @@
 <div class="col-md-6">
 				<div class="box_style_2" id="main_menu">
 					<h2 class="inner">Menu de opções</h2>
-					<h3 class="nomargin_top" id="starters">Burguer restaurante</h3>
+					<h3 class="nomargin_top" id="starters">{{burger.dataValues.title}}</h3>
 					<p>
-						Todos os produtos são de extrema qualidade e confiabilidade, tratados e seguindo um rigoroso padão de qualidade. Compre sem medo.
+						{{burger.dataValues.desc}}
 					</p>
 					<table class="table table-striped cart-list">
 					<thead>
 					<tr>
 						<th>
-							 Item
+							 {{burger.dataValues.tabela1}}
 						</th>
 						<th>
-							 Valor
+							 {{burger.dataValues.tabela2}}
 						</th>
 						<th>
-							 Alterção
+							 {{burger.dataValues.tabela3}}
 						</th>
 					</tr>
 					</thead>
@@ -23,148 +23,580 @@
 					<tr>
 						<td>
                         	<figure class="thumb_menu_list"><img src="img/menu-thumb-1.jpg" alt="thumb"></figure>
-							<h5>1. Mexican Enchiladas</h5>
+							<h5>1.{{burger.dataValues.title1}}</h5>
 							<p>
-								Fuisset mentitum deleniti sit ea.
+								{{burger.dataValues.desc1}}.
 							</p>
 						</td>
 						<td>
-							<strong>€ 9,40</strong>
+							<strong>{{burger.dataValues.valor1}}</strong>
 						</td>
 						<td class="options">
                         <div class="dropdown dropdown-options">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon_plus_alt2"></i></a>
                             <div class="dropdown-menu">
-                                <h5>Selecione uma opção</h5>
+                                <h5>{{burger.dataValues.title_option}}</h5>
                                 <label>
-                                <input type="radio" value="option1" name="options_1" checked>Medium <span>+ $3.30</span>
+                                <input type="radio" value="option1" name="options_1" checked>{{burger.dataValues.opt1}} <span>+ R${{burger.dataValues.valor_opt1}}</span>
                                 </label>
                                 <label>
-                                <input type="radio" value="option2" name="options_1" >Large <span>+ $5.30</span>
+                                <input type="radio" value="option2" name="options_1" >{{burger.dataValues.opt2}} <span>+ R${{burger.dataValues.valor_opt2}}</span>
                                 </label>
                                 <label>
-                                <input type="radio" value="option3" name="options_1" >Extra Large <span>+ $8.30</span>
+                                <input type="radio" value="option3" name="options_1" >{{burger.dataValues.opt3}}<span>+ R${{burger.dataValues.valor_opt3}}</span>
                                 </label>
-                                <h5>Add ingredients</h5>
+                                <h5>{{burger.dataValues.title_option1_1}}</h5>
                                 <label>
-                                <input type="checkbox" value="">Extra Tomato <span>+ $4.30</span>
+                                <input type="checkbox" value="">{{burger.dataValues.opt1_1}}<span>+ R${{burger.dataValues.valor_opt1_1}}</span>
                                 </label>
                                 <label>
-                                <input type="checkbox" value="">Extra Peppers <span>+ $2.50</span>
+                                <input type="checkbox" value="">{{burger.dataValues.opt2_1}}<span>+ R${{burger.dataValues.valor_opt2_1}}</span>
                                 </label>
                                 <a href="#0" class="add_to_basket">Adicionar ao carrinho</a>
-                            </div>
+                            </d2v>
                         </div>
                     </td>
 					</tr>
 					<tr>
 						<td>
                         	<figure class="thumb_menu_list"><img src="img/menu-thumb-2.jpg" alt="thumb"></figure>
-							<h5>2. Fajitas</h5>
+							<h5>2. {{burger.dataValues.title2}}</h5>
 							<p>
-								Fuisset mentitum deleniti sit ea.
+								{{burger.dataValues.desc2}}
 							</p>
 						</td>
 						<td>
-							<strong>€ 6,80</strong>
+							<strong>{{burger.dataValues.valor2}}</strong>
 						</td>
 						<td class="options">
                         <div class="dropdown dropdown-options">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon_plus_alt2"></i></a>
                             <div class="dropdown-menu">
-                                <h5>Select an option</h5>
+                                <h5>{{burger.dataValues.title_option}}</h5>
                                 <label>
-                                <input type="radio" value="option1" name="options_2" checked>Medium <span>+ $3.30</span>
+                                <input type="radio" value="option1" name="options_1" checked>{{burger.dataValues.opt1}} <span>+ R${{burger.dataValues.valor_opt1}}</span>
                                 </label>
                                 <label>
-                                <input type="radio" value="option2" name="options_2" >Large <span>+ $5.30</span>
+                                <input type="radio" value="option2" name="options_1" >{{burger.dataValues.opt2}} <span>+ R${{burger.dataValues.valor_opt2}}</span>
                                 </label>
                                 <label>
-                                <input type="radio" value="option3" name="options_2" >Extra Large <span>+ $8.30</span>
+                                <input type="radio" value="option3" name="options_1" >{{burger.dataValues.opt3}}<span>+ R${{burger.dataValues.valor_opt3}}</span>
                                 </label>
-                                <h5>Add ingredients</h5>
+                                <h5>{{burger.dataValues.title_option1_1}}</h5>
                                 <label>
-                                <input type="checkbox" value="">Extra Tomato <span>+ $4.30</span>
+                                <input type="checkbox" value="">{{burger.dataValues.opt1_1}}<span>+ R${{burger.dataValues.valor_opt1_1}}</span>
                                 </label>
                                 <label>
-                                <input type="checkbox" value="">Extra Peppers <span>+ $2.50</span>
+                                <input type="checkbox" value="">{{burger.dataValues.opt2_1}}<span>+ R${{burger.dataValues.valor_opt2_1}}</span>
                                 </label>
-                                <a href="#0" class="add_to_basket">Add to cart</a>
-                            </div>
+                                <a href="#0" class="add_to_basket">Adicionar ao carrinho</a>
+                            </d2v>
                         </div>
                     </td>
 					</tr>
 					<tr>
 						<td>
                         	<figure class="thumb_menu_list"><img src="img/menu-thumb-3.jpg" alt="thumb"></figure>
-							<h5>3. Royal Fajitas</h5>
+							<h5>3. {{burger.dataValues.title3}}</h5>
 							<p>
-								Fuisset mentitum deleniti sit ea.
+								{{burger.dataValues.desc3}}
 							</p>
 						</td>
 						<td>
-							<strong>€ 5,70</strong>
+							<strong>{{burger.dataValues.valor3}}</strong>
 						</td>
 						<td class="options">
                         <div class="dropdown dropdown-options">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon_plus_alt2"></i></a>
                             <div class="dropdown-menu">
-                                <h5>Select an option</h5>
+                                <h5>{{burger.dataValues.title_option}}</h5>
                                 <label>
-                                <input type="radio" value="option1" name="options_3" checked>Medium <span>+ $3.30</span>
+                                <input type="radio" value="option1" name="options_1" checked>{{burger.dataValues.opt1}} <span>+ R${{burger.dataValues.valor_opt1}}</span>
                                 </label>
                                 <label>
-                                <input type="radio" value="option2" name="options_3" >Large <span>+ $5.30</span>
+                                <input type="radio" value="option2" name="options_1" >{{burger.dataValues.opt2}} <span>+ R${{burger.dataValues.valor_opt2}}</span>
                                 </label>
                                 <label>
-                                <input type="radio" value="option3" name="options_3" >Extra Large <span>+ $8.30</span>
+                                <input type="radio" value="option3" name="options_1" >{{burger.dataValues.opt3}}<span>+ R${{burger.dataValues.valor_opt3}}</span>
                                 </label>
-                                <h5>Add ingredients</h5>
+                                <h5>{{burger.dataValues.title_option1_1}}</h5>
                                 <label>
-                                <input type="checkbox" value="">Extra Tomato <span>+ $4.30</span>
+                                <input type="checkbox" value="">{{burger.dataValues.opt1_1}}<span>+ R${{burger.dataValues.valor_opt1_1}}</span>
                                 </label>
                                 <label>
-                                <input type="checkbox" value="">Extra Peppers <span>+ $2.50</span>
+                                <input type="checkbox" value="">{{burger.dataValues.opt2_1}}<span>+ R${{burger.dataValues.valor_opt2_1}}</span>
                                 </label>
                                 <a href="#0" class="add_to_basket">Adicionar ao carrinho</a>
-                            </div>
+                            </d2v>
                         </div>
                     </td>
 					</tr>
 					<tr>
 						<td>
                         	<figure class="thumb_menu_list"><img src="img/menu-thumb-4.jpg" alt="thumb"></figure>
-							<h5>4. Chicken Enchilada Wrap</h5>
+							<h5>4. {{burger.dataValues.title4}}</h5>
 							<p>
-								Fuisset mentitum deleniti sit ea.
+								{{burger.dataValues.desc4}}
 							</p>
 						</td>
 						<td>
-							<strong>€ 5,20</strong>
+							<strong>{{burger.dataValues.valor4}}</strong>
 						</td>
 						<td class="options">
                         <div class="dropdown dropdown-options">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon_plus_alt2"></i></a>
                             <div class="dropdown-menu">
-                                <h5>Select an option</h5>
+                                <h5>{{burger.dataValues.title_option}}</h5>
                                 <label>
-                                <input type="radio" value="option1" name="options_4" checked>Medium <span>+ $3.30</span>
+                                <input type="radio" value="option1" name="options_1" checked>{{burger.dataValues.opt1}} <span>+ R${{burger.dataValues.valor_opt1}}</span>
                                 </label>
                                 <label>
-                                <input type="radio" value="option2" name="options_4" >Large <span>+ $5.30</span>
+                                <input type="radio" value="option2" name="options_1" >{{burger.dataValues.opt2}} <span>+ R${{burger.dataValues.valor_opt2}}</span>
                                 </label>
                                 <label>
-                                <input type="radio" value="option3" name="options_4" >Extra Large <span>+ $8.30</span>
+                                <input type="radio" value="option3" name="options_1" >{{burger.dataValues.opt3}}<span>+ R${{burger.dataValues.valor_opt3}}</span>
                                 </label>
-                                <h5>Add ingredients</h5>
+                                <h5>{{burger.dataValues.title_option1_1}}</h5>
                                 <label>
-                                <input type="checkbox" value="">Extra Tomato <span>+ $4.30</span>
+                                <input type="checkbox" value="">{{burger.dataValues.opt1_1}}<span>+ R${{burger.dataValues.valor_opt1_1}}</span>
                                 </label>
                                 <label>
-                                <input type="checkbox" value="">Extra Peppers <span>+ $2.50</span>
+                                <input type="checkbox" value="">{{burger.dataValues.opt2_1}}<span>+ R${{burger.dataValues.valor_opt2_1}}</span>
                                 </label>
-                                <a href="#0" class="add_to_basket">Add to cart</a>
-                            </div>
+                                <a href="#0" class="add_to_basket">Adicionar ao carrinho</a>
+                            </d2v>
+                        </div>
+                    </td>
+					</tr>
+                    <tr>
+						<td>
+                        	<figure class="thumb_menu_list"><img src="img/menu-thumb-4.jpg" alt="thumb"></figure>
+							<h5>5. {{burger.dataValues.title5}}</h5>
+							<p>
+								{{burger.dataValues.desc5}}
+							</p>
+						</td>
+						<td>
+							<strong>{{burger.dataValues.valor5}}</strong>
+						</td>
+						<td class="options">
+                        <div class="dropdown dropdown-options">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon_plus_alt2"></i></a>
+                            <div class="dropdown-menu">
+                                <h5>{{burger.dataValues.title_option}}</h5>
+                                <label>
+                                <input type="radio" value="option1" name="options_1" checked>{{burger.dataValues.opt1}} <span>+ R${{burger.dataValues.valor_opt1}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option2" name="options_1" >{{burger.dataValues.opt2}} <span>+ R${{burger.dataValues.valor_opt2}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option3" name="options_1" >{{burger.dataValues.opt3}}<span>+ R${{burger.dataValues.valor_opt3}}</span>
+                                </label>
+                                <h5>{{burger.dataValues.title_option1_1}}</h5>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt1_1}}<span>+ R${{burger.dataValues.valor_opt1_1}}</span>
+                                </label>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt2_1}}<span>+ R${{burger.dataValues.valor_opt2_1}}</span>
+                                </label>
+                                <a href="#0" class="add_to_basket">Adicionar ao carrinho</a>
+                            </d2v>
+                        </div>
+                    </td>
+					</tr>
+                    <tr>
+						<td>
+                        	<figure class="thumb_menu_list"><img src="img/menu-thumb-4.jpg" alt="thumb"></figure>
+							<h5>6. {{burger.dataValues.title6}}</h5>
+							<p>
+								{{burger.dataValues.desc6}}
+							</p>
+						</td>
+						<td>
+							<strong>{{burger.dataValues.valor6}}</strong>
+						</td>
+						<td class="options">
+                        <div class="dropdown dropdown-options">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon_plus_alt2"></i></a>
+                            <div class="dropdown-menu">
+                                <h5>{{burger.dataValues.title_option}}</h5>
+                                <label>
+                                <input type="radio" value="option1" name="options_1" checked>{{burger.dataValues.opt1}} <span>+ R${{burger.dataValues.valor_opt1}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option2" name="options_1" >{{burger.dataValues.opt2}} <span>+ R${{burger.dataValues.valor_opt2}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option3" name="options_1" >{{burger.dataValues.opt3}}<span>+ R${{burger.dataValues.valor_opt3}}</span>
+                                </label>
+                                <h5>{{burger.dataValues.title_option1_1}}</h5>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt1_1}}<span>+ R${{burger.dataValues.valor_opt1_1}}</span>
+                                </label>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt2_1}}<span>+ R${{burger.dataValues.valor_opt2_1}}</span>
+                                </label>
+                                <a href="#0" class="add_to_basket">Adicionar ao carrinho</a>
+                            </d2v>
+                        </div>
+                    </td>
+                    </td>
+					</tr>
+                    <tr>
+						<td>
+                        	<figure class="thumb_menu_list"><img src="img/menu-thumb-4.jpg" alt="thumb"></figure>
+							<h5>7. {{burger.dataValues.title7}}</h5>
+							<p>
+								{{burger.dataValues.desc7}}
+							</p>
+						</td>
+						<td>
+							<strong>{{burger.dataValues.valor7}}</strong>
+						</td>
+						<td class="options">
+                        <div class="dropdown dropdown-options">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon_plus_alt2"></i></a>
+                            <div class="dropdown-menu">
+                                <h5>{{burger.dataValues.title_option}}</h5>
+                                <label>
+                                <input type="radio" value="option1" name="options_1" checked>{{burger.dataValues.opt1}} <span>+ R${{burger.dataValues.valor_opt1}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option2" name="options_1" >{{burger.dataValues.opt2}} <span>+ R${{burger.dataValues.valor_opt2}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option3" name="options_1" >{{burger.dataValues.opt3}}<span>+ R${{burger.dataValues.valor_opt3}}</span>
+                                </label>
+                                <h5>{{burger.dataValues.title_option1_1}}</h5>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt1_1}}<span>+ R${{burger.dataValues.valor_opt1_1}}</span>
+                                </label>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt2_1}}<span>+ R${{burger.dataValues.valor_opt2_1}}</span>
+                                </label>
+                                <a href="#0" class="add_to_basket">Adicionar ao carrinho</a>
+                            </d2v>
+                        </div>
+                    </td>
+					</tr>
+                    <tr>
+						<td>
+                        	<figure class="thumb_menu_list"><img src="img/menu-thumb-4.jpg" alt="thumb"></figure>
+							<h5>8. {{burger.dataValues.title8}}</h5>
+							<p>
+								{{burger.dataValues.desc8}}
+							</p>
+						</td>
+						<td>
+							<strong>{{burger.dataValues.valor8}}</strong>
+						</td>
+						<td class="options">
+                        <div class="dropdown dropdown-options">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon_plus_alt2"></i></a>
+                            <div class="dropdown-menu">
+                                <h5>{{burger.dataValues.title_option}}</h5>
+                                <label>
+                                <input type="radio" value="option1" name="options_1" checked>{{burger.dataValues.opt1}} <span>+ R${{burger.dataValues.valor_opt1}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option2" name="options_1" >{{burger.dataValues.opt2}} <span>+ R${{burger.dataValues.valor_opt2}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option3" name="options_1" >{{burger.dataValues.opt3}}<span>+ R${{burger.dataValues.valor_opt3}}</span>
+                                </label>
+                                <h5>{{burger.dataValues.title_option1_1}}</h5>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt1_1}}<span>+ R${{burger.dataValues.valor_opt1_1}}</span>
+                                </label>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt2_1}}<span>+ R${{burger.dataValues.valor_opt2_1}}</span>
+                                </label>
+                                <a href="#0" class="add_to_basket">Adicionar ao carrinho</a>
+                            </d2v>
+                        </div>
+                    </td>
+					</tr>
+                    <tr>
+						<td>
+                        	<figure class="thumb_menu_list"><img src="img/menu-thumb-4.jpg" alt="thumb"></figure>
+							<h5>9. {{burger.dataValues.title9}}</h5>
+							<p>
+								{{burger.dataValues.desc9}}
+							</p>
+						</td>
+						<td>
+							<strong>{{burger.dataValues.valor9}}</strong>
+						</td>
+						<td class="options">
+                        <div class="dropdown dropdown-options">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon_plus_alt2"></i></a>
+                            <div class="dropdown-menu">
+                                <h5>{{burger.dataValues.title_option}}</h5>
+                                <label>
+                                <input type="radio" value="option1" name="options_1" checked>{{burger.dataValues.opt1}} <span>+ R${{burger.dataValues.valor_opt1}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option2" name="options_1" >{{burger.dataValues.opt2}} <span>+ R${{burger.dataValues.valor_opt2}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option3" name="options_1" >{{burger.dataValues.opt3}}<span>+ R${{burger.dataValues.valor_opt3}}</span>
+                                </label>
+                                <h5>{{burger.dataValues.title_option1_1}}</h5>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt1_1}}<span>+ R${{burger.dataValues.valor_opt1_1}}</span>
+                                </label>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt2_1}}<span>+ R${{burger.dataValues.valor_opt2_1}}</span>
+                                </label>
+                                <a href="#0" class="add_to_basket">Adicionar ao carrinho</a>
+                            </d2v>
+                        </div>
+                    </td><td class="options">
+                        <div class="dropdown dropdown-options">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon_plus_alt2"></i></a>
+                            <div class="dropdown-menu">
+                                <h5>{{burger.dataValues.title_option}}</h5>
+                                <label>
+                                <input type="radio" value="option1" name="options_1" checked>{{burger.dataValues.opt1}} <span>+ R${{burger.dataValues.valor_opt1}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option2" name="options_1" >{{burger.dataValues.opt2}} <span>+ R${{burger.dataValues.valor_opt2}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option3" name="options_1" >{{burger.dataValues.opt3}}<span>+ R${{burger.dataValues.valor_opt3}}</span>
+                                </label>
+                                <h5>{{burger.dataValues.title_option1_1}}</h5>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt1_1}}<span>+ R${{burger.dataValues.valor_opt1_1}}</span>
+                                </label>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt2_1}}<span>+ R${{burger.dataValues.valor_opt2_1}}</span>
+                                </label>
+                                <a href="#0" class="add_to_basket">Adicionar ao carrinho</a>
+                            </d2v>
+                        </div>
+                    </td>
+					</tr>
+                    <tr>
+						<td>
+                        	<figure class="thumb_menu_list"><img src="img/menu-thumb-4.jpg" alt="thumb"></figure>
+							<h5>10. {{burger.dataValues.title10}}</h5>
+							<p>
+								{{burger.dataValues.desc10}}
+							</p>
+						</td>
+						<td>
+							<strong>{{burger.dataValues.valor10}}</strong>
+						</td>
+						<td class="options">
+                        <div class="dropdown dropdown-options">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon_plus_alt2"></i></a>
+                            <div class="dropdown-menu">
+                                <h5>{{burger.dataValues.title_option}}</h5>
+                                <label>
+                                <input type="radio" value="option1" name="options_1" checked>{{burger.dataValues.opt1}} <span>+ R${{burger.dataValues.valor_opt1}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option2" name="options_1" >{{burger.dataValues.opt2}} <span>+ R${{burger.dataValues.valor_opt2}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option3" name="options_1" >{{burger.dataValues.opt3}}<span>+ R${{burger.dataValues.valor_opt3}}</span>
+                                </label>
+                                <h5>{{burger.dataValues.title_option1_1}}</h5>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt1_1}}<span>+ R${{burger.dataValues.valor_opt1_1}}</span>
+                                </label>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt2_1}}<span>+ R${{burger.dataValues.valor_opt2_1}}</span>
+                                </label>
+                                <a href="#0" class="add_to_basket">Adicionar ao carrinho</a>
+                            </d2v>
+                        </div>
+                    </td>
+					</tr>
+                    <tr>
+						<td>
+                        	<figure class="thumb_menu_list"><img src="img/menu-thumb-4.jpg" alt="thumb"></figure>
+							<h5>11. {{burger.dataValues.title11}}</h5>
+							<p>
+								{{burger.dataValues.desc11}}
+							</p>
+						</td>
+						<td>
+							<strong>{{burger.dataValues.valor11}}</strong>
+						</td>
+						<td class="options">
+                        <div class="dropdown dropdown-options">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon_plus_alt2"></i></a>
+                            <div class="dropdown-menu">
+                                <h5>{{burger.dataValues.title_option}}</h5>
+                                <label>
+                                <input type="radio" value="option1" name="options_1" checked>{{burger.dataValues.opt1}} <span>+ R${{burger.dataValues.valor_opt1}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option2" name="options_1" >{{burger.dataValues.opt2}} <span>+ R${{burger.dataValues.valor_opt2}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option3" name="options_1" >{{burger.dataValues.opt3}}<span>+ R${{burger.dataValues.valor_opt3}}</span>
+                                </label>
+                                <h5>{{burger.dataValues.title_option1_1}}</h5>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt1_1}}<span>+ R${{burger.dataValues.valor_opt1_1}}</span>
+                                </label>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt2_1}}<span>+ R${{burger.dataValues.valor_opt2_1}}</span>
+                                </label>
+                                <a href="#0" class="add_to_basket">Adicionar ao carrinho</a>
+                            </d2v>
+                        </div>
+                    </td>
+					</tr>
+                    <tr>
+						<td>
+                        	<figure class="thumb_menu_list"><img src="img/menu-thumb-4.jpg" alt="thumb"></figure>
+							<h5>12. {{burger.dataValues.title12}}</h5>
+							<p>
+								{{burger.dataValues.desc12}}
+							</p>
+						</td>
+						<td>
+							<strong>{{burger.dataValues.valor12}}</strong>
+						</td>
+						<td class="options">
+                        <div class="dropdown dropdown-options">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon_plus_alt2"></i></a>
+                            <div class="dropdown-menu">
+                                <h5>{{burger.dataValues.title_option}}</h5>
+                                <label>
+                                <input type="radio" value="option1" name="options_1" checked>{{burger.dataValues.opt1}} <span>+ R${{burger.dataValues.valor_opt1}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option2" name="options_1" >{{burger.dataValues.opt2}} <span>+ R${{burger.dataValues.valor_opt2}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option3" name="options_1" >{{burger.dataValues.opt3}}<span>+ R${{burger.dataValues.valor_opt3}}</span>
+                                </label>
+                                <h5>{{burger.dataValues.title_option1_1}}</h5>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt1_1}}<span>+ R${{burger.dataValues.valor_opt1_1}}</span>
+                                </label>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt2_1}}<span>+ R${{burger.dataValues.valor_opt2_1}}</span>
+                                </label>
+                                <a href="#0" class="add_to_basket">Adicionar ao carrinho</a>
+                            </d2v>
+                        </div>
+                    </td>
+					</tr>
+                    <tr>
+						<td>
+                        	<figure class="thumb_menu_list"><img src="img/menu-thumb-4.jpg" alt="thumb"></figure>
+							<h5>13. {{burger.dataValues.title13}}</h5>
+							<p>
+								{{burger.dataValues.desc13}}
+							</p>
+						</td>
+						<td>
+							<strong>{{burger.dataValues.valor13}}</strong>
+						</td>
+						<td class="options">
+                        <div class="dropdown dropdown-options">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon_plus_alt2"></i></a>
+                            <div class="dropdown-menu">
+                                <h5>{{burger.dataValues.title_option}}</h5>
+                                <label>
+                                <input type="radio" value="option1" name="options_1" checked>{{burger.dataValues.opt1}} <span>+ R${{burger.dataValues.valor_opt1}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option2" name="options_1" >{{burger.dataValues.opt2}} <span>+ R${{burger.dataValues.valor_opt2}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option3" name="options_1" >{{burger.dataValues.opt3}}<span>+ R${{burger.dataValues.valor_opt3}}</span>
+                                </label>
+                                <h5>{{burger.dataValues.title_option1_1}}</h5>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt1_1}}<span>+ R${{burger.dataValues.valor_opt1_1}}</span>
+                                </label>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt2_1}}<span>+ R${{burger.dataValues.valor_opt2_1}}</span>
+                                </label>
+                                <a href="#0" class="add_to_basket">Adicionar ao carrinho</a>
+                            </d2v>
+                        </div>
+                    </td>
+					</tr>
+                    <tr>
+						<td>
+                        	<figure class="thumb_menu_list"><img src="img/menu-thumb-4.jpg" alt="thumb"></figure>
+							<h5>14. {{burger.dataValues.title14}}</h5>
+							<p>
+								{{burger.dataValues.desc14}}
+							</p>
+						</td>
+						<td>
+							<strong>{{burger.dataValues.valor14}}</strong>
+						</td>
+						<td class="options">
+                        <div class="dropdown dropdown-options">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon_plus_alt2"></i></a>
+                            <div class="dropdown-menu">
+                                <h5>{{burger.dataValues.title_option}}</h5>
+                                <label>
+                                <input type="radio" value="option1" name="options_1" checked>{{burger.dataValues.opt1}} <span>+ R${{burger.dataValues.valor_opt1}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option2" name="options_1" >{{burger.dataValues.opt2}} <span>+ R${{burger.dataValues.valor_opt2}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option3" name="options_1" >{{burger.dataValues.opt3}}<span>+ R${{burger.dataValues.valor_opt3}}</span>
+                                </label>
+                                <h5>{{burger.dataValues.title_option1_1}}</h5>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt1_1}}<span>+ R${{burger.dataValues.valor_opt1_1}}</span>
+                                </label>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt2_1}}<span>+ R${{burger.dataValues.valor_opt2_1}}</span>
+                                </label>
+                                <a href="#0" class="add_to_basket">Adicionar ao carrinho</a>
+                            </d2v>
+                        </div>
+                    </td>
+					</tr>
+                    <tr>
+						<td>
+                        	<figure class="thumb_menu_list"><img src="img/menu-thumb-4.jpg" alt="thumb"></figure>
+							<h5>15. {{burger.dataValues.title15}}</h5>
+							<p>
+								{{burger.dataValues.desc15}}
+							</p>
+						</td>
+						<td>
+							<strong>{{burger.dataValues.valor15}}</strong>
+						</td>
+						<td class="options">
+                        <div class="dropdown dropdown-options">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="icon_plus_alt2"></i></a>
+                            <div class="dropdown-menu">
+                                <h5>{{burger.dataValues.title_option}}</h5>
+                                <label>
+                                <input type="radio" value="option1" name="options_1" checked>{{burger.dataValues.opt1}} <span>+ R${{burger.dataValues.valor_opt1}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option2" name="options_1" >{{burger.dataValues.opt2}} <span>+ R${{burger.dataValues.valor_opt2}}</span>
+                                </label>
+                                <label>
+                                <input type="radio" value="option3" name="options_1" >{{burger.dataValues.opt3}}<span>+ R${{burger.dataValues.valor_opt3}}</span>
+                                </label>
+                                <h5>{{burger.dataValues.title_option1_1}}</h5>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt1_1}}<span>+ R${{burger.dataValues.valor_opt1_1}}</span>
+                                </label>
+                                <label>
+                                <input type="checkbox" value="">{{burger.dataValues.opt2_1}}<span>+ R${{burger.dataValues.valor_opt2_1}}</span>
+                                </label>
+                                <a href="#0" class="add_to_basket">Adicionar ao carrinho</a>
+                            </d2v>
                         </div>
                     </td>
 					</tr>

@@ -62,6 +62,10 @@ const MenuBurger = db.sequelize.define('menu_burger', {
         type: db.Sequelize.STRING,
         require: true
     },
+    title11: {
+        type: db.Sequelize.STRING,
+        require: true
+    },
     title12: {
         type: db.Sequelize.STRING,
         require: true
@@ -201,7 +205,56 @@ const MenuBurger = db.sequelize.define('menu_burger', {
     valor15: {
         type: db.Sequelize.STRING,
         require: true
-    }
+    },
+    title_option: {
+        type: db.Sequelize.STRING,
+        require: true
+    },
+    opt1: {
+        type: db.Sequelize.STRING,
+        require: true
+    },
+    valor_opt1: {
+        type: db.Sequelize.FLOAT,
+        require: true
+    },
+    opt2: {
+        type: db.Sequelize.STRING,
+        require: true
+    },
+    valor_opt2: {
+        type: db.Sequelize.FLOAT,
+        require: true
+    },
+    opt3: {
+        type: db.Sequelize.STRING,
+        require: true
+    },
+    valor_opt3: {
+        type: db.Sequelize.FLOAT,
+        require: true
+    },
+    title_option1_1: {
+        type: db.Sequelize.STRING,
+        require: true
+    },
+    opt1_1: {
+        type: db.Sequelize.STRING,
+        require: true
+    },
+    valor_opt1_1: {
+        type: db.Sequelize.FLOAT,
+        require: true
+    },
+    opt2_1: {
+        type: db.Sequelize.STRING,
+        require: true
+    },
+    valor_opt2_1: {
+        type: db.Sequelize.FLOAT,
+        require: true
+    },
+
 })
 
 //create table(model)

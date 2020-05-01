@@ -254,7 +254,20 @@ router.get('/menuburger', (req, res) => {
         valor12: 'R$:11,98',
         valor13: 'R$:11,98',
         valor14: 'R$:11,98',
-        valor15: 'R$:11,98'
+        valor15: 'R$:11,98',
+        title_option: 'Escolha um tipo de Carne',
+        opt1: 'Bovina',
+        valor_opt1: '0.00',
+        opt2: 'Frango',
+        valor_opt2: '2.00',
+        opt3: 'Suína',
+        valor_opt3: '2.50',
+        title_option1_1: 'Escolha o tipo de Batata',
+        opt1_1: 'Batata-Palha',
+        valor_opt1_1: '0.50',
+        opt2_1: 'Batata-Frita',
+        valor_opt2_1: '1.00'
+
     }).then(() => {
         res.send('Pagina Resetada com Sucesso!')
     }).catch((err) => {
