@@ -5,12 +5,16 @@ const router = express.Router()
 const HeaderNav = require('../models/HeaderNav')
 const Footer = require('../models/Footer_models')
 const MenuBurger = require('../models/MenuBurger')
+const MenuBebidas = require('../models/MenuBebidas')
 
 router.get('/', (req, res) => {
     HeaderNav.findOne().then((nav) => {
         Footer.findOne().then((footer) => {
             MenuBurger.findOne().then((burger) => {
-                res.render('menu/menu', { nav: nav, footer: footer, burger: burger })
+                MenuBebidas.findOne().then((bebidas) => {
+
+                    res.render('menu/menu', { nav: nav, footer: footer, burger: burger, bebidas: bebidas })
+                })
             })
         })
     })

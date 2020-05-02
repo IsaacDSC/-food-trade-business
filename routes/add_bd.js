@@ -275,4 +275,42 @@ router.get('/menuburger', (req, res) => {
     })
 })
 
+router.get('/menubebidas', (req, res) => {
+    MenuBebidas.create({
+        title: 'BEBIDAS',
+        desc: 'Todos os produtos são de extrema qualidade e confiabilidade, tratados e seguindo um rigoroso padão de qualidade. Compre sem medo.',
+        tabela1: 'Item',
+        tabela2: 'Valor',
+        tabela3: 'Alteração',
+        title1: 'Coca-Lata 0.33L',
+        desc1: 'Estupendamente gelada!',
+        valor1: '4.00',
+        title2: 'Coca-Lata zero 0.33L',
+        desc2: 'Estupendamente gelada!',
+        valor2: '4.00',
+        title3: 'Coca-cola 600ml',
+        desc3: 'Estupendamente gelada!',
+        valor3: '6.00',
+        title4: 'Fanta-Laranja 0.33L',
+        desc4: 'Estupendamente gelada!',
+        valor4: '4.00',
+        title5: 'H2O 600ml',
+        desc5: 'Estupendamente gelada!',
+        valor5: '8.00',
+        title6: 'Ativ-Plus',
+        desc6: 'Estupendamente gelada!',
+        valor6: '1.20',
+        title7: 'Mantiqueira 2L',
+        desc7: 'Estupendamente gelada!',
+        valor7: '6.00',
+        title8: 'Coca-cola 2l',
+        desc8: 'Estupendamente gelada!',
+        valor8: '10.00'
+    }).then(() => {
+        res.send('Pagina Resetada com Sucesso!')
+    }).catch((err) => {
+        res.send('Erro ao Resetar ' + err)
+    })
+})
+
 module.exports = router
