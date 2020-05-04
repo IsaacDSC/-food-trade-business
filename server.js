@@ -24,8 +24,7 @@ const add_bd = require('./routes/add_bd')
 const addBd = require('./routes/addBd')
     //adionando rota para apresentar visualização da edição pelo dashboard
 const visualizarAdmin = require('./routes/visualizarAdmin')
-    // adionando rota para receber pedidos e calcular
-const pedidos_calcular = require('./routes/pedidos_calcular')
+
 
 //configurando body-parser
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -46,7 +45,7 @@ app.use('/superuser', loginAdmin)
 app.use('/add_bd', add_bd)
 app.use('/addbd', addBd)
 app.use('/visAdmin', visualizarAdmin)
-app.use('/pedidos', pedidos_calcular)
+
 
 const PORT = 3000
 app.listen(PORT, () => {

@@ -22,6 +22,8 @@ const MenuPizza = require('../models/MenuPizza')
 const MenuPromocoes = require('../models/MenuProcoes')
 const MenuSorvetes = require('../models/MenuSorvetes')
 
+
+
 router.get('/', (req, res) => {
     res.render('add_bd/reset', { layout: 'dashboard.handlebars' })
 })
@@ -312,5 +314,7 @@ router.get('/menubebidas', (req, res) => {
         res.send('Erro ao Resetar ' + err)
     })
 })
+
+
 
 module.exports = router
