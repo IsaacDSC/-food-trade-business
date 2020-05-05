@@ -3,6 +3,9 @@ const app = express()
 const bodyParser = require('body-parser')
 const handlebars = require('express-handlebars')
 const path = require('path')
+const session = require('express-session')
+const flash = require('connect-flash')
+const passport = require('passport')
 
 //adionando rotas
 const home = require('./routes/home')
@@ -34,6 +37,23 @@ app.engine('handlebars', handlebars({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
     //adionando pasta public
 app.use(express.static(path.join(__dirname, 'public')))
+    //configurando a sessao
+app.use(session({
+        secret: 'secret',
+        resave: true,
+        saveUninitialized: true
+    }))
+    //configurando passport
+app.use(passport.initialize())
+app.use(passport.session())
+    //configurando flash
+app.use(flash())
+    //configurando midleware flash
+app.use((req, res, next) => {
+    res.locals.success_msg = req.flash('success_msg')
+    res.locals.error_msg = req.flash('error_msg')
+    next()
+})
 
 
 app.use('/', home)

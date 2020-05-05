@@ -1,35 +1,38 @@
 {
-    "name": "food-trade-business",
-    "version": "1.0.0",
-    "description": "ecommerce de hamburguer",
-    "main": "server.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/IsaacDSC/food-trade-business.git"
-    },
-    "keywords": [
-        "hamburgue",
-        "petisco",
-        "milk-shake",
-        "suco",
-        "natural",
-        "best",
-        "burger"
-    ],
-    "author": "IsaacDSC",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/IsaacDSC/food-trade-business"
-    },
-    "homepage": "https://github.com/IsaacDSC/food-trade-business#readme",
-    "dependencies": {
-        "body-parser": "^1.19.0",
-        "express": "^4.17.1",
-        "express-handlebars": "^3.1.0",
-        "mysql2": "^2.1.0",
-        "sequelize": "^5.21.5"
-    }
+  "name": "food-trade-business",
+  "version": "1.0.0",
+  "description": "ecommerce de hamburguer",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsaacDSC/food-trade-business.git"
+  },
+  "keywords": [
+    "hamburgue",
+    "petisco",
+    "milk-shake",
+    "suco",
+    "natural",
+    "best",
+    "burger"
+  ],
+  "author": "IsaacDSC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IsaacDSC/food-trade-business"
+  },
+  "homepage": "https://github.com/IsaacDSC/food-trade-business#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.1.0",
+    "passport": "^0.4.1",
+    "sequelize": "^5.21.5"
+  }
 }
