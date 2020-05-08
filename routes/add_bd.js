@@ -315,6 +315,39 @@ router.get('/menubebidas', (req, res) => {
     })
 })
 
+router.get('/menupizzas', (req, res) => {
+    MenuPizza.create({
+        title: 'Best Pizzas',
+        desc: 'Todos os produtos são de extrema qualidade e confiabilidade, tratados e seguindo um rigoroso padão de qualidade. Compre sem medo.',
+        tabela1: 'Item',
+        tabela2: 'Valor',
+        tabela3: 'Alteração',
+        title1: 'MUSSARELA - ESPECIALIDADES',
+        desc1: 'QUEIJO, MUSSARELA E ORÉGANO',
+        valor1: '30,95',
+        title2: 'MARGHERITA - ESPECIALIDADES',
+        desc2: 'MUSSARELA, TOMATE, MANJERICÃO E ORÉGANO',
+        valor2: '30,00',
+        title3: 'PEPPERONI - ESPECIALIDADES',
+        desc3: 'MUSSARELA, PEPPERONI E OREGANO',
+        valor3: '30,95',
+        title4: 'FRANGO COM REQUEIJÃO - ESPECIALIDADES',
+        desc4: 'FRANGO DESFIADO, REQUEIJÃO E CEBOLA',
+        valor: '30,00',
+        title5: 'VENEZA',
+        desc5: 'MOLHO, MUSSARELA, CATUPIRY, TOMATE, AZEITONA E ORÉGANO',
+        valor5: '32,00',
+        title6: 'CARIOCA',
+        desc6: 'MOLHO, MUSSARELA, OVO, MILHO, TOMATE, AZEITONA, E ORÉGANO',
+        valor6: '31,90',
+
+
+    }).then(() => {
+        res.send('Pagina resetada com sucesso!')
+    }).catch((err) => {
+        res.send('error ao resetar a pagina: ' + err)
+    })
+})
 
 
 module.exports = router
