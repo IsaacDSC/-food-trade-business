@@ -6,6 +6,7 @@ const HeaderNav = require('../models/HeaderNav')
 const pagHome_slideshow = require('../models/PagHome_Slideshow')
 const History = require('../models/HistoryHome_models')
 const Footer = require('../models/Footer_models')
+const Contato = require('../models/Contato')
 
 
 router.post('/headernav', (req, res) => {
@@ -134,7 +135,6 @@ router.post('/footer', (req, res) => {
             footer.desc3 = req.body.desc3,
             footer.imgIcon3 = req.body.imgIcon3,
 
-
             footer.save().then(() => {
                 res.send('Editado com Sucesso!')
             }).catch((err) => {
@@ -143,5 +143,26 @@ router.post('/footer', (req, res) => {
     })
 })
 
+router.post('/contato', (req, res) => {
+    Contato.findOne({ id: req.body.id }).then((contato) => {
+        contato.title = req.body.title,
+            contato.subtitle = req.body.subtitle,
+            contato.desc = req.body.desc,
+            contato.placeholder1 = req.body.placeholder1,
+            contato.placeholder2 = req.body.placeholder2,
+            contato.placeholder3 = req.body.placeholder3,
+            contato.placeholder4 = req.body.placeholder4,
+            contato.title_btn = req.body.title_btn,
+
+            contato.save().then(() => {
+                req.flash('success_msg', 'Pagina Contato Editada com Sucesso!')
+                res.redirect('/visAdmin/vis-contato')
+            }).catch((err) => {
+                req.flash('error_msg', 'Erro ao Editar a Pagina Contato, entre em contato com o administrador')
+                res.redirect('/visAdmin/vis-contato')
+                    //res.send('error' + err)
+            })
+    })
+})
 
 module.exports = router

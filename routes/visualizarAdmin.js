@@ -6,6 +6,7 @@ const HeaderNav = require('../models/HeaderNav')
 const History = require('../models/HistoryHome_models')
 const Footer = require('../models/Footer_models')
 const Slideshow = require('../models/PagHome_Slideshow')
+const Contato = require('../models/Contato')
 
 router.get('/vis-headernav', (req, res) => {
     HeaderNav.findOne().then((nav) => {
@@ -40,6 +41,14 @@ router.get('/vis-slideshow', (req, res) => {
         //Erro ao carregar pagina Visualizar Slideshow do banco de dados
         req.flash('error_msg', 'EVSDB-1010')
         res.redirect('/visAdmin/vis-slideshow')
+    })
+})
+
+router.get('/vis-contato', (req, res) => {
+    Contato.findOne().then((contato) => {
+        res.render('vis-admin/vis-contato', { layout: 'dashboard.handlebars', contato: contato })
+    }).catch((err) => {
+        res.send('Error' + err)
     })
 })
 

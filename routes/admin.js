@@ -6,6 +6,7 @@ const HeaderNav = require('../models/HeaderNav')
 const PagHome_slideshow = require('../models/PagHome_Slideshow')
 const HistoryHome = require('../models/HistoryHome_models')
 const Footer = require('../models/Footer_models')
+const Contato = require('../models/Contato')
 
 router.get('/', (req, res) => {
     res.render('admin/dashboard', { layout: 'dashboard.handlebars' })
@@ -42,6 +43,14 @@ router.get('/edit-footer', (req, res) => {
         res.render('edit-admin/edit-footer', { layout: 'dashboard.handlebars', footer: footer })
     }).catch((err) => {
         res.send('Erro ao carregar models footer: ' + err)
+    })
+})
+
+router.get('/edit-contato', (req, res) => {
+    Contato.findOne().then((contato) => {
+        res.render('edit-admin/edit-contato', { layout: 'dashboard.handlebars', contato: contato })
+    }).catch((err) => {
+        res.send('Erro ao carregar a pagina edit-contato' + err)
     })
 })
 

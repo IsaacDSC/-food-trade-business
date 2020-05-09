@@ -11,6 +11,8 @@ const Footer_models = require('../models/Footer_models')
 const Hystoryhome_models = require('../models/HistoryHome_models')
     //adionando models do cardapio da pagina home
 const CardapioHome_models = require('../models/CardapiosHome_models')
+    //adionando models da pagina contato
+const Contato = require('../models/Contato')
     //adionando Models Menu
 const MenuAlmoco = require('../models/MenuAlmoco')
 const MenuBebidas = require('../models/MenuBebidas')
@@ -349,5 +351,21 @@ router.get('/menupizzas', (req, res) => {
     })
 })
 
+router.get('/contato', (req, res) => {
+    Contato.create({
+        title: 'Seja Bem Vindo a Pagina de Cotato!',
+        subtitle: 'Contato',
+        desc: 'Ajudenos a melhorar a cada dia!!!',
+        placeholder1: 'Digite seu nome completo',
+        placeholder2: 'Digite seu E-mail',
+        placeholder3: '',
+        placeholder4: 'Escreva sua mensagem...',
+        title_btn: 'Enviar Mensagem',
+    }).then(() => {
+        res.send('Pagina resetada com sucesso!')
+    }).catch((err) => {
+        res.send('Erro ao resetar a pagina: ' + err)
+    })
+})
 
 module.exports = router
