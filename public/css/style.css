@@ -1252,9 +1252,13 @@ a,a:focus,a:hover{text-decoration:none}
 html *{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 body{font-size:13px;line-height:1.4;color:#555;background-color:#f5f5f5;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
 
-.high_light h3,h1,h2,h3.slide_typo{font-family:Lato,"Helvetica Neue",Helvetica,Arial,sans-serif}h1,h2,h3,h4,h5,h6,label{color:#333}
+.high_light h3,h1,h2,h3.slide_typo{font-family:Lato,"Helvetica Neue",Helvetica,Arial,sans-serif}
 
-h3.slide_typo{letter-spacing:-2px;font-size:60px;color:#fff!important;font-weight:300}.box_style_2 h2.inner,h3 .slide_typo strong{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+h1,h2,h3,h4,h5,h6,label{color:#333}
+
+h3.slide_typo{letter-spacing:-2px;font-size:60px;color:#fff!important;font-weight:300}
+
+.box_style_2 h2.inner,h3 .slide_typo strong{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
 
 h3 .slide_typo strong{font-weight:400}
 
@@ -1523,7 +1527,9 @@ hr.styled{border:0;border-top:1px solid #ddd;border-bottom:1px solid #fff}
     
     #cart_box,.box_style_2{background:#fff;border-radius:3px;border:1px solid #ededed;margin-bottom:25px;padding:25px}
     
-    .box_style_2#main_menu,.box_style_2.info{padding-bottom:10px}.box_style_2#help i{font-size:52px;display:inline-block;color:#999}
+    .box_style_2#main_menu,.box_style_2.info{padding-bottom:10px}
+    
+    .box_style_2#help i{font-size:52px;display:inline-block;color:#999}
     
     .box_style_2#help a.phone{font-size:26px;display:block;margin-bottom:0;color:#85c99d}
     
@@ -1659,7 +1665,7 @@ hr.styled{border:0;border-top:1px solid #ddd;border-bottom:1px solid #fff}
     
     .review_strip_single h4{font-size:18px;margin:-12px 0 35px 90px;padding:0}
     
-    .review_strip_single small{float:right;font-size:12px;margin-top:-10px;font-style:italic}
+    .review_strip_single small{float:right;font-size:12px;margin-top:-10px;font-style:italic;}
     
     ul.opening_list{margin:20px 0 0;padding:0}
     
@@ -2030,7 +2036,7 @@ a.btn_filter#search_bt:before{font-family:fontello;content:"\ee33";font-size:17p
 
 .search-overlay-menu .search-overlay-close:hover{color:#ff1a22; cursor:pointer}
 
-.thumb_menu_list{width:60px;height:60px;overflow:hidden;text-align:center;display:inline-block;float:left;margin-right:15px;border:1px solid #fff;border-radius:3px}
+.thumb_menu_list{width:60px;height:60px;overflow:hidden;text-align:justify;display:inline-block;float:left;margin-right:15px;border:1px solid #fff;border-radius:3px;}
 
 .thumb_menu_list img{width:60px;height:auto}
 
