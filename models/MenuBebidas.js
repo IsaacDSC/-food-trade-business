@@ -54,34 +54,6 @@ const MenuBurger = db.sequelize.define('menu_bebidas', {
         type: db.Sequelize.STRING,
         require: true
     },
-    title9: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    title10: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    title12: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    title12: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    title13: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    title14: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    title15: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
     desc1: {
         type: db.Sequelize.STRING,
         require: true
@@ -114,94 +86,38 @@ const MenuBurger = db.sequelize.define('menu_bebidas', {
         type: db.Sequelize.STRING,
         require: true
     },
-    desc9: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    desc10: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    desc11: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    desc12: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    desc13: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    desc14: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    desc15: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
     valor1: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor2: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor3: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor4: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor5: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor6: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor7: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor8: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
-    valor9: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    valor10: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    valor11: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    valor12: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    valor13: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    valor14: {
-        type: db.Sequelize.STRING,
-        require: true
-    },
-    valor15: {
-        type: db.Sequelize.STRING,
-        require: true
-    }
 })
 
 //create table(model)

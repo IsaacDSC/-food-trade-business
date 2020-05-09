@@ -31,8 +31,10 @@ router.post('/headernav', (req, res) => {
             nav.urlNav5 = req.body.urlNav5
 
         nav.save().then(() => {
-            res.send('Editado com Sucesso!')
+            req.flash('success_msg', 'Pagina Editada com Sucesso!')
+            res.redirect('/visAdmin/vis-headernav')
         }).cath((err) => {
+            req.flash('error_msg', ' error: EEN-1001')
             res.send('Erro ao Editar:  ' + err)
         })
     })

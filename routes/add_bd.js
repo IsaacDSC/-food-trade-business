@@ -22,6 +22,8 @@ const MenuPizza = require('../models/MenuPizza')
 const MenuPromocoes = require('../models/MenuProcoes')
 const MenuSorvetes = require('../models/MenuSorvetes')
 
+
+
 router.get('/', (req, res) => {
     res.render('add_bd/reset', { layout: 'dashboard.handlebars' })
 })
@@ -274,5 +276,78 @@ router.get('/menuburger', (req, res) => {
         res.send('Erro ao Resetar : ' + err)
     })
 })
+
+router.get('/menubebidas', (req, res) => {
+    MenuBebidas.create({
+        title: 'BEBIDAS',
+        desc: 'Todos os produtos são de extrema qualidade e confiabilidade, tratados e seguindo um rigoroso padão de qualidade. Compre sem medo.',
+        tabela1: 'Item',
+        tabela2: 'Valor',
+        tabela3: 'Alteração',
+        title1: 'Coca-Lata 0.33L',
+        desc1: 'Estupendamente gelada!',
+        valor1: '4.00',
+        title2: 'Coca-Lata zero 0.33L',
+        desc2: 'Estupendamente gelada!',
+        valor2: '4.00',
+        title3: 'Coca-cola 600ml',
+        desc3: 'Estupendamente gelada!',
+        valor3: '6.00',
+        title4: 'Fanta-Laranja 0.33L',
+        desc4: 'Estupendamente gelada!',
+        valor4: '4.00',
+        title5: 'H2O 600ml',
+        desc5: 'Estupendamente gelada!',
+        valor5: '8.00',
+        title6: 'Ativ-Plus',
+        desc6: 'Estupendamente gelada!',
+        valor6: '1.20',
+        title7: 'Mantiqueira 2L',
+        desc7: 'Estupendamente gelada!',
+        valor7: '6.00',
+        title8: 'Coca-cola 2l',
+        desc8: 'Estupendamente gelada!',
+        valor8: '10.00'
+    }).then(() => {
+        res.send('Pagina Resetada com Sucesso!')
+    }).catch((err) => {
+        res.send('Erro ao Resetar ' + err)
+    })
+})
+
+router.get('/menupizzas', (req, res) => {
+    MenuPizza.create({
+        title: 'Best Pizzas',
+        desc: 'Todos os produtos são de extrema qualidade e confiabilidade, tratados e seguindo um rigoroso padão de qualidade. Compre sem medo.',
+        tabela1: 'Item',
+        tabela2: 'Valor',
+        tabela3: 'Alteração',
+        title1: 'MUSSARELA - ESPECIALIDADES',
+        desc1: 'QUEIJO, MUSSARELA E ORÉGANO',
+        valor1: '30,95',
+        title2: 'MARGHERITA - ESPECIALIDADES',
+        desc2: 'MUSSARELA, TOMATE, MANJERICÃO E ORÉGANO',
+        valor2: '30,00',
+        title3: 'PEPPERONI - ESPECIALIDADES',
+        desc3: 'MUSSARELA, PEPPERONI E OREGANO',
+        valor3: '30,95',
+        title4: 'FRANGO COM REQUEIJÃO - ESPECIALIDADES',
+        desc4: 'FRANGO DESFIADO, REQUEIJÃO E CEBOLA',
+        valor: '30,00',
+        title5: 'VENEZA',
+        desc5: 'MOLHO, MUSSARELA, CATUPIRY, TOMATE, AZEITONA E ORÉGANO',
+        valor5: '32,00',
+        title6: 'CARIOCA',
+        desc6: 'MOLHO, MUSSARELA, OVO, MILHO, TOMATE, AZEITONA, E ORÉGANO',
+        valor6: '31,90',
+
+
+    }).then(() => {
+        res.send('Pagina resetada com sucesso!')
+    }).catch((err) => {
+        res.send('error ao resetar a pagina: ' + err)
+    })
+})
+
 
 module.exports = router

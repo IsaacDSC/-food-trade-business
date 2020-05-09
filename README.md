@@ -53,6 +53,12 @@
                         visualizarAdmin.js => responsável por carregar as prés visualizações de cada pagina edit-dashboard;
                         
                         
+        Documentação de Erros
+                # Erros de Editar padrão(EEP-1001) - Erro Editar Pagina
+                        EEN-1001 => erro ao editar Navegação pelo dashboard;
+                        EES-1010 => erro ao editar Pagina Home(slideshow), pelo dashboard;
+                        EEH-1100 => erro ao editar Pagina Home(Pequena Historia da empresa), pelo dashboard;
+                        EEF-1101 => erro ao editar Footer(rodapé do site), pelo dashboard;
                         
 
         
