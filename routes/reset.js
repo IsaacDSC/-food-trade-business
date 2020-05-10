@@ -27,7 +27,7 @@ const MenuSorvetes = require('../models/MenuSorvetes')
 
 
 router.get('/', (req, res) => {
-    res.render('add_bd/reset', { layout: 'dashboard.handlebars' })
+    res.render('reset/reset', { layout: 'dashboard.handlebars' })
 })
 
 router.get('/headernav', (req, res) => {

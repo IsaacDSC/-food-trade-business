@@ -21,8 +21,8 @@ const contato = require('./routes/contato')
 const loginAdmin = require('./routes/loginAdmin')
     //adionando pagina de login
 const login_register = require('./routes/login_register')
-    //adionando paginas para  add_bd
-const add_bd = require('./routes/add_bd')
+    //adionando paginas para  reset
+const reset = require('./routes/reset')
     //adionando addbd dahsboard rotas post
 const addBd = require('./routes/addBd')
     //adionando rota para apresentar visualização da edição pelo dashboard
@@ -62,7 +62,7 @@ app.use('/menu', menu)
 app.use('/sobre', sobre)
 app.use('/contato', contato)
 app.use('/superuser', loginAdmin)
-app.use('/add_bd', add_bd)
+app.use('/reset', reset)
 app.use('/addbd', addBd)
 app.use('/visAdmin', visualizarAdmin)
 
