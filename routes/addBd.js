@@ -7,6 +7,8 @@ const pagHome_slideshow = require('../models/PagHome_Slideshow')
 const History = require('../models/HistoryHome_models')
 const Footer = require('../models/Footer_models')
 const Contato = require('../models/Contato')
+    //adionando models menu
+const MenuBurger = require('../models/MenuBurger')
 
 
 router.post('/headernav', (req, res) => {
@@ -162,6 +164,71 @@ router.post('/contato', (req, res) => {
                 res.redirect('/visAdmin/vis-contato')
                     //res.send('error' + err)
             })
+    })
+})
+
+router.post('/menuBurger', (req, res) => {
+    MenuBurger.findOne({ id: req.body.id }).then((burger) => {
+        burger.title = req.body.title,
+            burger.desc = req.body.desc,
+            burger.tabela1 = req.body.tabela1,
+            burger.tabela2 = req.body.tabela2,
+            burger.tabela3 = req.body.tabela3,
+            burger.title1 = req.body.title1,
+            burger.desc1 = req.body.desc1,
+            burger.valor1 = req.body.valor1,
+            burger.title2 = req.body.title2,
+            burger.desc2 = req.body.desc2,
+            burger.valor2 = req.body.valor2,
+            burger.title3 = req.body.title3,
+            burger.desc3 = req.body.desc3,
+            burger.valor3 = req.body.valor3,
+            burger.title4 = req.body.title4,
+            burger.desc4 = req.body.desc4,
+            burger.valor4 = req.body.valor4,
+            burger.title5 = req.body.title5,
+            burger.desc5 = req.body.desc5,
+            burger.valor5 = req.body.valor5,
+            burger.title6 = req.body.title6,
+            burger.desc6 = req.body.desc6,
+            burger.valor6 = req.body.valor6,
+            burger.title7 = req.body.title7,
+            burger.desc7 = req.body.desc7,
+            burger.valor7 = req.body.valor7,
+            burger.title8 = req.body.title8,
+            burger.desc8 = req.body.desc8,
+            burger.valor8 = req.body.valor8,
+            burger.title9 = req.body.title9,
+            burger.desc9 = req.body.desc9,
+            burger.valor9 = req.body.valor9,
+            burger.title10 = req.body.title10,
+            burger.desc10 = req.body.desc10,
+            burger.valor10 = req.body.valor10,
+            burger.title11 = req.body.title11,
+            burger.desc11 = req.body.desc11,
+            burger.valor11 = req.body.valor11,
+            burger.title12 = req.body.title12,
+            burger.desc12 = req.body.desc12,
+            burger.valor12 = req.body.valor12,
+            burger.title13 = req.body.title13,
+            burger.desc13 = req.body.desc13,
+            burger.valor13 = req.body.valor13,
+            burger.title14 = req.body.title14,
+            burger.desc14 = req.body.desc14,
+            burger.valor14 = req.body.valor14,
+            burger.title15 = req.body.title15,
+            burger.desc15 = req.body.desc15,
+            burger.valor15 = req.body.valor15,
+
+            burger.save().then(() => {
+                req.flash('success_msg', 'Menu Hamburger Editado com sucesso!')
+                res.redirect('/visAdmin/vis-contato')
+            }).catch((err) => {
+                //res.send('Error ao editar a pagina ' + err)
+                req.flash('error_msg', 'Erro ao editar Pagina Hamburger')
+                res.redirect('/visAdmin/vis-contato')
+            })
+
     })
 })
 

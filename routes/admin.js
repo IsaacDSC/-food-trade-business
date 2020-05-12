@@ -8,6 +8,9 @@ const HistoryHome = require('../models/HistoryHome_models')
 const Footer = require('../models/Footer_models')
 const Contato = require('../models/Contato')
 
+//adionando models menus cardápios
+const MenuBurger = require('../models/MenuBurger')
+
 router.get('/', (req, res) => {
     res.render('admin/dashboard', { layout: 'dashboard.handlebars' })
 })
@@ -53,5 +56,13 @@ router.get('/edit-contato', (req, res) => {
         res.send('Erro ao carregar a pagina edit-contato' + err)
     })
 })
+
+router.get('/edit-menuBurger', (req, res) => {
+    MenuBurger.findOne().then((burger) => {
+        res.render('edit-admin/edit-menuBurger', { layout: 'dashboard.handlebars', burger: burger })
+    })
+})
+
+
 
 module.exports = router
