@@ -7,6 +7,8 @@ const History = require('../models/HistoryHome_models')
 const Footer = require('../models/Footer_models')
 const Slideshow = require('../models/PagHome_Slideshow')
 const Contato = require('../models/Contato')
+    //adionando models para carregar pagina de cardápios
+const MenuBurger = require('../models/MenuBurger')
 
 router.get('/vis-headernav', (req, res) => {
     HeaderNav.findOne().then((nav) => {
@@ -52,7 +54,13 @@ router.get('/vis-contato', (req, res) => {
     })
 })
 
-
+router.get('/vis-menuBurger', (req, res) => {
+    MenuBurger.findOne().then((burger) => {
+        res.render('vis-admin/vis-menuBurger', { layout: 'dashboard.handlebars', burger: burger })
+    }).catch((err) => {
+        res.send('error : ' + err)
+    })
+})
 
 
 module.exports = router
