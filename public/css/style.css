@@ -1239,6 +1239,7 @@ a,a:focus,a:hover{text-decoration:none}
 
 #hero_video>div,#sub_content,.parallax-content-2>div,.strip_list .go_to div,.table.cart-list td{vertical-align:middle}
 
+
 .slide_typo_2,h3.slide_typo,s.checkbox-holder{white-space:nowrap}
 
 .bs-wizard>.bs-wizard-step.disabled a.bs-wizard-dot,.marker_info:after{pointer-events:none}
@@ -1586,11 +1587,11 @@ hr.styled{border:0;border-top:1px solid #ddd;border-bottom:1px solid #fff}
     
     ul.additional_links li:first-child{border-left:none;padding-left:0;margin-left:0}
     
-    .table.cart-list td h5{margin-top: 70px;font-weight:600; text-align: center;}
+    .table.cart-list td h5{margin-top: 0px;font-weight:600; text-align: center; }
 
     .table.cart-list td p {
       text-align: justify;
-      
+      margin-bottom: 15px;
       color: #F5F5F5;
       font-weight: bold;
       background-color:#ff1a22;
@@ -2287,7 +2288,7 @@ box-shadow: 0px 5px 35px 9px #ccc;
     .thumb_menu_list{width:80px;height:60px;overflow:hidden;text-align:justify;display:inline-block;float:left;margin-right:15px;border:1px solid #fff;border-radius:3px;}
 
 .thumb_menu_list img{width:80px;height:auto;}
-.table.cart-list td h5{margin-top: 60px;font-weight:600; text-align: center;}
+.table.cart-list td h5{margin-top: 0;font-weight:600; text-align: center;}
 
     .table.cart-list td p {
       text-align: inherit;
