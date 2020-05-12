@@ -13,10 +13,10 @@ MOBILE SELECT MENU
     //plugin's default options
     var settings = {
       switchWidth: 767,
-      topOptionText: 'Filter by category',
-      indentString: '&nbsp;&nbsp;&nbsp;'
+      topOptionText: 'Filtrar Por categoria',
+      indentString: '&nbsp;&nbsp;&nbsp;',
     };
-    
+   
     
     //function to check if selector matches a list
     function isList($this){
