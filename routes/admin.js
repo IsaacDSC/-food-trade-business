@@ -5,6 +5,7 @@ const router = express.Router()
 const HeaderNav = require('../models/HeaderNav')
 const PagHome_slideshow = require('../models/PagHome_Slideshow')
 const HistoryHome = require('../models/HistoryHome_models')
+const CardapioHome = require('../models/CardapiosHome_models')
 const Footer = require('../models/Footer_models')
 const Contato = require('../models/Contato')
 
@@ -43,6 +44,14 @@ router.get('/edit-history', (req, res) => {
         res.render('edit-admin/edit-history', { layout: 'dashboard.handlebars', hisHome: history })
     }).catch((err) => {
         res.send('Error: ' + err)
+    })
+})
+
+router.get('/edit-cardapiohome', (req, res) => {
+    CardapioHome.findOne().then((cardHome) => {
+        res.render('edit-admin/edit-cardapioHome', { layout: 'dashboard.handlebars', cardHome: cardHome })
+    }).catch((err) => {
+        res.send('Error:  ' + err)
     })
 })
 

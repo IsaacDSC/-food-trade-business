@@ -8,6 +8,7 @@ const History = require('../models/HistoryHome_models')
 const Footer = require('../models/Footer_models')
 const Contato = require('../models/Contato')
     //adionando models menu
+const CardapioHome = require('../models/CardapiosHome_models')
 const MenuBurger = require('../models/MenuBurger')
 
 
@@ -231,5 +232,7 @@ router.post('/menuBurger', (req, res) => {
 
     })
 })
+
+router.post('/')
 
 module.exports = router

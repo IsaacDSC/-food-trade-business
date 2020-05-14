@@ -13,55 +13,51 @@ const CadapioHome_models = db.sequelize.define('cardapioHome_pag', {
         type: db.Sequelize.STRING(30),
         require: true
     },
-    url2: {
-        type: db.Sequelize.STRING(40),
-        require: true
-    },
-    img_item2_1: {
+    img2_1: {
         type: db.Sequelize.STRING,
         require: true
     },
-    title_item2_1: {
+    title2_1: {
         type: db.Sequelize.STRING(90),
         require: true
     },
-    desc_item2_1: {
+    desc2_1: {
         type: db.Sequelize.STRING(220),
         require: true
     },
-    valor_item2_1: {
+    valor2_1: {
         type: db.Sequelize.STRING(40),
         require: true
     },
-    img_item2_2: {
+    img2_2: {
         type: db.Sequelize.STRING,
         require: true
     },
-    title_item2_2: {
+    title2_2: {
         type: db.Sequelize.STRING(90),
         require: true
     },
-    desc_item2_2: {
+    desc2_2: {
         type: db.Sequelize.STRING(220),
         require: true
     },
-    valor_item2_2: {
+    valor2_2: {
         type: db.Sequelize.STRING(40),
         require: true
     },
-    img_item2_3: {
+    img2_3: {
         type: db.Sequelize.STRING,
         require: true
     },
-    title_item2_3: {
+    title2_3: {
         type: db.Sequelize.STRING(90),
         require: true
     },
-    desc_item2_3: {
+    desc2_3: {
         type: db.Sequelize.STRING(220),
         require: true
     },
-    valor_item2_3: {
+    valor2_3: {
         type: db.Sequelize.STRING(40),
         require: true
     },
@@ -69,55 +65,51 @@ const CadapioHome_models = db.sequelize.define('cardapioHome_pag', {
         type: db.Sequelize.STRING(30),
         require: true
     },
-    url3: {
-        type: db.Sequelize.STRING(40),
-        require: true
-    },
-    img_item3_1: {
+    img3_1: {
         type: db.Sequelize.STRING,
         require: true
     },
-    title_item3_1: {
+    title3_1: {
         type: db.Sequelize.STRING(90),
         require: true
     },
-    desc_item3_1: {
+    desc3_1: {
         type: db.Sequelize.STRING(220),
         require: true
     },
-    valor_item3_1: {
+    valor3_1: {
         type: db.Sequelize.STRING(40),
         require: true
     },
-    img_item3_2: {
+    img3_2: {
         type: db.Sequelize.STRING,
         require: true
     },
-    title_item3_2: {
+    title3_2: {
         type: db.Sequelize.STRING(90),
         require: true
     },
-    desc_item3_2: {
+    desc3_2: {
         type: db.Sequelize.STRING(220),
         require: true
     },
-    valor_item3_2: {
+    valor3_2: {
         type: db.Sequelize.STRING(40),
         require: true
     },
-    img_item3_3: {
+    img3_3: {
         type: db.Sequelize.STRING,
         require: true
     },
-    title_item3_3: {
+    title3_3: {
         type: db.Sequelize.STRING(90),
         require: true
     },
-    desc_item3_3: {
+    desc3_3: {
         type: db.Sequelize.STRING(220),
         require: true
     },
-    valor_item3_3: {
+    valor3_3: {
         type: db.Sequelize.STRING(40),
         require: true
     },
@@ -125,55 +117,51 @@ const CadapioHome_models = db.sequelize.define('cardapioHome_pag', {
         type: db.Sequelize.STRING(30),
         require: true
     },
-    url4: {
-        type: db.Sequelize.STRING(40),
-        require: true
-    },
-    img_item4_1: {
+    img4_1: {
         type: db.Sequelize.STRING,
         require: true
     },
-    title_item4_1: {
+    title4_1: {
         type: db.Sequelize.STRING(90),
         require: true
     },
-    desc_item4_1: {
+    desc4_1: {
         type: db.Sequelize.STRING(220),
         require: true
     },
-    valor_item4_1: {
+    valor4_1: {
         type: db.Sequelize.STRING(40),
         require: true
     },
-    img_item4_2: {
+    img4_2: {
         type: db.Sequelize.STRING,
         require: true
     },
-    title_item4_2: {
+    title4_2: {
         type: db.Sequelize.STRING(90),
         require: true
     },
-    desc_item4_2: {
+    desc4_2: {
         type: db.Sequelize.STRING(220),
         require: true
     },
-    valor_item4_2: {
+    valor4_2: {
         type: db.Sequelize.STRING(40),
         require: true
     },
-    img_item4_3: {
+    img4_3: {
         type: db.Sequelize.STRING,
         require: true
     },
-    title_item4_3: {
+    title4_3: {
         type: db.Sequelize.STRING(90),
         require: true
     },
-    desc_item4_3: {
+    desc4_3: {
         type: db.Sequelize.STRING(220),
         require: true
     },
-    valor_item4_3: {
+    valor4_3: {
         type: db.Sequelize.STRING(40),
         require: true
     }
