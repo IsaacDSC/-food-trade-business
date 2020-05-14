@@ -8,6 +8,7 @@ const Footer = require('../models/Footer_models')
 const Slideshow = require('../models/PagHome_Slideshow')
 const Contato = require('../models/Contato')
     //adionando models para carregar pagina de cardápios
+const CardapioHome = require('../models/CardapiosHome_models')
 const MenuBurger = require('../models/MenuBurger')
 
 router.get('/vis-headernav', (req, res) => {
@@ -59,6 +60,14 @@ router.get('/vis-menuBurger', (req, res) => {
         res.render('vis-admin/vis-menuBurger', { layout: 'dashboard.handlebars', burger: burger })
     }).catch((err) => {
         res.send('error : ' + err)
+    })
+})
+
+router.get('/vis-cardapiohome', (req, res) => {
+    CardapioHome.findOne().then((cardHome) => {
+        res.render('vis-admin/vis-cardapiohome', { layout: 'dashboard.handlebars', cardHome: cardHome })
+    }).catch((err) => {
+        res.send('Error' + err)
     })
 })
 
