@@ -10,6 +10,7 @@ const Contato = require('../models/Contato')
 
 //adionando models menus cardápios
 const MenuBurger = require('../models/MenuBurger')
+const menuBebidas = require('../models/MenuBebidas')
 
 router.get('/', (req, res) => {
     res.render('admin/dashboard', { layout: 'dashboard.handlebars' })
@@ -17,6 +18,10 @@ router.get('/', (req, res) => {
 
 router.get('/edit-pages', (req, res) => {
     res.render('edit-admin/edit-pages', { layout: 'dashboard.handlebars' })
+})
+
+router.get('/edit-cardapio', (req, res) => {
+    res.render('edit-admin/edit-cardapios', { layout: 'dashboard.handlebars' })
 })
 
 router.get('/edit-nav', (req, res) => {
@@ -63,6 +68,10 @@ router.get('/edit-menuBurger', (req, res) => {
     })
 })
 
-
+router.get('/edit-menuBebidas', (req, res) => {
+    menuBebidas.findOne().then((bebidas) => {
+        res.render('edit-admin/menuBebidas', { layout: 'dashboard.handlebars', bebidas: bebidas })
+    })
+})
 
 module.exports = router
