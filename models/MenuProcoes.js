@@ -74,6 +74,6 @@ const MenuPromocoes = db.sequelize.define('menu_promocoes', {
 })
 
 //create table(model)
-//MenuPromocoes.sync({ force: true })
+MenuPromocoes.sync({ force: true })
 
 module.exports = MenuPromocoes
