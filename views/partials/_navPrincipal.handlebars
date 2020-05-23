@@ -36,14 +36,196 @@
                         </div>
                         -->
                     </li>
+                   
 			        </ul>
                     </nav>
                     </li>
                     <!-- ======================================================================================================================== -->
                     <li class="nav-item"><a class="nav-link" href="{{nav.dataValues.urlNav5}}">{{nav.dataValues.nav5}}</a></li>
+               
+        <!-- End open cart button -->
+      </div>
                 </ul>
             </div>
         </div>
+              <button id="cart-open-btn" class="cart-open-btn" type="button"> 
+          <span class="cart-total">
+            <span class="money">$0.00</span>
+          </span>
+          <span class="icon icon--cart">
+            <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="16" height="20" viewBox="0 0 16 20">
+              <path d="M14.000,20.000 L2.000,20.000 C0.895,20.000 -0.000,19.105 -0.000,18.000 L-0.000,7.000 C-0.000,5.896 0.895,5.000 2.000,5.000 L4.000,5.000 L4.000,4.000 C4.000,1.791 5.791,0.000 8.000,0.000 C10.209,0.000 12.000,1.791 12.000,4.000 L12.000,5.000 L14.000,5.000 C15.105,5.000 16.000,5.896 16.000,7.000 L16.000,18.000 C16.000,19.105 15.105,20.000 14.000,20.000 ZM10.000,4.000 C10.000,2.895 9.105,2.000 8.000,2.000 C6.895,2.000 6.000,2.895 6.000,4.000 L6.000,5.000 L10.000,5.000 L10.000,4.000 ZM14.000,8.000 C14.000,7.448 13.552,7.000 13.000,7.000 L3.000,7.000 C2.448,7.000 2.000,7.448 2.000,8.000 L2.000,17.000 C2.000,17.552 2.448,18.000 3.000,18.000 L13.000,18.000 C13.552,18.000 14.000,17.552 14.000,17.000 L14.000,8.000 ZM12.000,17.000 C11.448,17.000 11.000,16.552 11.000,16.000 L11.000,13.000 C11.000,12.448 11.448,12.000 12.000,12.000 C12.552,12.000 13.000,12.448 13.000,13.000 L13.000,16.000 C13.000,16.552 12.552,17.000 12.000,17.000 Z" class="cls-1"/>
+            </svg>
+          </span>
+        
+          <span id="cartCount" class="cart-count">0</span>
+          <span class="fallback-text">Open cart</span>
+        </button>
+             <div id="cart" class="drawer drawer--cart close">      
+        <div class="drawer__wrapper">
+          <div class="cart-wrapper">
+            <div class="drawer__header">
+              <h3 class="heading--add-small">YOUR FOOD BAG</h3>
+              <!-- End shop logo -->
+              <button class="drawer__btn-close btn" type="button">
+                <span>Close</span>
+              </button>
+            </div> <!-- end drawer__header -->
+                  
+            <hr class="hr--clear">
+                  
+            <div class="cart">
+              <form action="https://foodly-store.myshopify.com/cart" method="POST" id="cart-form">
+                  
+                  <div class="cart-header">
+                    <div class="cart-header__item">
+                      Price
+                    </div>
+                  
+                    <div class="cart-header__item">
+                      QTY
+                    </div>
+                  </div>
+                  
+                  <ul class="cart-list">
+                    
+                    
+                  </ul>
+              
+                  <div class="cart__block cart__package">
+                    
+                    <!-- DO NOT REMOVE THE FOLLOWING COMMENT -->
+<!-- (c) Copyright 2014 Caroline Hill. All Rights Reserved. Contact Mlle Caroline Schnapp at mllegeorgesand@gmail.com -->
+<!-- DO NOT REMOVE THE ABOVE COMMENT -->
+
+
+
+  <div class="special-packing" id="is-a-gift" class="clearfix">
+    <h3 class="heading--add-small">CHOOSE PACKAGE</h3>
+    <div class="special-packing__block">
+      <input type="hidden" name="attributes[choose_package]" value="" />
+
+      <div class="special-packing__item">
+        <input type="radio" id="pack-default" name="attributes[choose_package]"  checked>
+        <label for="pack-default">paper bag <span class="special-packing__price money">$0</span></label>
+      </div>
+
+      <div class="special-packing__item">
+        <input type="radio" id="giftWrap" name="attributes[choose_package]" > 
+        <label for="giftWrap">wooden box <span class="special-packing__price money">$3.00</span></label>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<style>
+  #updates_15130955527 { display: none; }
+</style>
+
+
+                  </div>
+              
+                  <div class="cart__block cart__total clearfix">
+                    <h3 class="heading--add-small">TOTAL</h3>
+
+                    <span class="cart-total">
+                      <span class="money">R$0.00</span>
+                    </span>
+
+                    <a id="update-cart" class="update-cart" href="javascript:void(0);">
+                      <span>Atualizar Carrinho</span>
+                      <span class="icon icon--refresh">
+                        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="21" height="19" viewBox="0 0 21 19">
+                          <path d="M21.008,13.709 C21.076,14.311 20.717,14.884 20.205,14.988 C19.694,15.091 19.223,14.687 19.155,14.084 L19.000,13.670 C17.453,16.818 14.244,19.000 10.500,19.000 C6.491,19.000 3.069,16.513 1.674,13.000 L3.869,13.000 C5.127,15.378 7.623,17.000 10.500,17.000 C13.275,17.000 15.685,15.483 16.981,13.242 L16.340,13.524 C15.877,13.808 15.314,13.611 15.083,13.085 C14.852,12.559 15.041,11.903 15.504,11.619 L18.423,10.334 C18.559,10.181 18.721,10.058 18.918,10.018 C19.223,9.956 19.501,10.089 19.701,10.322 C19.722,10.342 19.737,10.372 19.757,10.395 C19.790,10.442 19.829,10.482 19.855,10.536 C19.882,10.579 19.918,10.610 19.940,10.659 C20.001,10.799 20.029,10.948 20.034,11.097 L21.008,13.709 ZM18.750,13.000 L18.579,12.539 L17.531,13.000 L18.750,13.000 ZM10.500,2.000 C8.067,2.000 5.911,3.162 4.543,4.959 C5.011,4.791 5.528,4.967 5.754,5.419 C6.003,5.918 5.800,6.540 5.301,6.809 L3.260,7.924 C3.103,8.127 2.882,8.280 2.620,8.327 C2.291,8.385 1.991,8.259 1.776,8.038 C1.752,8.019 1.737,7.991 1.715,7.969 C1.679,7.925 1.638,7.887 1.610,7.835 C1.581,7.795 1.541,7.765 1.518,7.719 C1.452,7.587 1.422,7.447 1.416,7.307 L0.367,4.880 C0.293,4.309 0.680,3.766 1.232,3.668 C1.784,3.570 2.291,3.953 2.364,4.524 L2.399,4.603 C4.061,1.854 7.052,-0.000 10.500,-0.000 C14.880,-0.000 18.558,2.968 19.656,7.000 L17.564,7.000 C16.533,4.089 13.764,2.000 10.500,2.000 Z"/>
+                        </svg>
+                      </span>
+                    </a>
+                    
+                    <p class="cart-total__info clearfix">Price excludes delivery, which is applied at checkout. Orders will be processed in USD</p>
+                    
+                  </div>
+              
+                  <div class="cart__block cart__note form form--default">
+                    <div class="form__row">
+                      <label class="heading--add-small" for="translation-missing-en-cart-general-note">o carrinho está vazio</label>
+                    </div>
+                    <div class="form__row">
+                      <textarea class="form__field form__field--textarea" id="note-to-foodly-store" name="attributes[Note to Foodly store]" rows="10" placeholder="Leave your special requirements here"></textarea>
+                      <label  class="form__field--placeholder" for="note-to-foodly-store">Leave your special requirements here</label>
+                    </div>
+                  </div>
+              
+                  <div class="text-center cart__checkout-btn">
+                    <button class="btn btn--default btn--full" type="submit" name="checkout">PROCEED TO CHECKOUT</button>
+                  </div>
+                  
+                  
+                  
+
+  <hr class="hr--clear">
+              
+  <div class="cart__block cart__shipping-calculator">
+
+    <div class="shipping-calculator" id="shipping-calculator">
+        
+      <h3 class="heading--add-small">GET SHIPPING ESTIMATES</h3>
+    
+      <div id="wrapper-response"></div>
+    
+      <div class="shipping-calculator__container form form--default">
+        <div class="field">
+          <label class="label-hide" for="address_country">Bairro</label>
+          <select class="js-dropdown-scroll" id="address_country" name="address[country]" data-default="United States"><option value="Dominican Republic" data-provinces="[]">Dominican Republic</option>
+<option value="Colombia" data-provinces="[[&quot;Bogotá, D.C.&quot;,&quot;Bogotá, D.C.&quot;],[&quot;Amazonas&quot;,&quot;Amazonas&quot;],[&quot;Antioquia&quot;,&quot;Antioquia&quot;],[&quot;Arauca&quot;,&quot;Arauca&quot;],[&quot;Atlántico&quot;,&quot;Atlántico&quot;],[&quot;Bolívar&quot;,&quot;Bolívar&quot;],[&quot;Boyacá&quot;,&quot;Boyacá&quot;],[&quot;Caldas&quot;,&quot;Caldas&quot;],[&quot;Caquetá&quot;,&quot;Caquetá&quot;],[&quot;Casanare&quot;,&quot;Casanare&quot;],[&quot;Cauca&quot;,&quot;Cauca&quot;],[&quot;Cesar&quot;,&quot;Cesar&quot;],[&quot;Chocó&quot;,&quot;Chocó&quot;],[&quot;Córdoba&quot;,&quot;Córdoba&quot;],[&quot;Cundinamarca&quot;,&quot;Cundinamarca&quot;],[&quot;Guainía&quot;,&quot;Guainía&quot;],[&quot;Guaviare&quot;,&quot;Guaviare&quot;],[&quot;Huila&quot;,&quot;Huila&quot;],[&quot;La Guajira&quot;,&quot;La Guajira&quot;],[&quot;Magdalena&quot;,&quot;Magdalena&quot;],[&quot;Meta&quot;,&quot;Meta&quot;],[&quot;Nariño&quot;,&quot;Nariño&quot;],[&quot;Norte de Santander&quot;,&quot;Norte de Santander&quot;],[&quot;Putumayo&quot;,&quot;Putumayo&quot;],[&quot;Quindío&quot;,&quot;Quindío&quot;],[&quot;Risaralda&quot;,&quot;Risaralda&quot;],[&quot;San Andrés, Providencia y Santa Catalina&quot;,&quot;San Andrés, Providencia y Santa Catalina&quot;],[&quot;Santander&quot;,&quot;Santander&quot;],[&quot;Sucre&quot;,&quot;Sucre&quot;],[&quot;Tolima&quot;,&quot;Tolima&quot;],[&quot;Valle del Cauca&quot;,&quot;Valle del Cauca&quot;],[&quot;Vaupés&quot;,&quot;Vaupés&quot;],[&quot;Vichada&quot;,&quot;Vichada&quot;]]">Colombia</option>
+<option value="Brazil" data-provinces="[[&quot;Acre&quot;,&quot;Acre&quot;],[&quot;Alagoas&quot;,&quot;Alagoas&quot;],[&quot;Amapá&quot;,&quot;Amapá&quot;],[&quot;Amazonas&quot;,&quot;Amazonas&quot;],[&quot;Bahia&quot;,&quot;Bahia&quot;],[&quot;Ceará&quot;,&quot;Ceará&quot;],[&quot;Distrito Federal&quot;,&quot;Distrito Federal&quot;],[&quot;Espírito Santo&quot;,&quot;Espírito Santo&quot;],[&quot;Goiás&quot;,&quot;Goiás&quot;],[&quot;Maranhão&quot;,&quot;Maranhão&quot;],[&quot;Mato Grosso&quot;,&quot;Mato Grosso&quot;],[&quot;Mato Grosso do Sul&quot;,&quot;Mato Grosso do Sul&quot;],[&quot;Minas Gerais&quot;,&quot;Minas Gerais&quot;],[&quot;Pará&quot;,&quot;Pará&quot;],[&quot;Paraíba&quot;,&quot;Paraíba&quot;],[&quot;Paraná&quot;,&quot;Paraná&quot;],[&quot;Pernambuco&quot;,&quot;Pernambuco&quot;],[&quot;Piauí&quot;,&quot;Piauí&quot;],[&quot;Rio Grande do Norte&quot;,&quot;Rio Grande do Norte&quot;],[&quot;Rio Grande do Sul&quot;,&quot;Rio Grande do Sul&quot;],[&quot;Rio de Janeiro&quot;,&quot;Rio de Janeiro&quot;],[&quot;Rondônia&quot;,&quot;Rondônia&quot;],[&quot;Roraima&quot;,&quot;Roraima&quot;],[&quot;Santa Catarina&quot;,&quot;Santa Catarina&quot;],[&quot;São Paulo&quot;,&quot;São Paulo&quot;],[&quot;Sergipe&quot;,&quot;Sergipe&quot;],[&quot;Tocantins&quot;,&quot;Tocantins&quot;]]">Brazil</option>
+
+        </div>
+        <div class="field" id="address_province_container" style="display:none;">
+          <label  class="label-hide" for="address_province" id="address_province_label">Cidade</label>
+          <select class="js-dropdown-scroll"  id="address_province" name="address[province]" data-default=""></select>
+        </div>  
+        <div class="field form__row">
+          <input class="form__field" type="text" id="address_zip" name="address[zip]" placeholder="Zip/Postal Code"/>
+          <label class="form__field--placeholder" for="address_zip">CEP</label>
+        </div>
+        <div class="field-full">
+          <button type="button" class="get-rates btn btn--default btn--full">Calcular o Frete</button>
+        </div>
+      </div>
+      
+    </div>
+
+    
+    <script id="shipping-calculator-response-template" type="text/template">
+      <p id="shipping-rates-feedback" <% if (success) { %> class="success" <% } else { %> class="error" <% } %>>
+      <% if (success) { %>
+        <% if (rates.length > 1) { %> 
+          There are <%= rates.length %> shipping rates available for <%= address %>, starting at <%= rates[0].price %>.
+        <% } else if (rates.length == 1) { %>
+          There is one shipping rate available for <%= address %>.
+        <% } else { %>
+          We do not ship to this destination.
+        <% } %>
+      <% } else { %>
+        <%= errorFeedback %>
+      <% } %>
+      </p>
+      <ul id="shipping-rates">
+        <% for (var i=0; i<rates.length; i++) { %>
+        <li><%= rates[i].name %> at <%= rates[i].price %></li>
+        <% } %>
+      </ul> 
+    </script>
+    
+    <!--[if lte IE 8]> 
+    <style> #shipping-calculator { display: none; } </style> 
+    <![endif]--> 
+ 
+  </div>
     </nav>
 </header>
 
