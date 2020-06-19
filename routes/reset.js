@@ -1,5 +1,7 @@
 const express = require('express')
 const router = express.Router()
+const bcryptjs = require('bcryptjs')
+
 
 //add models HeaderNav
 const HeaderNav = require('../models/HeaderNav')
@@ -23,7 +25,8 @@ const MenuDoces = require('../models/MenuDoces')
 const MenuPizza = require('../models/MenuPizza')
 const MenuPromocoes = require('../models/MenuProcoes')
 const MenuSorvetes = require('../models/MenuSorvetes')
-
+    //models login admin
+const LoginAdmin = require('../models/LoginAdmin')
 
 
 router.get('/', (req, res) => {
@@ -365,6 +368,27 @@ router.get('/contato', (req, res) => {
         res.send('Pagina resetada com sucesso!')
     }).catch((err) => {
         res.send('Erro ao resetar a pagina: ' + err)
+    })
+})
+
+router.get('/loginAdmin', (req, res) => {
+    const senha = 'secret'
+    bcryptjs.genSalt(10, (err, salt) => {
+        bcryptjs.hash(senha, salt, (err, hash) => {
+            if (err) {
+                res.send('Erro ao Criptografar esta Senha: ' + err)
+            } else {
+                const pwd = hash
+                LoginAdmin.create({
+                    login: 'food-trade-business',
+                    pwd: pwd
+                }).then(() => {
+                    res.send('Admin cadastrado com sucesso!')
+                }).catch((err) => {
+                    res.send(err)
+                })
+            }
+        })
     })
 })
 

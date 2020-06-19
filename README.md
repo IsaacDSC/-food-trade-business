@@ -23,6 +23,11 @@
                                                 /footer
                                                 /history
                                                 /cardapiohome
+                                                /menuburger
+                                                /menubebidas
+                                                /menupizzas
+                                                /contato
+                                                /loginAdmin
         
         Sobre as Libs: 
                         #bootstrap 4.4.1 dist
@@ -60,6 +65,8 @@
                         EEH-1100 => erro ao editar Pagina Home(Pequena Historia da empresa), pelo dashboard;
                         EEF-1101 => erro ao editar Footer(rodapé do site), pelo dashboard;
                         
+        Sistema de Login Admin: 
+                Using Dependencies: express-session, passport, passport-local, bcryptjs
 
         
 >>>>>>> 55bde97c9f00a6fb9c6a25d90fb479549abc1504
