@@ -68,5 +68,11 @@
         Sistema de Login Admin: 
                 Using Dependencies: express-session, passport, passport-local, bcryptjs
 
-        
+        upload files:
+                Using multer import files;
+                configuration to separate images in folders by each layout
+
+
+
+
 >>>>>>> 55bde97c9f00a6fb9c6a25d90fb479549abc1504

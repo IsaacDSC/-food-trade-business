@@ -7,6 +7,9 @@ const session = require('express-session')
 const flash = require('connect-flash')
 const passport = require('passport')
 
+const authenticate = require('./config/authenticate')
+authenticate.passport
+
 //adionando rotas
 const home = require('./routes/home')
     //adicionando tela de adm
@@ -27,6 +30,9 @@ const reset = require('./routes/reset')
 const addBd = require('./routes/addBd')
     //adionando rota para apresentar visualização da edição pelo dashboard
 const visualizarAdmin = require('./routes/visualizarAdmin')
+    //adionando upload files
+const uploadfiles = require('./routes/uploadFiles')
+
 
 
 //configurando body-parser
@@ -65,7 +71,7 @@ app.use('/superuser', loginAdmin)
 app.use('/reset', reset)
 app.use('/addbd', addBd)
 app.use('/visAdmin', visualizarAdmin)
-
+app.use('/uploadfiles', uploadfiles)
 
 const PORT = 3000
 app.listen(PORT, () => {

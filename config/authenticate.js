@@ -1,10 +1,10 @@
 const locaslStrategy = require('passport-local').Strategy
-const bcrypt = require('bcryptjs')
+const bcryptjs = require('bcryptjs')
 
 
 //models Login admin
 const LoginAdmin = require('../models/LoginAdmin')
-const passport = require('passport')
+
 
 module.export = ((passport) => {
     passport.use(new locaslStrategy({
@@ -15,9 +15,9 @@ module.export = ((passport) => {
             if (!user) {
                 return done(null, false, { error_msg: 'Cadastro com este e-mail não existe!' })
             }
-            bcrypt.compare(pwd, user.senha, (err, corr) => {
+            bcryptjs.compare(pwd, user.pwd, (err, corr) => {
                 if (corr) {
-                    return (null, user)
+                    return done(null, user)
                 } else {
                     return done(null, false, { error_msg: 'Dados incorretos!' })
                 }

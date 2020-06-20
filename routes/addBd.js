@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
+
 //adionando models
 const HeaderNav = require('../models/HeaderNav')
 const pagHome_slideshow = require('../models/PagHome_Slideshow')
@@ -10,6 +11,8 @@ const Contato = require('../models/Contato')
     //adionando models menu
 const CardapioHome = require('../models/CardapiosHome_models')
 const MenuBurger = require('../models/MenuBurger')
+    //const { pathToFileURL } = require('url')
+
 
 
 router.post('/headernav', (req, res) => {
@@ -74,11 +77,12 @@ router.post('/slideshow', (req, res) => {
         //editando com a route slideshow
         slideshow.save().then(() => {
             res.send('Editado com Sucesso!')
-        }).cath((err) => {
+        }).catch((err) => {
             res.send('Error ao Editar: ' + err)
         })
     })
 })
+
 
 router.post('/history', (req, res) => {
     History.findOne({ id: req.body.id }).then((history) => {
@@ -145,6 +149,7 @@ router.post('/footer', (req, res) => {
             })
     })
 })
+
 
 router.post('/contato', (req, res) => {
     Contato.findOne({ id: req.body.id }).then((contato) => {
@@ -233,6 +238,6 @@ router.post('/menuBurger', (req, res) => {
     })
 })
 
-router.post('/')
+
 
 module.exports = router
