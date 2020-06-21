@@ -50,13 +50,15 @@ router.post('/headernav', (req, res) => {
 router.post('/slideshow', (req, res) => {
     pagHome_slideshow.findOne({ id: req.body.id }).then((slideshow) => {
         //primeira parte do form
-        slideshow.title1_1 = req.body.title1_1,
+        slideshow.img1 = req.body.img1,
+            slideshow.title1_1 = req.body.title1_1,
             slideshow.title1_2 = req.body.title1_2,
             slideshow.text1_1 = req.body.text1_1,
             slideshow.text1_2 = req.body.text1_2,
             slideshow.btn1 = req.body.btn1,
             slideshow.urlbtn1 = req.body.urlbtn1,
             //segunda parte do form
+            slideshow.img2 = req.body.img2,
             slideshow.title2_1 = req.body.tite2_1,
             slideshow.title2_2 = req.body.title2_2,
             slideshow.text2_1 = req.body.text2_1,
@@ -64,6 +66,7 @@ router.post('/slideshow', (req, res) => {
             slideshow.btn2 = req.body.btn2,
             slideshow.urlbtn2 = req.body.urlbtn2,
             //terceira parte do form
+            slideshow.img3 = req.body.img3,
             slideshow.title3_1 = req.body.title3_1,
             slideshow.title3_2 = req.body.title3_2,
             slideshow.text3_1 = req.body.text3_1,
@@ -76,9 +79,13 @@ router.post('/slideshow', (req, res) => {
 
         //editando com a route slideshow
         slideshow.save().then(() => {
-            res.send('Editado com Sucesso!')
+            //res.send('Editado com Sucesso!')
+            req.flash('success_msg', 'SlideShow Editado com Sucesso!')
+            res.redirect('visAdmin/vis-slideshow')
         }).catch((err) => {
-            res.send('Error ao Editar: ' + err)
+            //res.send('Error ao Editar: ' + err)
+            req.flash('error_msg', 'Error ao editar os campos, preencha corretamente!')
+            res.redirect('visAdmin/vis-slideshow')
         })
     })
 })

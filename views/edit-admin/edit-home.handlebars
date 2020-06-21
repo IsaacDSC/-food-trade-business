@@ -23,43 +23,51 @@
                             </div>
                         </div>
                     </div>
-
                     <hr>
-                    <form action="/addbd/upload" method="POST" enctype="multipart/form-data">
-                        <input name="id" type="hidden" value="{{slideshow.dataValues.id}}">
-                        <h4>Carregamento das Imagens</h2>
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <label><span class="text-danger">* </span>Imagem já carregadas</label>
-                                    <div class="custom-file">
-                                        <select name="" id="" class="form form-control">
-                                            <option value="{{slideshow.dataValues.img1}}">{{slideshow.dataValues.img1}}</option>
-                                            <option value="{{slideshow.dataValues.img2}}">{{slideshow.dataValues.img2}}</option>
-                                            <option value="{{slideshow.dataValues.img3}}">{{slideshow.dataValues.img3}}</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label><span class="text-danger">* </span>Nome da primeira Imagem e sua
-                                        extensão</label>
-                                    <input name="title" type="text" class="form-control" id="title"
-                                        placeholder="Digite o nome do arquivo e sua extensão ex: img.png"
-                                        value="{{slideshow.dataValues.title1_1}}" required>
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label><span class="text-danger">* </span>Carregue a Imagem</label>
-                                    <div class="custom-file">
-                                        <input type="file" name="img" class="custom-file-input" id="customFile" border="1">
-                                        <label class="custom-file-label" for="customFile">Carregar Arquivo</label>
-                                    </div>
-                                </div>
-                                <button class="btn btn-info">Enviar</button>
-                            </div>
-                    </form>
                     <!-- ============================ Segundo Form ========================================= -->
                     <h4 class="mt-5">Editar Scripts Slide-Show</h4>
                     <form action="/addbd/slideshow" method="post">
-                        <div class="form-row">
+                    <h4>Carregamento das Imagens</h2>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label><span class="text-danger">* </span>Imagem já carregadas</label>
+                                    <div class="custom-file">
+                                        <select name="img1" id="img1" class="form form-control">
+                                            <option value="null">Selecione a imagem</option>
+                                            {{#each paths}}
+                                            <option value="{{this}}">{{this}}</option>    
+                                            {{/each}}                                       
+                                        </select>
+                                    </div>
+                                </div>                                                        
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label><span class="text-danger">* </span>Imagem já carregadas</label>
+                                    <div class="custom-file">
+                                        <select name="img2" id="img2" class="form form-control">
+                                            <option value="null">Selecione a imagem</option>
+                                            {{#each paths}}
+                                            <option value="{{this}}">{{this}}</option>    
+                                            {{/each}}                                       
+                                        </select>
+                                    </div>
+                                </div>                                                        
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label><span class="text-danger">* </span>Imagem já carregadas</label>
+                                    <div class="custom-file">
+                                        <select name="img3" id="img3" class="form form-control">
+                                            <option value="null">Selecione a imagem</option>
+                                            {{#each paths}}
+                                            <option value="{{this}}">{{this}}</option>    
+                                            {{/each}}                                       
+                                        </select>
+                                    </div>
+                                </div>                                                        
+                            </div>
+                        <div class="form-row mt-3">
                             <div class="form-group col-md-6">
                                 <label><span class="text-danger">* </span>Titulo da primeira Imagem (parte-um)</label>
                                 <input name="title1_1" type="text" class="form-control" id="title1_1"

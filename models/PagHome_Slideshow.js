@@ -22,11 +22,11 @@ const PagHome = db.sequelize.define('pagHome_slideshow', {
         require: true
     },
     btn1: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.STRING(60),
         require: true,
     },
     urlbtn1: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.STRING(30),
         require: true
     },
     img2: {
@@ -50,11 +50,11 @@ const PagHome = db.sequelize.define('pagHome_slideshow', {
         require: true
     },
     btn2: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.STRING(60),
         require: true,
     },
     urlbtn2: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.STRING(30),
         require: true
     },
     img3: {
@@ -78,11 +78,11 @@ const PagHome = db.sequelize.define('pagHome_slideshow', {
         require: true
     },
     btn3: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.STRING(60),
         require: true,
     },
     urlbtn3: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.STRING(30),
         require: true
     },
     iconbtnNext: {
