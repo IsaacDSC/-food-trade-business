@@ -4,6 +4,9 @@ const multer = require('multer')
 const fs = require('fs')
 const folder = 'public/images/'
 
+const { promisify } = require('util');
+const unlink = promisify(fs.unlink);
+
 //config multer 
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
@@ -24,7 +27,7 @@ const upload = multer({ storage })
 
 router.get('/', (req, res) => {
     fs.readdir(folder, (err, paths) => {
-        res.render('uploadfiles/upLoadFile', { layout: 'dashboard.handlebars', paths: paths, folder: folder })
+        res.render('paths_files/upLoadFile', { layout: 'dashboard.handlebars', paths: paths, folder: folder })
     })
 })
 
@@ -35,11 +38,21 @@ router.post('/upload', upload.single('img'), (req, res) => {
 
 router.post('/files', (req, res) => {
     fs.readdir(folder, (err, paths) => {
-        res.render('uploadfiles/viz-file', { layout: 'dashboard.handlebars', file: file, folder: folder })
+        res.render('paths_files/viz-file', { layout: 'dashboard.handlebars', file: file, folder: folder })
             //res.send(`<img src="/images/${file}" class="img-fluid" alt="imgs">`)
     })
 })
 
+
+router.post('/delete', async(req, res) => {
+    try {
+        fs.unlinkSync('./' + folder + req.body.file)
+        res.send('excluido com secesso!')
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Ocorreu um erro interno.');
+    }
+})
 
 
 module.exports = router
