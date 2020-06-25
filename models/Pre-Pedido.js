@@ -1,6 +1,7 @@
 const db = require('./db')
 
-const Pedidos = db.sequelize.define('pedido', {
+
+const Pre_Pedido = db.sequelize.define('PrePedido', {
     codigo: {
         type: db.Sequelize.STRING,
         require: true
@@ -17,13 +18,9 @@ const Pedidos = db.sequelize.define('pedido', {
         type: db.Sequelize.FLOAT,
         require: true
     },
-    status: {
-        type: db.Sequelize.STRING,
-        require: true
-    }
-
 })
 
-//Pedidos.sync({ force: true })
+//models acionando
+//Pre_Pedido.sync({ force: true })
 
-module.exports = Pedidos
+module.exports = Pre_Pedido
