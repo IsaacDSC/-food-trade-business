@@ -6,27 +6,30 @@ const HeaderNav = require('../models/HeaderNav')
 const Footer = require('../models/Footer_models')
 const MenuBurger = require('../models/MenuBurger')
 const MenuBebidas = require('../models/MenuBebidas')
-    //recebendo dados teste
 const Pedidos = require('../models/Pedidos')
+
 
 router.get('/', (req, res) => {
     HeaderNav.findOne().then((nav) => {
         Footer.findOne().then((footer) => {
             MenuBurger.findOne().then((burger) => {
                 MenuBebidas.findOne().then((bebidas) => {
-                    res.render('menu/menu', { nav: nav, footer: footer, burger: burger, bebidas: bebidas })
+                    Pedidos.findOne().then((pedido) => {
+
+                        res.render('menu/menu', { nav: nav, footer: footer, burger: burger, bebidas: bebidas, pedido: pedido })
+                    })
                 })
             })
         })
     })
 })
-router.get('/pedidos', (req, res) => {
+router.post('/pedidos', (req, res) => {
     Pedidos.create({
-        burger1: req.body.burger1_1,
-        burger1_2: req.body.burger1_2,
-        burger1_3: req.body.burger1_3,
-        burger1_4: req.body.burger1_4,
-        burger1_5: req.body.burger1_5,
+        codigo: req.body.codigo,
+        nome: req.body.nome,
+        quantidade: req.body.quantidade,
+        valor: req.body.valor,
+        status: req.body.status
 
     }).then(() => {
         res.send('enviado com sucesso!')
