@@ -72,7 +72,7 @@
                 Using multer import files;
                 configuration to separate images in folders by each layout
 
-
+        table Usuario responsável por guardar informações dos usuarios do app.
 
 
 >>>>>>> 55bde97c9f00a6fb9c6a25d90fb479549abc1504

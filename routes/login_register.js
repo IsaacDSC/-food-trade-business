@@ -1,12 +1,16 @@
 const express = require('express')
 const router = express.Router()
 
-router.get('/', (req, res) => {
+router.get('/asd', (req, res) => {
     res.render('login_register/login', { layout: 'login_register.handlebars' })
 })
 
-router.get('/register', (req, res) => {
-    res.render('login_register/register', { layout: 'login_register.handlebars' })
+router.get('/', (req, res) => {
+    res.render('register/register', { layout: 'login_register.handlebars' })
+})
+
+router.post('/', (req, res) => {
+
 })
 
 module.exports = router

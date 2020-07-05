@@ -380,7 +380,7 @@ router.get('/loginAdmin', (req, res) => {
             } else {
                 const pwd = hash
                 LoginAdmin.create({
-                    login: 'food-trade-business',
+                    login: 'admin',
                     pwd: pwd
                 }).then(() => {
                     res.send('Admin cadastrado com sucesso!')

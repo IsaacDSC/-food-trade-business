@@ -5,7 +5,7 @@ const LoginAdmin = db.sequelize.define('loginAdmin', {
             type: db.Sequelize.STRING,
             require: true
         },
-        pwd: {
+        senha: {
             type: db.Sequelize.STRING,
             require: true
         }

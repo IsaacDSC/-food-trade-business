@@ -6,9 +6,11 @@ const path = require('path')
 const session = require('express-session')
 const flash = require('connect-flash')
 const passport = require('passport')
+require('./config/auth')(passport)
 
 const authenticate = require('./config/authenticate')
 authenticate.passport
+
 
 //adionando rotas
 const home = require('./routes/home')
@@ -22,8 +24,6 @@ const sobre = require('./routes/sobre')
 const contato = require('./routes/contato')
     //adionando login Administrador Site
 const loginAdmin = require('./routes/loginAdmin')
-    //adionando pagina de login
-const login_register = require('./routes/login_register')
     //adionando paginas para  reset
 const reset = require('./routes/reset')
     //adionando addbd dahsboard rotas post
@@ -32,7 +32,8 @@ const addBd = require('./routes/addBd')
 const visualizarAdmin = require('./routes/visualizarAdmin')
     //adionando upload files
 const uploadfiles = require('./routes/uploadFiles')
-
+    //adionando router login_register
+const register = require('./routes/login_register')
 
 
 //configurando body-parser
@@ -62,6 +63,7 @@ app.use((req, res, next) => {
 })
 
 
+
 app.use('/', home)
 app.use('/admin', admin)
 app.use('/menu', menu)
@@ -72,6 +74,8 @@ app.use('/reset', reset)
 app.use('/addbd', addBd)
 app.use('/visAdmin', visualizarAdmin)
 app.use('/uploadfiles', uploadfiles)
+app.use('/register', register)
+
 
 const PORT = 3000
 app.listen(PORT, () => {

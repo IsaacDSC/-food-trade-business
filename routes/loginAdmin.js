@@ -6,9 +6,9 @@ router.get('/', (req, res) => {
     res.render('login/loginAdmin', { layout: 'login_register.handlebars' })
 })
 
-router.post('/', (req, res, next) => {
+router.post('/login', (req, res, next) => {
     passport.authenticate('local', {
-        successRedirect: '/admin/',
+        successRedirect: '/admin',
         failureRedirect: '/superuser',
         failureFlash: true,
     })(req, res, next)

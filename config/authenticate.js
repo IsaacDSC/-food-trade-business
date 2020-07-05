@@ -3,6 +3,7 @@ const bcryptjs = require('bcryptjs')
 
 
 //models Login admin
+require('../models/LoginAdmin')
 const LoginAdmin = require('../models/LoginAdmin')
 
 
@@ -10,12 +11,12 @@ module.export = ((passport) => {
     passport.use(new locaslStrategy({
         usernameField: 'login',
         passwordField: 'pwd'
-    })), (login, pwd, done) => {
+    }, (login, pwd, done) => {
         LoginAdmin.findOne({ login: login }).then((user) => {
             if (!user) {
                 return done(null, false, { error_msg: 'Cadastro com este e-mail não existe!' })
             }
-            bcryptjs.compare(pwd, user.pwd, (err, corr) => {
+            bcryptjs.compare(senha, user.senha, (err, corr) => {
                 if (corr) {
                     return done(null, user)
                 } else {
@@ -23,7 +24,7 @@ module.export = ((passport) => {
                 }
             })
         })
-    }
+    }))
 
     //salvando os dados na sessao
     passport.serializeUser((user, done) => {
