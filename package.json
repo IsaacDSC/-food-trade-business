@@ -4,7 +4,7 @@
     "description": "ecommerce de hamburguer",
     "main": "server.js",
     "scripts": {
-        "start": "nodemon",
+        "server": "nodemon",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
