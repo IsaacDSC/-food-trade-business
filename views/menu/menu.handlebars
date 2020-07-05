@@ -1,20 +1,22 @@
 <!-- Content ================================================== -->
 
 <div class="container margin_60_35" style="relative">
-=======
+	=======
 	<div class="row">
 
 		<div class="col-md-3">
 			<p><a href="list_page.html" class="btn_side">Back to search</a></p>
 			<div class="box_style_1">
 				<ul id="cat_nav">
-					<li><a href="#starters" class="active">Combos <span>(16)</span></a></li>
-					<li><a href="#main_courses">Lanches<span>(10)</span></a></li>
-					<li><a href="#beef">Sorvetes <span>(5)</span></a></li>
-					<li><a href="#desserts">Doces <span>(12)</span></a></li>
-					<li><a href="#drinks">Bebidas <span>({{bebidas.length}})</span></a></li>
-					<li><a href="">Pizza</a></li>
-					<li><a href="">Almoço</a></li>
+					<li onclick="fecharMenuBebidas()"><a href="#starters" class="active">Combos <span>(16)</span></a>
+					</li>
+					<li onclick="fecharMenuBebidas()"><a href="#main_courses">Lanches<span>(10)</span></a></li>
+					<li onclick="fecharMenuBebidas()"><a href="#beef">Sorvetes <span>(5)</span></a></li>
+					<li onclick="fecharMenuBebidas()"><a href="#desserts">Doces <span>(12)</span></a></li>
+					<li onclick="abrirMenuBebidas()"><a href="#drinks">Bebidas <span>({{bebidas.length}})</span></a>
+					</li>
+					<li onclick="fecharMenuBebidas()"><a href="">Pizza</a></li>
+					<li onclick="fecharMenuBebidas()"><a href="">Almoço</a></li>
 				</ul>
 			</div><!-- End box_style_1 -->
 
@@ -40,8 +42,11 @@
 		{{>_menuDoces}}
 		<!-- ============================================QUINTA PARTE MENU========================================================== -->
 		{{>_menuBebidas}} --}}
-		{{>newMenu}} 
-		
+
+				{{>newMenuBebidas}}
+
+
+
 
 		<div class="col-md-3" id="sidebar">
 			<div class="theiaStickySidebar">
@@ -143,5 +148,5 @@
 		</div><!-- End col-md-3 -->
 
 	</div><!-- End row -->
-  </div>
+</div>
 </div><!-- End container -->
