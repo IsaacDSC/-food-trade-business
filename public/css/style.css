@@ -5678,7 +5678,8 @@ input:focus~.bar:after {
     }
 }
 
-#modalMenu {
+
+/* #modalMenu {
     display: none;
 }
 
@@ -5692,12 +5693,12 @@ input:focus~.bar:after {
 }
 
 
-/* #ModalTitle:hover {
+ #ModalTitle:hover {
     background-color: rgba(238, 238, 238, 0.788);
-} */
+} 
 
 #titleModal h2:hover {
     color: red;
     font-size: 30px;
     transition: 350ms;
-}
+} */

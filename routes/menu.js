@@ -6,6 +6,7 @@ const HeaderNav = require('../models/HeaderNav')
 const Footer = require('../models/Footer_models')
 const MenuBurger = require('../models/MenuBurger')
 const MenuBebidas = require('../models/MenuBebidas')
+const MenuPizzas = require('../models/MenuPizza')
     //const Pedidos = require('../models/Pedidos')
 
 var pedido = []
@@ -14,29 +15,34 @@ router.get('/', (req, res) => {
     HeaderNav.findOne().then((nav) => {
         Footer.findOne().then((footer) => {
             MenuBurger.findOne().then((burger) => {
-                MenuBebidas.findOne().then((bebidas) => {
-
-                    res.render('menu/menu', { nav: nav, footer: footer, burger: burger, bebidas: bebidas, pedido: pedido })
-
-                })
+                res.render('menu/burger', { layout: 'menu.handlebars', nav: nav, footer: footer, burger: burger, pedido: pedido })
             })
         })
     })
 })
-router.post('/pedidos', (req, res) => {
-    Pedidos.create({
-        codigo: req.body.codigo,
-        nome: req.body.nome,
-        quantidade: req.body.quantidade,
-        valor: req.body.valor,
-        status: req.body.status
+router.get('/bebidas', (req, res) => {
+    HeaderNav.findOne().then((nav) => {
+        Footer.findOne().then((footer) => {
+            MenuBebidas.findOne().then((bebidas) => {
+                res.render('menu/bebidas', { layout: 'menu.handlebars', nav: nav, footer: footer, bebidas: bebidas, pedido: pedido })
 
-    }).then(() => {
-        res.send('enviado com sucesso!')
-    }).catch((err) => {
-        res.send(' error> ' + err)
+            })
+        })
     })
 })
+
+
+router.get('/pizza', (req, res) => {
+    HeaderNav.findOne().then((nav) => {
+        Footer.findOne().then((footer) => {
+            MenuPizzas.findOne().then((pizza) => {
+                res.render('menu/pizzas', { layout: 'menu.handlebars', nav: nav, footer: footer, pizza: pizza })
+            })
+        })
+    })
+})
+
+
 
 router.post('/add', (req, res) => {
     pedido.push({
@@ -48,6 +54,8 @@ router.post('/add', (req, res) => {
         res.send('pedido undefined ou null')
     } else {
         //res.send(pedido)
+        res.redirect('/menu')
+            //console.log(pedido[0]['title'])
 
     }
 })

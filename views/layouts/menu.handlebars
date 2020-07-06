@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <title>Food-trade-business</title>
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="Isaac e João">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/brands.min.css">
+<!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <!-- Icones -->
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+     <!-- Bootstrap CSS -->
+    <!--  --><link rel="stylesheet" href="/css/bootstrap.min.css">    
+    <!-- Radio and check inputs -->
+    <link href="/css/skins/square/grey.css" rel="stylesheet">
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="/css/style.css">   
+    <link href="/css/cdn.shopify.com/s/files/1/1148/3974/t/18/assets/style.scssc9fc.css?v=13723650677764253788" rel="stylesheet" type="text/css" media="all" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/css/responsive.css">
+
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/demo.css"> <!-- Demo style -->
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+    
+
+    
+</head>
+
+<body>
+   {{>_navPrincipal}}
+    <br>
+    <br>
+    <!-- Content ================================================== -->
+
+    <div class="container margin_60_35 mt-5" style="relative">
+        <div class="row">
+
+            <div class="col-md-3">
+                <p><a href="list_page.html" class="btn_side">Back to search</a></p>
+                <div class="box_style_1">
+                    <ul id="cat_nav">
+                        <li onclick="fecharMenuBebidas()"><a href="#starters" class="active">Combos
+                                <span>(16)</span></a>
+                        </li>
+                        <li onclick="fecharMenuBebidas()"><a href="/menu">Lanches<span>(10)</span></a></li>
+                        <li onclick="fecharMenuBebidas()"><a href="/menu/bebidas">Bebidas <span>(5)</span></a></li>
+                        <li onclick="fecharMenuBebidas()"><a href="/doces">Doces <span>(12)</span></a></li>
+                        <li onclick="abrirMenuBebidas()"><a href="/menu/pizza">Pizza <span>({{bebidas.length}})</span></a>
+                        </li>
+
+                    </ul>
+                </div><!-- End box_style_1 -->
+
+                <div class="box_style_2 hidden-xs" id="help">
+                    <i class="icon_lifesaver"></i>
+                    <small>
+                        <h1>Funcionamento</h1>
+                        <h2>de segunda a Domingo</h2>
+                        <h1>das 17h às 22h</h1>
+                    </small>
+                </div>
+            </div>
+
+
+            {{!-- 			<!-- End col-md-3 -->
+		<!-- =======================================PRIMEIRA PARTE MENU======================================================= -->
+		{{>_menuBurger}}
+		<!-- =======================================SEGUNDA PARTE MENU======================================================= -->
+		{{>_menuComida}}
+		<!-- =======================================TERCEIRA PARTE MENU======================================================= -->
+		{{>_menuPizza}}
+		<!-- ========================================QUARTA PARTE MENU============================================================== -->
+		{{>_menuDoces}}
+		<!-- ============================================QUINTA PARTE MENU========================================================== -->
+		{{>_menuBebidas}} --}}
+            {{{body}}}
+            {{!-- {{>newMenuBebidas}} --}}
+
+            <div class="col-md-3" id="sidebar">
+                <div class="theiaStickySidebar">
+                    <div id="cart_box">
+                        <h3>Your order <i class="icon_cart_alt pull-right"></i></h3>
+                        <table class="table table_summary">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="#0" class="remove_item"><i class="icon_minus_alt"></i></a>
+                                        <strong>1x</strong>
+                                        {{pedido}}
+                                    </td>
+                                    <td>
+                                        <strong class="pull-right">$11</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#0" class="remove_item"><i class="icon_minus_alt"></i></a>
+                                        <strong>2x</strong>
+                                        Burrito
+                                    </td>
+                                    <td>
+                                        <strong class="pull-right">$14</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#0" class="remove_item"><i class="icon_minus_alt"></i></a>
+                                        <strong>1x</strong>
+                                        Chicken
+                                    </td>
+                                    <td>
+                                        <strong class="pull-right">$20</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#0" class="remove_item"><i class="icon_minus_alt"></i></a>
+                                        <strong>2x</strong>
+                                        Corona Beer
+                                    </td>
+                                    <td>
+                                        <strong class="pull-right">$9</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#0" class="remove_item"><i class="icon_minus_alt"></i></a>
+                                        <strong>2x</strong>
+                                        Cheese Cake
+                                    </td>
+                                    <td>
+                                        <strong class="pull-right">$12</strong>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <hr>
+                        <div class="row" id="options_2">
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
+                                <label><input type="radio" value="" checked name="option_2"
+                                        class="icheck">Entrega</label>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
+                                <label><input type="radio" value="" name="option_2" class="icheck">Retirar no
+                                    local</label>
+                            </div>
+                        </div><!-- Edn options 2 -->
+
+                        <hr>
+                        <table class="table table_summary">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Subtotal <span class="pull-right">R$56</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Entrega <span class="pull-right">R$10</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        CUPOM <input type="text" size="3">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="total">
+                                        TOTAL <span class="pull-right">R$50</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <hr>
+                        <a class="btn_full cd-btn js-cd-panel-trigger" href="" data-panel="main">Pedir</a>
+                    </div><!-- End cart_box -->
+                </div><!-- End theiaStickySidebar -->
+            </div><!-- End col-md-3 -->
+
+        </div><!-- End row -->
+    </div>
+    </div><!-- End container -->
+
+    {{>_footer}}
+
+<!-- Adionando Arquivo JavaScript -->
+
+      <script src="/js/modalmenu.js"></script>
+</body>
+
+</html>
