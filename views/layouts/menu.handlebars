@@ -75,8 +75,9 @@
                     <div id="cart_box">
                         <h3>Your order <i class="icon_cart_alt pull-right"></i></h3>
                         <table class="table table_summary">
-                            <tbody>                               
-                                    {{#each pedido}}                                                                
+                            <tbody> 
+                                {{Subtotal}}{{PedidoTitle}}                              
+                                    {{#each pedidos}}                                                                
                                 <tr>
                                     <td>
                                         <a href="#0" class="remove_item"><i class="icon_minus_alt"></i></a>
