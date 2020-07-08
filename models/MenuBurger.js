@@ -147,63 +147,63 @@ const MenuBurger = db.sequelize.define('menu_burger', {
         require: true
     },
     valor1: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor2: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor3: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor4: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor5: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor6: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor7: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor8: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor9: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor10: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor11: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor12: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor13: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor14: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     valor15: {
-        type: db.Sequelize.STRING,
+        type: db.Sequelize.FLOAT,
         require: true
     },
     title_option: {

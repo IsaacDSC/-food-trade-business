@@ -13,12 +13,15 @@ var pedidos = []
 
 
 const SubTotal = pedidos.reduce((subtotal, pedido) => pedido.valor + subtotal, 0)
+console.log(SubTotal)
 
 router.get('/', (req, res) => {
     HeaderNav.findOne().then((nav) => {
         Footer.findOne().then((footer) => {
             MenuBurger.findOne().then((burger) => {
-                res.render('menu/burger', { layout: 'menu.handlebars', nav: nav, footer: footer, burger: burger, pedidos: pedidos, SubTotal: SubTotal })
+                const subTotal = pedidos.reduce((subtotal, pedido) => pedido.valor + subtotal, 0)
+                console.log(subTotal)
+                res.render('menu/burger', { layout: 'menu.handlebars', nav: nav, footer: footer, burger: burger, pedidos: pedidos, subTotal: subTotal })
             })
         })
     })
@@ -41,7 +44,8 @@ router.get('/bebidas', (req, res) => {
     HeaderNav.findOne().then((nav) => {
         Footer.findOne().then((footer) => {
             MenuBebidas.findOne().then((bebidas) => {
-                res.render('menu/bebidas', { layout: 'menu.handlebars', nav: nav, footer: footer, bebidas: bebidas, pedidos: pedidos, SubTotal: SubTotal })
+                const subTotal = pedidos.reduce((subtotal, pedido) => pedido.valor + subtotal, 0)
+                res.render('menu/bebidas', { layout: 'menu.handlebars', nav: nav, footer: footer, bebidas: bebidas, pedidos: pedidos, subTotal: subTotal })
 
             })
         })

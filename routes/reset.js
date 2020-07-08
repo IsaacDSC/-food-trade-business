@@ -247,21 +247,21 @@ router.get('/menuburger', (req, res) => {
         desc13: '2 carnes , 2 ovos, 2 queijos , 2 presunto, dobro bacon, alface ,tomate , milho , molho especial, batata frita .',
         desc14: '2 carnes goumet Picanha 120 g , queijo cheedar, alface, tomate , cebola roxa , molho especial e batata frita .',
         desc15: '2 carnes goumet Picanha 120 g , queijo cheedar, alface, tomate , cebola roxa , molho especial e batata frita .',
-        valor1: 'R$:11,98',
-        valor2: 'R$:11,98',
-        valor3: 'R$:11,98',
-        valor4: 'R$:11,98',
-        valor5: 'R$:11,98',
-        valor6: 'R$:11,98',
-        valor7: 'R$:11,98',
-        valor8: 'R$:11,98',
-        valor9: 'R$:11,98',
-        valor10: 'R$:11,98',
-        valor11: 'R$:11,98',
-        valor12: 'R$:11,98',
-        valor13: 'R$:11,98',
-        valor14: 'R$:11,98',
-        valor15: 'R$:11,98',
+        valor1: '11.98',
+        valor2: '11.98',
+        valor3: '11.98',
+        valor4: '11.98',
+        valor5: '11.98',
+        valor6: '11.98',
+        valor7: '11.98',
+        valor8: '11.98',
+        valor9: '11.98',
+        valor10: '11.98',
+        valor11: '11.98',
+        valor12: '11.98',
+        valor13: '11.98',
+        valor14: '11.98',
+        valor15: '11.98',
         title_option: 'Escolha um tipo de Carne',
         opt1: 'Bovina',
         valor_opt1: '0.00',
@@ -381,7 +381,7 @@ router.get('/loginAdmin', (req, res) => {
                 const pwd = hash
                 LoginAdmin.create({
                     login: 'admin',
-                    pwd: pwd
+                    senha: pwd
                 }).then(() => {
                     res.send('Admin cadastrado com sucesso!')
                 }).catch((err) => {
