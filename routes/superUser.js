@@ -6,6 +6,7 @@ router.get('/', (req, res) => {
     res.render('login/loginAdmin', { layout: 'login_register.handlebars' })
 })
 
+
 router.post('/login', (req, res, next) => {
     passport.authenticate('local', {
         successRedirect: '/admin',

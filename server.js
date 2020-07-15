@@ -23,7 +23,7 @@ const sobre = require('./routes/sobre')
     //adionando pagina Contato
 const contato = require('./routes/contato')
     //adionando login Administrador Site
-const loginAdmin = require('./routes/loginAdmin')
+const superUser = require('./routes/superUser')
     //adionando paginas para  reset
 const reset = require('./routes/reset')
     //adionando addbd dahsboard rotas post
@@ -59,6 +59,7 @@ app.use(flash())
 app.use((req, res, next) => {
     res.locals.success_msg = req.flash('success_msg')
     res.locals.error_msg = req.flash('error_msg')
+    res.locals.message = req.flash('message')
     next()
 })
 
@@ -69,7 +70,7 @@ app.use('/admin', admin)
 app.use('/menu', menu)
 app.use('/sobre', sobre)
 app.use('/contato', contato)
-app.use('/superuser', loginAdmin)
+app.use('/superuser', superUser)
 app.use('/reset', reset)
 app.use('/addbd', addBd)
 app.use('/visAdmin', visualizarAdmin)

@@ -9,8 +9,5 @@ router.get('/', (req, res) => {
     res.render('register/register', { layout: 'login_register.handlebars' })
 })
 
-router.post('/', (req, res) => {
-
-})
 
 module.exports = router

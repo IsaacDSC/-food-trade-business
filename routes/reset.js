@@ -26,7 +26,7 @@ const MenuPizza = require('../models/MenuPizza')
 const MenuPromocoes = require('../models/MenuProcoes')
 const MenuSorvetes = require('../models/MenuSorvetes')
     //models login admin
-const LoginAdmin = require('../models/LoginAdmin')
+const SuperUser = require('../models/SuperUser')
 
 
 router.get('/', (req, res) => {
@@ -371,7 +371,7 @@ router.get('/contato', (req, res) => {
     })
 })
 
-router.get('/loginAdmin', (req, res) => {
+router.get('/SuperUser', (req, res) => {
     const senha = 'secret'
     bcryptjs.genSalt(10, (err, salt) => {
         bcryptjs.hash(senha, salt, (err, hash) => {
@@ -379,8 +379,9 @@ router.get('/loginAdmin', (req, res) => {
                 res.send('Erro ao Criptografar esta Senha: ' + err)
             } else {
                 const pwd = hash
-                LoginAdmin.create({
-                    login: 'admin',
+                SuperUser.create({
+                    nome: 'Administrador da Casa',
+                    email: 'admin@gmail.com.br',
                     senha: pwd
                 }).then(() => {
                     res.send('Admin cadastrado com sucesso!')

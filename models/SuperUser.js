@@ -1,7 +1,11 @@
 const db = require('./db')
 
-const LoginAdmin = db.sequelize.define('loginAdmin', {
-        login: {
+const SuperUser = db.sequelize.define('superuser', {
+        nome: {
+            type: db.Sequelize.STRING(60),
+            require: true
+        },
+        email: {
             type: db.Sequelize.STRING,
             require: true
         },
@@ -11,7 +15,7 @@ const LoginAdmin = db.sequelize.define('loginAdmin', {
         }
     })
     //create models table
-    //LoginAdmin.sync({ force: true })
+    //SuperUser.sync({ force: true })
 
 
-module.exports = LoginAdmin
+module.exports = SuperUser
