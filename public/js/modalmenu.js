@@ -1,11 +1,11 @@
 var titleMenu = document.querySelector('#titleMenu')
 
-function abrirMenuBebidas() {
+function abrirMenu() {
     document.querySelector('#modalMenu').style.display = 'block'
 }
 
 
 
-function fecharMenuBebidas() {
+function fecharMenu() {
     document.querySelector('#modalMenu').style.display = 'none'
 }

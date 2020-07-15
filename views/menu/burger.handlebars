@@ -8,7 +8,7 @@
                                                                     BURGER
         =============================================================================================================================================================== -->
 
-        <div class="container" onclick="abrirMenuBebidas()">
+        <div class="container" onclick="abrirModal">
             <div class="card">
                 <div class="card-body" style="max-width: 480px;" id="titleModal">
                     <h2 class="text-center">{{burger.dataValues.title}}</h2>
@@ -16,6 +16,7 @@
                 </div>
             </div>
         </div>
+
 
         <div class="card mt-3" style="max-width: 520px;">
             <div class="row no-gutters">
@@ -33,7 +34,7 @@
                             <p class="card-text mt-2"><small class="text-muted">R$ {{burger.dataValues.valor1}}</small>
                             </p>
                             <button class="btn btn-danger mt-4 col-05"
-                                style="max-height: 40px; font-size: 10px; margin-left: 30%">Comprar</button>
+                                style="max-height: 40px; font-size: 10px; margin-left: 30%" onclick="addCarrinhoBurger()">Comprar</button>
                         </form>
                     </div>
                 </div>
@@ -55,7 +56,7 @@
                             <p class="card-text mt-2"><small class="text-muted">R$ {{burger.dataValues.valor2}}</small>
                             </p>
                             <button class="btn btn-danger mt-4 col-05"
-                                style="max-height: 40px; font-size: 10px; margin-left: 30%">Comprar</button>
+                                style="max-height: 40px; font-size: 10px; margin-left: 30%" onclick="addCarrinhoBurger()">Comprar</button>
                         </form>
                     </div>
                 </div>
@@ -77,7 +78,7 @@
                             <p class="card-text mt-2"><small class="text-muted">R$ {{burger.dataValues.valor3}}</small>
                             </p>
                             <button class="btn btn-danger mt-4 col-05"
-                                style="max-height: 40px; font-size: 10px; margin-left: 30%">Comprar</button>
+                                style="max-height: 40px; font-size: 10px; margin-left: 30%" onclick="addCarrinhoBurger()">Comprar</button>
                         </form>
                     </div>
                 </div>
@@ -100,7 +101,7 @@
                             <p class="card-text mt-2"><small class="text-muted">R$ {{burger.dataValues.valor4}}</small>
                             </p>
                             <button class="btn btn-danger mt-4 col-05"
-                                style="max-height: 40px; font-size: 10px; margin-left: 30%">Comprar</button>
+                                style="max-height: 40px; font-size: 10px; margin-left: 30%" onclick="addCarrinhoBurger()">Comprar</button>
                         </form>
                     </div>
                 </div>
@@ -122,7 +123,7 @@
                             <p class="card-text mt-2"><small class="text-muted">R$ {{burger.dataValues.valor5}}</small>
                             </p>
                             <button class="btn btn-danger mt-4 col-05"
-                                style="max-height: 40px; font-size: 10px; margin-left: 30%">Comprar</button>
+                                style="max-height: 40px; font-size: 10px; margin-left: 30%" onclick="addCarrinhoBurger()">Comprar</button>
                         </form>
                     </div>
                 </div>
