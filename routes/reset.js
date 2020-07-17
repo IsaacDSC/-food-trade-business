@@ -385,7 +385,7 @@ router.get('/SuperUser', (req, res) => {
                 SuperUser.create({
                     nome: 'Administrador da Casa',
                     email: 'admin@gmail.com.br',
-                    senha: pwd
+                    password: pwd
                 }).then(() => {
                     res.send('Admin cadastrado com sucesso!')
                 }).catch((err) => {

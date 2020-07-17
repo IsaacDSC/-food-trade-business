@@ -9,7 +9,7 @@ const SuperUser = db.sequelize.define('superuser', {
             type: db.Sequelize.STRING,
             require: true
         },
-        senha: {
+        password: {
             type: db.Sequelize.STRING,
             require: true
         }

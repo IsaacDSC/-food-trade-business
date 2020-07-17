@@ -2,20 +2,19 @@ const LocalStrategy = require('passport-local').Strategy
 const bcrypt = require('bcryptjs')
 
 //models
-require('../models/SuperUser')
 const SuperUser = require('../models/SuperUser')
 
 module.exports = function(passport) {
-    passport.use(new LocalStrategy({ usernameField: 'email', passwordField: 'senha' }, (email, pwd, done) => {
+    passport.use(new LocalStrategy({ usernameField: 'email', passwordField: 'password' }, (email, password, done) => {
         SuperUser.findOne({ where: { email: email } }).then((user) => {
             if (!user) {
-                return done(null, false, { 'message': 'Esta conta não Existe' })
+                return done(null, false, { message: 'Esta conta não Existe' })
             }
-            bcrypt.compare(pwd, user.senha, (err, batem) => {
+            bcrypt.compare(password, user.password, (err, batem) => {
                 if (batem) {
                     return done(null, user)
                 } else {
-                    return done(null, false, { 'message': "Senha Incorreta" })
+                    return done(null, false, { message: "password Incorreta" })
                 }
             })
         })
