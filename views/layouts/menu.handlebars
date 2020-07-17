@@ -75,8 +75,7 @@
                     <div id="cart_box">
                         <h3>Your order <i class="icon_cart_alt pull-right"></i></h3>
                         <table class="table table_summary">
-                            <tbody> 
-                                {{Subtotal}}                            
+                            <tbody>                                                        
                                     {{#each pedidos}}                                                                
                                 <tr>
                                     <td>
@@ -124,6 +123,7 @@
                                 <tr>
                                     <td>
                                         Subtotal <span class="pull-right">R${{subTotal}}</span>
+                                        {{NsubTotal}}
                                     </td>
                                 </tr>
                                 <tr>
@@ -144,7 +144,7 @@
                             </tbody>
                         </table>
                         <hr>
-                        <a class="btn_full cd-btn js-cd-panel-trigger" href="" data-panel="main">Pedir</a>
+                        <a class="btn_full cd-btn js-cd-panel-trigger" href="" data-panel="main">Finalizar Compra</a>
                     </div><!-- End cart_box -->
                 </div><!-- End theiaStickySidebar -->
             </div><!-- End col-md-3 -->

@@ -13,15 +13,15 @@ var pedidos = []
 
 
 const SubTotal = pedidos.reduce((subtotal, pedido) => pedido.valor + subtotal, 0)
-console.log(SubTotal)
+
 
 router.get('/', (req, res) => {
     HeaderNav.findOne().then((nav) => {
         Footer.findOne().then((footer) => {
             MenuBurger.findOne().then((burger) => {
                 const subTotal = pedidos.reduce((subtotal, pedido) => pedido.valor + subtotal, 0)
-                console.log(subTotal)
-                res.render('menu/burger', { layout: 'menu.handlebars', nav: nav, footer: footer, burger: burger, pedidos: pedidos, subTotal: subTotal })
+                const NsubTotal = Number(subTotal.value)
+                res.render('menu/burger', { layout: 'menu.handlebars', nav: nav, footer: footer, burger: burger, pedidos: pedidos, subTotal: subTotal, NsubTotal: NsubTotal })
             })
         })
     })
@@ -29,7 +29,6 @@ router.get('/', (req, res) => {
 
 
 router.post('/add', (req, res) => {
-
     //var quantidade = pedido.length + 1
     pedidos.push({ title: req.body.title, valor: req.body.valor })
     if (pedidos == null || pedidos == undefined) {
