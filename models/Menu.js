@@ -13,10 +13,14 @@ const Menu = db.sequelize.define('menu', {
         type: db.Sequelize.TEXT,
         require: true
     },
-    valor: {
+    valorGasto: {
         type: db.Sequelize.FLOAT,
         require: true
     },
+    valorVenda: {
+        type: db.Sequelize.FLOAT,
+        require: true
+    }
 })
 
 //Menu.sync({ force: true })

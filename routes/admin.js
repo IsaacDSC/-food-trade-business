@@ -86,7 +86,7 @@ router.get('/edit-menuBebidas', (req, res) => {
 })
 
 router.get('/menu', (req, res) => {
-        res.render('edit-admin/edit-menuBurger', { layout: 'dashboard.handlebars' })
+        res.render('addbd/addMenu', { layout: 'dashboard.handlebars' })
     })
     /* router.get('/edit-menuBurger', (req, res) => {
         MenuBurger.findOne().then((burger) => {
