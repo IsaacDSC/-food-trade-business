@@ -11,16 +11,14 @@ const MenuPizzas = require('../models/MenuPizza')
 
 var pedidos = []
 
-
-const SubTotal = pedidos.reduce((subtotal, pedido) => pedido.valor + subtotal, 0)
-console.log(SubTotal)
+//const SubTotal = pedidos.reduce((subtotal, pedido) => pedido.valor + subtotal, 0)
+//console.log(typeof SubTotal)
 
 router.get('/', (req, res) => {
     HeaderNav.findOne().then((nav) => {
         Footer.findOne().then((footer) => {
             MenuBurger.findOne().then((burger) => {
-                const subTotal = pedidos.reduce((subtotal, pedido) => pedido.valor + subtotal, 0)
-                console.log(subTotal)
+                const subTotal = pedidos.reduce((subtotal, pedido) => parseFloat(pedido.valor) + subtotal, 0)
                 res.render('menu/burger', { layout: 'menu.handlebars', nav: nav, footer: footer, burger: burger, pedidos: pedidos, subTotal: subTotal })
             })
         })
@@ -29,14 +27,21 @@ router.get('/', (req, res) => {
 
 
 router.post('/add', (req, res) => {
-
-    //var quantidade = pedido.length + 1
-    pedidos.push({ title: req.body.title, valor: req.body.valor })
+    if (req.body.title == undefined || req.body.title == null || req.body.valor == undefined || req.body.valor == null) {
+        res.send('null or undefined')
+    }
     if (pedidos == null || pedidos == undefined) {
         res.send('pedido undefined ou null')
     } else {
-        //res.send(pedido)        
+        //var quantidade = pedido.length + 1
+        const Nvalor = parseFloat(req.body.valor)
+        pedidos.push({ title: req.body.title, valor: Nvalor })
+            //res.send(pedido)        
         res.redirect('/menu')
+            //console.log(typeof req.body.valor)
+    }
+    for (pedido of pedidos) {
+        //console.log(pedido.valor)
     }
 })
 
@@ -62,11 +67,5 @@ router.get('/pizza', (req, res) => {
         })
     })
 })
-
-
-
-
-
-
 
 module.exports = router

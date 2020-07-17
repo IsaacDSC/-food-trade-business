@@ -15,7 +15,10 @@ const Hystoryhome_models = require('../models/HistoryHome_models')
 const CardapioHome_models = require('../models/CardapiosHome_models')
     //adionando models da pagina contato
 const Contato = require('../models/Contato')
-    //adionando Models Menu
+
+const Menu = require('../models/Menu')
+
+//adionando Models Menu
 const MenuAlmoco = require('../models/MenuAlmoco')
 const MenuBebidas = require('../models/MenuBebidas')
 const MenuBurger = require('../models/MenuBurger')
@@ -392,5 +395,6 @@ router.get('/SuperUser', (req, res) => {
         })
     })
 })
+
 
 module.exports = router

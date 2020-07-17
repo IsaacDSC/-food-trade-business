@@ -78,11 +78,6 @@ router.get('/edit-contato', (req, res) => {
     })
 })
 
-router.get('/edit-menuBurger', (req, res) => {
-    MenuBurger.findOne().then((burger) => {
-        res.render('edit-admin/edit-menuBurger', { layout: 'dashboard.handlebars', burger: burger })
-    })
-})
 
 router.get('/edit-menuBebidas', (req, res) => {
     menuBebidas.findOne().then((bebidas) => {
@@ -90,4 +85,12 @@ router.get('/edit-menuBebidas', (req, res) => {
     })
 })
 
+router.get('/menu', (req, res) => {
+        res.render('edit-admin/edit-menuBurger', { layout: 'dashboard.handlebars' })
+    })
+    /* router.get('/edit-menuBurger', (req, res) => {
+        MenuBurger.findOne().then((burger) => {
+            res.render('edit-admin/edit-menuBurger', { layout: 'dashboard.handlebars', burger: burger })
+        })
+    }) */
 module.exports = router

@@ -8,8 +8,8 @@ const flash = require('connect-flash')
 const passport = require('passport')
 require('./config/auth')(passport)
 
-const authenticate = require('./config/auth')
-authenticate.passport
+//const authenticate = require('./config/auth')
+//authenticate.passport
 
 
 //adionando rotas

@@ -6,7 +6,7 @@
                 <div class="list-group-item">
                     <div class="d-flex">
                         <div class="mr-auto p-2">
-                            <h2 class="display-4 titulo">Editar Menu (Hamburgue)</h2>
+                            <h2 class="display-4 titulo">Adionar Cardápio ao Menu</h2>
                         </div>
                         <div class="p-2">
                             <span class="d-none d-md-block">
@@ -26,7 +26,7 @@
 
                     <hr>
 
-                    <form action="/admin/" method="POST">
+                    {{!--                     <form action="/admin/" method="POST">
                         <input name="id" type="hidden" value="{{slideshow.dataValues.id}}">
                         <h4>Carregamento das Imagens</h2>
                             <div class="form-row">
@@ -59,331 +59,40 @@
                                 </div>
                                 <button class="btn btn-info">Enviar</button>
                             </div>
-                    </form>
+                    </form> --}}
                     <!-- ============================ Segundo Form ========================================= -->
-                    <h4 class="mt-5">Editar Scripts da pagina Contato</h4>
-                    <form action="/addbd/menuburger" method="post">
-                        <input name="id" type="hidden" value="{{burger.dataValues.id}}">
+                    <h4 class="mt-5">Formulário</h4>
+                    <form action="/addbd/menu" method="post">
                         <div class="form-row">
-                            <div class="form-group col-md-4">
-                                <label><span class="text-danger">* </span>Titulo principal</label>
-                                <input name="title" type="text" class="form-control" id="title"
-                                    placeholder="Digite o titulo principal" value="{{burger.dataValues.title}}"
-                                    required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span>Descrição principal</label>
-                                <textarea name="desc" class="form-control" id="desc" cols="30" rows="10" required placeholder="Digite a descrição principal">{{burger.dataValues.desc}}</textarea>
+                            <div class="form-group col-md-12">
+                                <label><span class="text-danger">* </span>Classe de Menu</label>
+                                <select name="class" id="class" class="form-control">
+                                    <option value="Hamburgue">Hamburgue</option>
+                                    <option value="Pizza">Pizza</option>
+                                    <option value="Bebidas">Bebidas</option>
+                                    <option value="Sorvete">Sorvete</option>
+                                    <option value="Petisco">Petisco</option>
+                                    <option value="Combos">Combos</option>
+                                    <option value="Promoções">Promoções</option>
+                                </select>
                             </div>
                         </div>
-                        <h4 class="mt-5">Titulos tabelas</h4>
-                         <div class="form-row">
-                             <div class="form-group col-md-4">
-                                <label><span class="text-danger">* </span>Nome da tabela 1</label>
-                                <input name="tabela1" type="text" class="form-control" id="tabela1"
-                                    placeholder="Digite o o nome da primeira tabela" value="{{burger.dataValues.tabela1}}"
-                                    required>
-                            </div>
+                        <div class="form-row">
                             <div class="form-group col-md-4">
-                                <label><span class="text-danger">* </span>Nome da tabela 2</label>
-                                <input name="tabela2" type="text" class="form-control" id="tabela2"
-                                    placeholder="Digite o o nome da primeira tabela" value="{{burger.dataValues.tabela2}}"
-                                    required>
-                            </div>
-                            <div class="form-group col-md-4">
-                                <label><span class="text-danger">* </span>Nome da tabela 2</label>
-                                <input name="tabela3" type="text" class="form-control" id="tabela3"
-                                    placeholder="Digite o o nome da primeira tabela" value="{{burger.dataValues.tabela3}}"
-                                    required>
-                            </div>
-                         </div>
-                         <h4 class="mt-5">Primeiro Item do Menu(Cardápio)</h4>
-                         <div class="form-row">
-                             <div class="form-group col-md-4">
-                                <label><span class="text-danger">* </span>Titulo do primeiro item do cardápio Hamburgue</label>
-                                <input name="title1" type="text" class="form-control" id="title"
-                                    placeholder="Digite o titulo do primeiro item do cardápio Hamburgue" value="{{burger.dataValues.title1}}"
-                                    required>
+                                <label><span class="text-danger">* </span>Nome</label>
+                                <input name="name" type="text" class="form-control" id="title"
+                                    placeholder="Digite o Nome do Aperitivo a ser Cadastrado" required>
                             </div>
                             <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span>Descrição principal</label>
-                                <textarea name="desc1" class="form-control" id="desc" cols="30" rows="10" required placeholder="Digite a descrição do primeiro item do menu">{{burger.dataValues.desc1}}</textarea>
+                                <label><span class="text-danger">* </span>Descrição</label>
+                                <textarea name="desc" class="form-control" id="desc" cols="30" rows="10" required
+                                    placeholder="Digite a descrição principal"></textarea>
                             </div>
                             <div class="form-group col-md-2">
-                                <label><span class="text-danger">* </span>Titulo principal</label>
-                                <input name="valor1" type="text" class="form-control" id="title"
-                                    placeholder="Digite o valor do primeiro item do cardápio Hamburgue" value="{{burger.dataValues.valor1}}"
-                                    required>
-                            </div>
-                         </div>
-                         <h4 class="mt-2">Segundo Item do Menu(Cardápio)</h4>
-                         <div class="form-row">
-                             <div class="form-group col-md-4">
-                                <label><span class="text-danger">* </span>Titulo do segundo item do cardápio Hamburgue</label>
-                                <input name="title2" type="text" class="form-control" id="title"
-                                    placeholder="Digite o titulo do segundo item do cardápio Hamburgue" value="{{burger.dataValues.title2}}"
-                                    required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span>Descrição principal</label>
-                                <textarea name="desc2" class="form-control" id="desc" cols="30" rows="10" required placeholder="Digite a descrição do segundo item do menu">{{burger.dataValues.desc2}}</textarea>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label><span class="text-danger">* </span>Titulo principal</label>
-                                <input name="valor2" type="text" class="form-control" id="title"
-                                    placeholder="Digite o valor do segundo item do cardápio Hamburgue" value="{{burger.dataValues.valor2}}"
-                                    required>
-                            </div>
-                         </div>
-                         <h4 class="mt-2">Terceiro Item do Menu(Cardápio)</h4>
-                         <div class="form-row">
-                             <div class="form-group col-md-4 " >
-                                <label><span class="text-danger">* </span>Titulo do Terceiro item do cardápio Hamburgue</label>
-                                <input name="title3" type="text" class="form-control" id="title"
-                                    placeholder="Digite o titulo do Terceiro item do cardápio Hamburgue" value="{{burger.dataValues.title3}}"
-                                    required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span>Descrição principal</label>
-                                <textarea name="desc3" class="form-control" id="desc" cols="30" rows="10" required placeholder="Digite a descrição do Terceiro item do menu">{{burger.dataValues.desc3}}</textarea>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label><span class="text-danger">* </span>Titulo principal</label>
-                                <input name="valor3" type="text" class="form-control" id="title"
-                                    placeholder="Digite o valor do Terceiro item do cardápio Hamburgue" value="{{burger.dataValues.valor3}}"
-                                    required>
-                            </div>
-                         </div>
-                         <h4 class="mt-2">Quinto Item do Menu(Cardápio)</h4>
-                         <div class="form-row">
-                             <div class="form-group col-md-4">
-                                <label><span class="text-danger">* </span>Titulo do Quarto item do cardápio Hamburgue</label>
-                                <input name="title4" type="text" class="form-control" id="title"
-                                    placeholder="Digite o titulo do Quarto item do cardápio Hamburgue" value="{{burger.dataValues.title4}}"
-                                    required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span>Descrição principal</label>
-                                <textarea name="desc4" class="form-control" id="desc" cols="30" rows="10" required placeholder="Digite a descrição do Quarto item do menu">{{burger.dataValues.desc4}}</textarea>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label><span class="text-danger">* </span>Titulo principal</label>
-                                <input name="valor4" type="text" class="form-control" id="title"
-                                    placeholder="Digite o valor do Quarto item do cardápio Hamburgue" value="{{burger.dataValues.valor4}}"
-                                    required>
-                            </div>
-                         </div>
-                         <h4 class="mt-2">Quinto Item do Menu(Cardápio)</h4>
-                         <div class="form-row">
-                             <div class="form-group col-md-4">
-                                <label><span class="text-danger">* </span>Titulo do Quinto item do cardápio Hamburgue</label>
-                                <input name="title5" type="text" class="form-control" id="title"
-                                    placeholder="Digite o titulo do Quinto item do cardápio Hamburgue" value="{{burger.dataValues.title5}}"
-                                    required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span>Descrição principal</label>
-                                <textarea name="desc5" class="form-control" id="desc" cols="30" rows="10" required placeholder="Digite a descrição do Quinto item do menu">{{burger.dataValues.desc5}}</textarea>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label><span class="text-danger">* </span>Titulo principal</label>
-                                <input name="valor5" type="text" class="form-control" id="title"
-                                    placeholder="Digite o valor do Quinto item do cardápio Hamburgue" value="{{burger.dataValues.valor5}}"
-                                    required>
-                            </div>
-                         </div>
-                         <h4 class="mt-2">Sexto Item do Menu(Cardápio)</h4>
-                         <div class="form-row">
-                             <div class="form-group col-md-4">
-                                <label><span class="text-danger">* </span>Titulo do Sexto item do cardápio Hamburgue</label>
-                                <input name="title6" type="text" class="form-control" id="title"
-                                    placeholder="Digite o titulo do Sexto item do cardápio Hamburgue" value="{{burger.dataValues.title6}}"
-                                    required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span>Descrição principal</label>
-                                <textarea name="desc6" class="form-control" id="desc" cols="30" rows="10" required placeholder="Digite a descrição do Sexto item do menu">{{burger.dataValues.desc6}}</textarea>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label><span class="text-danger">* </span>Titulo principal</label>
-                                <input name="valor6" type="text" class="form-control" id="title"
-                                    placeholder="Digite o valor do Sexto item do cardápio Hamburgue" value="{{burger.dataValues.valor6}}"
-                                    required>
-                            </div>
-                         </div>
-                         <h4 class="mt-2">Setimo Item do Menu(Cardápio)</h4>
-                         <div class="form-row">
-                             <div class="form-group col-md-4">
-                                <label><span class="text-danger">* </span>Titulo do Setimo item do cardápio Hamburgue</label>
-                                <input name="title7" type="text" class="form-control" id="title"
-                                    placeholder="Digite o titulo do Setimo item do cardápio Hamburgue" value="{{burger.dataValues.title7}}"
-                                    required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span>Descrição principal</label>
-                                <textarea name="desc7" class="form-control" id="desc" cols="30" rows="10" required placeholder="Digite a descrição do Setimo item do menu">{{burger.dataValues.desc7}}</textarea>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label><span class="text-danger">* </span>Titulo principal</label>
-                                <input name="valor7" type="text" class="form-control" id="title"
-                                    placeholder="Digite o valor do Setimo item do cardápio Hamburgue" value="{{burger.dataValues.valor7}}"
-                                    required>
-                            </div>
-                         </div>
-                         <h4 class="mt-2">Oitavo Item do Menu(Cardápio)</h4>
-                         <div class="form-row">
-                             <div class="form-group col-md-4">
-                                <label><span class="text-danger">* </span>Titulo do Oitavo item do cardápio Hamburgue</label>
-                                <input name="title8" type="text" class="form-control" id="title"
-                                    placeholder="Digite o titulo do Oitavo item do cardápio Hamburgue" value="{{burger.dataValues.title8}}"
-                                    required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span>Descrição principal</label>
-                                <textarea name="desc8" class="form-control" id="desc" cols="30" rows="10" required placeholder="Digite a descrição do Oitavo item do menu">{{burger.dataValues.desc8}}</textarea>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label><span class="text-danger">* </span>Titulo principal</label>
-                                <input name="valor8" type="text" class="form-control" id="title"
-                                    placeholder="Digite o valor do Oitavo item do cardápio Hamburgue" value="{{burger.dataValues.valor8}}"
-                                    required>
-                            </div>
-                         </div>
-                         <h4 class="mt-2"> 09 - Item do Menu(Cardápio)</h4>
-                         <div class="form-row">
-                             <div class="form-group col-md-4">
-                                <label><span class="text-danger">* </span>Titulo do nono item do cardápio Hamburgue</label>
-                                <input name="title9" type="text" class="form-control" id="title"
-                                    placeholder="Digite o titulo do nono item do cardápio Hamburgue" value="{{burger.dataValues.title9}}"
-                                    required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span>Descrição principal</label>
-                                <textarea name="desc9" class="form-control" id="desc" cols="30" rows="10" required placeholder="Digite a descrição do nono item do menu">{{burger.dataValues.desc9}}</textarea>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label><span class="text-danger">* </span>Titulo principal</label>
-                                <input name="valor9" type="text" class="form-control" id="title"
-                                    placeholder="Digite o valor do nono item do cardápio Hamburgue" value="{{burger.dataValues.valor9}}"
-                                    required>
-                            </div>
-                         </div>
-                         <h4 class="mt-2"> 10 - Item do Menu(Cardápio)</h4>
-                         <div class="form-row">
-                             <div class="form-group col-md-4">
-                                <label><span class="text-danger">* </span>Titulo do décimo item do cardápio Hamburgue</label>
-                                <input name="title10" type="text" class="form-control" id="title"
-                                    placeholder="Digite o titulo do décimo item do cardápio Hamburgue" value="{{burger.dataValues.title10}}"
-                                    required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span>Descrição principal</label>
-                                <textarea name="desc10" class="form-control" id="desc" cols="30" rows="10" required placeholder="Digite a descrição do décimo item do menu">{{burger.dataValues.desc10}}</textarea>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label><span class="text-danger">* </span>Titulo principal</label>
-                                <input name="valor10" type="text" class="form-control" id="title"
-                                    placeholder="Digite o valor do décimo item do cardápio Hamburgue" value="{{burger.dataValues.valor10}}"
-                                    required>
-                            </div>
-                         </div>
-                         <h4 class="mt-2"> 11 - Item do Menu(Cardápio)</h4>
-                         <div class="form-row">
-                             <div class="form-group col-md-4">
-                                <label><span class="text-danger">* </span>Titulo do décimo primeiro item do cardápio Hamburgue</label>
-                                <input name="title11" type="text" class="form-control" id="title"
-                                    placeholder="Digite o titulo do décimo primeiro item do cardápio Hamburgue" value="{{burger.dataValues.title11}}"
-                                    required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span>Descrição principal</label>
-                                <textarea name="desc11" class="form-control" id="desc" cols="30" rows="10" required placeholder="Digite a descrição do décimo primeiro item do menu">{{burger.dataValues.desc11}}</textarea>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label><span class="text-danger">* </span>Titulo principal</label>
-                                <input name="valor11" type="text" class="form-control" id="title"
-                                    placeholder="Digite o valor do décimo primeiro item do cardápio Hamburgue" value="{{burger.dataValues.valor11}}"
-                                    required>
-                            </div>
-                         </div>
-                         <h4 class="mt-2"> 12 - Item do Menu(Cardápio)</h4>
-                         <div class="form-row">
-                             <div class="form-group col-md-4">
-                                <label><span class="text-danger">* </span>Titulo do décimo segundo item do cardápio Hamburgue</label>
-                                <input name="title12" type="text" class="form-control" id="title"
-                                    placeholder="Digite o titulo do décimo segundo item do cardápio Hamburgue" value="{{burger.dataValues.title12}}"
-                                    required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span>Descrição principal</label>
-                                <textarea name="desc12" class="form-control" id="desc" cols="30" rows="10" required placeholder="Digite a descrição do décimo segundo item do menu">{{burger.dataValues.desc12}}</textarea>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label><span class="text-danger">* </span>Titulo principal</label>
-                                <input name="valor12" type="text" class="form-control" id="title"
-                                    placeholder="Digite o valor do décimo segundo item do cardápio Hamburgue" value="{{burger.dataValues.valor12}}"
-                                    required>
-                            </div>
-                         </div>
-                         <h4 class="mt-2"> 13 - Item do Menu(Cardápio)</h4>
-                         <div class="form-row">
-                             <div class="form-group col-md-4">
-                                <label><span class="text-danger">* </span>Titulo do décimo terceiro item do cardápio Hamburgue</label>
-                                <input name="title13" type="text" class="form-control" id="title"
-                                    placeholder="Digite o titulo do décimo terceiro item do cardápio Hamburgue" value="{{burger.dataValues.title13}}"
-                                    required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span>Descrição principal</label>
-                                <textarea name="desc13" class="form-control" id="desc" cols="30" rows="10" required placeholder="Digite a descrição do décimo terceiro item do menu">{{burger.dataValues.desc13}}</textarea>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label><span class="text-danger">* </span>Titulo principal</label>
-                                <input name="valor13" type="text" class="form-control" id="title"
-                                    placeholder="Digite o valor do décimo terceiro item do cardápio Hamburgue" value="{{burger.dataValues.valor13}}"
-                                    required>
-                            </div>
-                         </div>
-                         <h4 class="mt-2"> 14 - Item do Menu(Cardápio)</h4>
-                         <div class="form-row">
-                             <div class="form-group col-md-4">
-                                <label><span class="text-danger">* </span>Titulo do décimo quarto item do cardápio Hamburgue</label>
-                                <input name="title14" type="text" class="form-control" id="title"
-                                    placeholder="Digite o titulo do décimo quarto item do cardápio Hamburgue" value="{{burger.dataValues.title14}}"
-                                    required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span>Descrição principal</label>
-                                <textarea name="desc14" class="form-control" id="desc" cols="30" rows="10" required placeholder="Digite a descrição do décimo quarto item do menu">{{burger.dataValues.desc14}}</textarea>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label><span class="text-danger">* </span>Titulo principal</label>
-                                <input name="valor14" type="text" class="form-control" id="title"
-                                    placeholder="Digite o valor do décimo quarto item do cardápio Hamburgue" value="{{burger.dataValues.valor14}}"
-                                    required>
-                            </div>
-                         </div>
-                         <h4 class="mt-2"> 15 - Item do Menu(Cardápio)</h4>
-                         <div class="form-row">
-                             <div class="form-group col-md-4">
-                                <label><span class="text-danger">* </span>Titulo do décimo quinto item do cardápio Hamburgue</label>
-                                <input name="title15" type="text" class="form-control" id="title"
-                                    placeholder="Digite o titulo do décimo quinto item do cardápio Hamburgue" value="{{burger.dataValues.title15}}"
-                                    required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label><span class="text-danger">* </span>Descrição principal</label>
-                                <textarea name="desc15" class="form-control" id="desc" cols="30" rows="10" required placeholder="Digite a descrição do décimo quinto item do menu">{{burger.dataValues.desc15}}</textarea>
-                            </div>
-                            <div class="form-group col-md-2">
-                                <label><span class="text-danger">* </span>Titulo principal</label>
-                                <input name="valor15" type="text" class="form-control" id="title"
-                                    placeholder="Digite o valor do décimo quinto item do cardápio Hamburgue" value="{{burger.dataValues.valor15}}"
-                                    required>
-                            </div>
-                         </div>
-                         
-
+                                <label><span class="text-danger">* </span>Valor</label>
+                                <input name="valor" type="text" class="form-control" id="tabela1" placeholder="Digite o valor" required>
+                            </div>  
+                        </div>                       
 
                         <p class="mt-4">
                             <span class="text-danger">* </span>Todos os campos são obrigatórios

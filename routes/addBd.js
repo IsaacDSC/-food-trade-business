@@ -8,6 +8,7 @@ const pagHome_slideshow = require('../models/PagHome_Slideshow')
 const History = require('../models/HistoryHome_models')
 const Footer = require('../models/Footer_models')
 const Contato = require('../models/Contato')
+const Menu = require('../models/Menu')
     //adionando models menu
 const CardapioHome = require('../models/CardapiosHome_models')
 const MenuBurger = require('../models/MenuBurger')
@@ -245,6 +246,21 @@ router.post('/menuBurger', (req, res) => {
     })
 })
 
-
+router.post('/menu', (req, res) => {
+    Menu.create({
+        class: req.body.class,
+        name: req.body.name,
+        desc: req.body.desc,
+        valor: req.body.valor
+    }).then(() => {
+        //res.send('Enviado com sucesso')
+        req.flash('success_msg', 'Cardápio enviado ao Menu com Sucesso!')
+        res.redirect('visAdmin/visMenu')
+    }).catch((err) => {
+        //res.send(err)
+        req.flash('error_msg', 'Preencha corretamente o campo e tente enviar novamente!')
+        res.redirect('visAdmin/visMenu')
+    })
+})
 
 module.exports = router
