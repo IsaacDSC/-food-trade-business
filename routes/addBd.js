@@ -263,4 +263,8 @@ router.post('/menu', (req, res) => {
     })
 })
 
+router.post('/pedido', (req, res) => {
+
+})
+
 module.exports = router

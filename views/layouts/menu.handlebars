@@ -2,26 +2,26 @@
 <html lang="en">
 
 <head>
-     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Food-trade-business</title>
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-     <!-- Site Metas -->
+
+    <!-- Site Metas -->
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="Isaac e João">
 
-    
-    {{>packs_Style}}
-    
 
-    
+    {{>packs_Style}}
+
+
+
 </head>
 
 <body>
-   {{>_navPrincipal}}
+    {{>_navPrincipal}}
     <br>
     <br>
     <!-- Content ================================================== -->
@@ -39,7 +39,8 @@
                         <li onclick="fecharMenuBebidas()"><a href="/menu">Lanches<span>(10)</span></a></li>
                         <li onclick="fecharMenuBebidas()"><a href="/menu/bebidas">Bebidas <span>(5)</span></a></li>
                         <li onclick="fecharMenuBebidas()"><a href="/doces">Doces <span>(12)</span></a></li>
-                        <li onclick="abrirMenuBebidas()"><a href="/menu/pizza">Pizza <span>({{bebidas.length}})</span></a>
+                        <li onclick="abrirMenuBebidas()"><a href="/menu/pizza">Pizza
+                                <span>({{bebidas.length}})</span></a>
                         </li>
 
                     </ul>
@@ -73,26 +74,26 @@
             <div class="col-md-3" id="sidebar">
                 <div class="theiaStickySidebar">
                     <div id="cart_box">
-                        <h3>Your order <i class="icon_cart_alt pull-right"></i></h3>
+                        <h3 class="text-center">Comanda <i class="icon_cart_alt pull-right"></i></h3>
                         <table class="table table_summary">
-                            <tbody> 
-                                {{Subtotal}}                            
-                                    {{#each pedidos}}                                                                
+                            <tbody>
+                                {{Subtotal}}
+                                {{#each pedidos}}
                                 <tr>
                                     <td>
                                         <a href="#0" class="remove_item"><i class="icon_minus_alt"></i></a>
-                                       <strong>x</strong>
+                                        <strong>x</strong>
                                         {{title}}
                                     </td>
-                                    
+
                                     <td>
                                         <strong class="pull-right">${{valor}}</strong>
                                     </td>
                                 </tr>
-                                        {{else}}
+                                {{else}}
 
-                                    {{/each}}
-                                     {{!-- 
+                                {{/each}}
+                                {{!-- 
                                 <tr>
                                    <td>
                                         <a href="#0" class="remove_item"><i class="icon_minus_alt"></i></a>
@@ -103,7 +104,7 @@
                                         <strong class="pull-right">$14</strong>
                                     </td>
                                 </tr>     
-                                --}}                           
+                                --}}
                             </tbody>
                         </table>
                         <hr>
@@ -120,44 +121,53 @@
 
                         <hr>
                         <table class="table table_summary">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        Subtotal <span class="pull-right">R${{subTotal}}</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Entrega <span class="pull-right">R$10</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        CUPOM <input type="text" size="3">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="total">
-                                        TOTAL <span class="pull-right">R$50</span>
-                                    </td>
-                                </tr>
-                            </tbody>
+                            <form action="" method="post">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            Subtotal <span class="pull-right"> R$ {{subTotal}}</span>
+                                        </td>
+                                        <td>
+                                            <input type="hidden" name="subTotal" value="{{subTotal}}">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>
+                                                Entrega <span class="pull-right"> R$ 10</span>
+                                            </p>
+                                            <input type="hidden" name="frete" value="">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <hr>
+                                            <p class="text-center ml-3">CUPOM </p>
+                                            <input type="text" name="cupom" size="3" class="form-control mt-2 ml-3">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="total">
+                                            TOTAL <span class="pull-right">R$50</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
                         </table>
                         <hr>
-                        <a class="btn_full cd-btn js-cd-panel-trigger" href="" data-panel="main">Pedir</a>
+                        <a class="btn_full cd-btn js-cd-panel-trigger" href="" data-panel="main">Finalizar Pedido</a>
                     </div><!-- End cart_box -->
                 </div><!-- End theiaStickySidebar -->
             </div><!-- End col-md-3 -->
-
+            </form>
         </div><!-- End row -->
     </div>
     </div><!-- End container -->
 
     {{>_footer}}
 
-<!-- Adionando Arquivo JavaScript -->
+    <!-- Adionando Arquivo JavaScript -->
 
-      <script src="/js/modalmenu.js"></script>
-      <script src="/js/addcarrinho.js"></script>
+    <script src="/js/modalmenu.js"></script>
 </body>
+
 </html>

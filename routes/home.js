@@ -1,5 +1,14 @@
 const express = require('express')
 const router = express.Router()
+    //require('../public/js/marketingDirecionado')
+
+const DataUsers = require('../models/DataUsers')
+
+/*for (dataUser of dataUsers) {
+    DataUsers.create({
+        visitas: dataUser.visitas
+    })
+}*/
 
 //adionando models para carregamento da pagina home via db
 const HeaderNav = require('../models/HeaderNav')

@@ -36,7 +36,8 @@ router.post('/add', (req, res) => {
         //var quantidade = pedido.length + 1
         const Nvalor = parseFloat(req.body.valor)
         pedidos.push({ title: req.body.title, valor: Nvalor })
-            //res.send(pedido)        
+            //res.send(pedido)
+        req.flash('success_msg', 'Compra Adionanda ao Carrinho com Sucesso!')
         res.redirect('/menu')
             //console.log(typeof req.body.valor)
     }
