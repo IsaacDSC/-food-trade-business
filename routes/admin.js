@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const fs = require('fs')
-
+const { auth } = require('../helpers/Authenticated')
 
 const folder = 'public/images/'
     //adionando models para carregamento do db nas paginas
@@ -16,7 +16,7 @@ const Contato = require('../models/Contato')
 const MenuBurger = require('../models/MenuBurger')
 const menuBebidas = require('../models/MenuBebidas')
 
-router.get('/', (req, res) => {
+router.get('/', auth, (req, res) => {
     res.render('admin/dashboard', { layout: 'dashboard.handlebars' })
 })
 
