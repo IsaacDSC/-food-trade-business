@@ -2,6 +2,8 @@ const express = require('express')
 const router = express.Router()
 const fs = require('fs')
 const { auth } = require('../helpers/Authenticated')
+const { promisify } = require('util');
+const unlink = promisify(fs.unlink);
 
 const folder = 'public/images/'
     //adionando models para carregamento do db nas paginas
@@ -86,7 +88,7 @@ router.get('/edit-menuBebidas', auth, (req, res) => {
 })
 
 router.get('/menu', auth, (req, res) => {
-        res.render('addbd/addMenu', auth, { layout: 'dashboard.handlebars' })
+        res.render('addbd/addMenu', { layout: 'dashboard.handlebars' })
     })
     /* router.get('/edit-menuBurger', (req, res) => {
         MenuBurger.findOne().then((burger) => {
