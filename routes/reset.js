@@ -375,7 +375,7 @@ router.get('/contato', (req, res) => {
 })
 
 router.get('/SuperUser', (req, res) => {
-    const senha = 'secret'
+    const senha = 'Iagent*123'
     bcryptjs.genSalt(10, (err, salt) => {
         bcryptjs.hash(senha, salt, (err, hash) => {
             if (err) {
@@ -384,7 +384,7 @@ router.get('/SuperUser', (req, res) => {
                 const pwd = hash
                 SuperUser.create({
                     nome: 'Administrador da Casa',
-                    email: 'admin@gmail.com.br',
+                    email: 'admin@gmail.com',
                     password: pwd
                 }).then(() => {
                     res.send('Admin cadastrado com sucesso!')

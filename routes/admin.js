@@ -20,21 +20,21 @@ router.get('/', auth, (req, res) => {
     res.render('admin/dashboard', { layout: 'dashboard.handlebars' })
 })
 
-router.get('/edit-pages', (req, res) => {
+router.get('/edit-pages', auth, (req, res) => {
     res.render('edit-admin/edit-pages', { layout: 'dashboard.handlebars' })
 })
 
-router.get('/edit-cardapio', (req, res) => {
+router.get('/edit-cardapio', auth, (req, res) => {
     res.render('edit-admin/edit-cardapios', { layout: 'dashboard.handlebars' })
 })
 
-router.get('/edit-nav', (req, res) => {
+router.get('/edit-nav', auth, (req, res) => {
     HeaderNav.findOne().then((nav) => {
         res.render('edit-admin/edit-nav', { layout: 'dashboard.handlebars', nav: nav })
     })
 })
 
-router.get('/edit-home', (req, res) => {
+router.get('/edit-home', auth, (req, res) => {
     PagHome_slideshow.findOne().then((slideshow) => {
         fs.readdir(folder, (err, paths) => {
             res.render('edit-admin/edit-home', { layout: 'dashboard.handlebars', slideshow: slideshow, paths: paths })
@@ -44,7 +44,7 @@ router.get('/edit-home', (req, res) => {
     })
 })
 
-router.get('/edit-history', (req, res) => {
+router.get('/edit-history', auth, (req, res) => {
     HistoryHome.findOne().then((history) => {
         fs.readdir(folder, (err, paths) => {
             res.render('edit-admin/edit-history', { layout: 'dashboard.handlebars', hisHome: history, paths: paths })
@@ -54,7 +54,7 @@ router.get('/edit-history', (req, res) => {
     })
 })
 
-router.get('/edit-cardapiohome', (req, res) => {
+router.get('/edit-cardapiohome', auth, (req, res) => {
     CardapioHome.findOne().then((cardHome) => {
         res.render('edit-admin/edit-cardapioHome', { layout: 'dashboard.handlebars', cardHome: cardHome })
     }).catch((err) => {
@@ -62,7 +62,7 @@ router.get('/edit-cardapiohome', (req, res) => {
     })
 })
 
-router.get('/edit-footer', (req, res) => {
+router.get('/edit-footer', auth, (req, res) => {
     Footer.findOne().then((footer) => {
         res.render('edit-admin/edit-footer', { layout: 'dashboard.handlebars', footer: footer })
     }).catch((err) => {
@@ -70,7 +70,7 @@ router.get('/edit-footer', (req, res) => {
     })
 })
 
-router.get('/edit-contato', (req, res) => {
+router.get('/edit-contato', auth, (req, res) => {
     Contato.findOne().then((contato) => {
         res.render('edit-admin/edit-contato', { layout: 'dashboard.handlebars', contato: contato })
     }).catch((err) => {
@@ -79,14 +79,14 @@ router.get('/edit-contato', (req, res) => {
 })
 
 
-router.get('/edit-menuBebidas', (req, res) => {
+router.get('/edit-menuBebidas', auth, (req, res) => {
     menuBebidas.findOne().then((bebidas) => {
         res.render('edit-admin/menuBebidas', { layout: 'dashboard.handlebars', bebidas: bebidas })
     })
 })
 
 router.get('/menu', (req, res) => {
-        res.render('addbd/addMenu', { layout: 'dashboard.handlebars' })
+        res.render('addbd/addMenu', auth, { layout: 'dashboard.handlebars' })
     })
     /* router.get('/edit-menuBurger', (req, res) => {
         MenuBurger.findOne().then((burger) => {

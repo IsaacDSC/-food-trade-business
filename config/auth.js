@@ -1,7 +1,9 @@
+const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
 const bcrypt = require('bcryptjs')
 
 //models
+require('../models/SuperUser')
 const SuperUser = require('../models/SuperUser')
 
 module.exports = function(passport) {
@@ -10,26 +12,34 @@ module.exports = function(passport) {
         passwordField: 'password'
     }, (email, password, done) => {
         SuperUser.findOne({ where: { email: email } }).then((user) => {
+            console.log(user)
             if (!user) {
+                console.log('não achou usuario!')
                 return done(null, false, { message: 'Esta conta não Existe' })
             }
             bcrypt.compare(password, user.password, (err, batem) => {
                 if (batem) {
+                    console.log('senhas batem')
                     return done(null, user)
                 } else {
-                    return done(null, false, { message: "password Incorreta" })
+                    console.log('senhas não batem')
+                    return done(null, false, { message: "Senha Incorreta" })
                 }
             })
         })
     }))
 
     passport.serializeUser((user, done) => {
+        console.log('salvo id do usuario: ' + user.id)
         done(null, user.id)
     })
     passport.deserializeUser((id, done) => {
-        SuperUser.findByPk(id, (err, user) => {
-            done(err, user)
+        console.log('this:' + id)
+            //done(id)
+        SuperUser.findOne({ where: { id: id } }).then((user) => {
+            done(null, user)
         })
     })
+
 
 }
