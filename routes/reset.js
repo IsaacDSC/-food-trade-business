@@ -2,8 +2,8 @@ const express = require('express')
 const router = express.Router()
 const bcryptjs = require('bcryptjs')
 
-
-//add models HeaderNav
+const { auth } = require('../helpers/Authenticated')
+    //add models HeaderNav
 const HeaderNav = require('../models/HeaderNav')
     //add models PagHome_slideshow
 const PagHome_slideshow = require('../models/PagHome_Slideshow')
@@ -32,11 +32,12 @@ const MenuSorvetes = require('../models/MenuSorvetes')
 const SuperUser = require('../models/SuperUser')
 
 
-router.get('/', (req, res) => {
+
+router.get('/', auth, (req, res) => {
     res.render('reset/reset', { layout: 'dashboard.handlebars' })
 })
 
-router.get('/headernav', (req, res) => {
+router.get('/headernav', auth, (req, res) => {
     HeaderNav.create({
         logotipo: 'images/logotipo.png',
         nav1: 'inicio',
@@ -65,7 +66,7 @@ router.get('/headernav', (req, res) => {
     })
 })
 
-router.get('/homeslideshow', (req, res) => {
+router.get('/homeslideshow', auth, (req, res) => {
     PagHome_slideshow.create({
         img1: 'images/slider-01.jpg',
         title1_1: 'Bem vindo ao ',
@@ -97,7 +98,7 @@ router.get('/homeslideshow', (req, res) => {
     })
 })
 
-router.get('/footer', (req, res) => {
+router.get('/footer', auth, (req, res) => {
     Footer_models.create({
         title1: 'SOBRE NÓS',
         describe1: 'Integer cursus scelerisque ipsum id efficitur. Donec a dui fringilla, gravida lorem ac, semper magna. Aenean rhoncus ac lectus a interdum. Vivamus semper posuere dui, at ornare turpis ultrices sit amet. Nulla cursus lorem ut nisi porta, ac eleifend arcu ultrices.',
@@ -143,7 +144,7 @@ router.get('/footer', (req, res) => {
     })
 })
 
-router.get('/history', (req, res) => {
+router.get('/history', auth, (req, res) => {
         Hystoryhome_models.create({
             title1: 'Bem vindo ao',
             title2: 'Site Burguer',
@@ -213,7 +214,7 @@ router.get('/cardapiohome', (req, res) => {
     })
 })
 
-router.get('/menuburger', (req, res) => {
+router.get('/menuburger', auth, (req, res) => {
     MenuBurger.create({
         title: 'BURGUER RESTAURANTE',
         desc: 'Todos os produtos são de extrema qualidade e confiabilidade, tratados e seguindo um rigoroso padão de qualidade. Compre sem medo.',
@@ -285,7 +286,7 @@ router.get('/menuburger', (req, res) => {
     })
 })
 
-router.get('/menubebidas', (req, res) => {
+router.get('/menubebidas', auth, (req, res) => {
     MenuBebidas.create({
         title: 'BEBIDAS',
         desc: 'Todos os produtos são de extrema qualidade e confiabilidade, tratados e seguindo um rigoroso padão de qualidade. Compre sem medo.',
@@ -323,7 +324,7 @@ router.get('/menubebidas', (req, res) => {
     })
 })
 
-router.get('/menupizzas', (req, res) => {
+router.get('/menupizzas', auth, (req, res) => {
     MenuPizza.create({
         title: 'Best Pizzas',
         desc: 'Todos os produtos são de extrema qualidade e confiabilidade, tratados e seguindo um rigoroso padão de qualidade. Compre sem medo.',
@@ -357,7 +358,7 @@ router.get('/menupizzas', (req, res) => {
     })
 })
 
-router.get('/contato', (req, res) => {
+router.get('/contato', auth, (req, res) => {
     Contato.create({
         title: 'Seja Bem Vindo a Pagina de Cotato!',
         subtitle: 'Contato',
@@ -374,7 +375,7 @@ router.get('/contato', (req, res) => {
     })
 })
 
-router.get('/SuperUser', (req, res) => {
+router.get('/SuperUser', auth, (req, res) => {
     const senha = 'Iagent*123'
     bcryptjs.genSalt(10, (err, salt) => {
         bcryptjs.hash(senha, salt, (err, hash) => {

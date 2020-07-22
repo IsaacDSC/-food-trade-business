@@ -3,6 +3,7 @@ const router = express.Router()
 const multer = require('multer')
 const fs = require('fs')
 const folder = 'public/images/'
+const { auth } = require('../helpers/Authenticated')
 
 const { promisify } = require('util');
 const unlink = promisify(fs.unlink);
@@ -25,7 +26,7 @@ const upload = multer({ storage })
 
 
 
-router.get('/', (req, res) => {
+router.get('/', auth, (req, res) => {
     fs.readdir(folder, (err, paths) => {
         res.render('paths_files/upLoadFile', { layout: 'dashboard.handlebars', paths: paths, folder: folder })
     })
