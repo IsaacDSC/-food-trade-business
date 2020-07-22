@@ -8,7 +8,7 @@ fs.readdir(folder, (err, paths) => {
 }) */
 
 
-const Burger = require('./models/MenuBurger')
+const Burger = require('../models/MenuBurger')
 Burger.findOne({ where: { title: title } }).then((burger) => {
     console.log(burger)
 }).catch((err) => {
