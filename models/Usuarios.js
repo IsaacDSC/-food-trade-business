@@ -25,7 +25,7 @@ const Usuarios = db.sequelize.define('usuario', {
         type: db.Sequelize.STRING,
         require: true
     },
-    casa: {
+    residencia: {
         type: db.Sequelize.INTEGER,
         require: true
     },

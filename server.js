@@ -14,16 +14,12 @@ require('./config/auth')(passport)
 
 //adionando rotas
 const home = require('./routes/home')
-    //adicionando tela de adm
-const admin = require('./routes/admin')
     //adionando pagina Menu
 const menu = require('./routes/menu')
     //adionando pagina sobre
 const sobre = require('./routes/sobre')
     //adionando pagina Contato
 const contato = require('./routes/contato')
-    //adionando login Administrador Site
-const superUser = require('./routes/superUser')
     //adionando paginas para  reset
 const reset = require('./routes/reset')
     //adionando addbd dahsboard rotas post
@@ -33,7 +29,7 @@ const visualizarAdmin = require('./routes/visualizarAdmin')
     //adionando upload files
 const uploadfiles = require('./routes/uploadFiles')
     //adionando router login_register
-const register = require('./routes/login_register')
+const login_register = require('./routes/login_register')
 
 
 //configurando body-parser
@@ -66,16 +62,14 @@ app.use((req, res, next) => {
 
 
 app.use('/', home)
-app.use('/admin', admin)
 app.use('/menu', menu)
 app.use('/sobre', sobre)
 app.use('/contato', contato)
-app.use('/superuser', superUser)
 app.use('/reset', reset)
 app.use('/addbd', addBd)
 app.use('/visAdmin', visualizarAdmin)
 app.use('/uploadfiles', uploadfiles)
-app.use('/register', register)
+app.use('/usuario', login_register)
 
 
 const PORT = 3000

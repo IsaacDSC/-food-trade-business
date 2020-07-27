@@ -36,7 +36,9 @@
                         #fontawesome-free-5.13.0-web
                                 link Documentação:https://fontawesome.com/
                                 css(min) - js(min)
-        
+                        #Cep:
+                                link Documentação:
+                                nome arquivo: 
 
 
 
@@ -71,6 +73,7 @@
         upload files:
                 Using multer import files;
                 configuration to separate images in folders by each layout
+                Using fs for to manage folders
 
         table Usuario responsável por guardar informações dos usuarios do app.
 
