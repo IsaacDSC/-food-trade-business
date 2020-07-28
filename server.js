@@ -20,14 +20,6 @@ const menu = require('./routes/menu')
 const sobre = require('./routes/sobre')
     //adionando pagina Contato
 const contato = require('./routes/contato')
-    //adionando paginas para  reset
-const reset = require('./routes/reset')
-    //adionando addbd dahsboard rotas post
-const addBd = require('./routes/addBd')
-    //adionando rota para apresentar visualização da edição pelo dashboard
-const visualizarAdmin = require('./routes/visualizarAdmin')
-    //adionando upload files
-const uploadfiles = require('./routes/uploadFiles')
     //adionando router login_register
 const login_register = require('./routes/login_register')
 
@@ -65,10 +57,6 @@ app.use('/', home)
 app.use('/menu', menu)
 app.use('/sobre', sobre)
 app.use('/contato', contato)
-app.use('/reset', reset)
-app.use('/addbd', addBd)
-app.use('/visAdmin', visualizarAdmin)
-app.use('/uploadfiles', uploadfiles)
 app.use('/usuario', login_register)
 
 
