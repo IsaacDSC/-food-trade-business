@@ -16,7 +16,7 @@ router.post('/login', (req, res, next) => {
 })
 
 router.post('/register', (req, res) => {
-
+    res.render('register/register')
 })
 
 
