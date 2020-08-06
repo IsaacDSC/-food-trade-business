@@ -69,4 +69,8 @@ router.get('/pizza', (req, res) => {
     })
 })
 
+router.get('/pedido', (req, res) => {
+    res.render('menu/pedido', { layout: 'main.handlebars' })
+})
+
 module.exports = router
