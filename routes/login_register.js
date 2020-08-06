@@ -4,7 +4,7 @@ const passport = require('passport')
 
 
 router.get('/login', (req, res) => {
-    res.render('login/login')
+    res.render('login/login', { layout: 'login_register.handlebars' })
 })
 
 router.post('/login', (req, res, next) => {

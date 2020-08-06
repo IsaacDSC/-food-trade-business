@@ -46,11 +46,13 @@
 
                 Tamanho da Imagem  do Logotipo: => A logo dever ter no maxímo 100px de Altura e no minímo 80px
                 e largura no maximo 200px (não existe minimo de largura) 
-        
-                Tamanho das Imagens Do SlideShow: =>
+
+                Tamanho Logotipo => logotipo.png => 98 x 100
+                Tamanho das Imagens Do SlideShow: => slider-01.jpg => 1920 x 1280
                 Tamanho da Imagem do Welcome_ Little Story: =>
                 tamanho da Imagem dos Menus : =>800px por 480px 
-                Tamanho da imagem de fundo do footer: =>
+                Tamanho da imagem de fundo do footer: => footer-bg.jpg 1920 x 750
+                Tamanho da Imagem do menu da galeria => img-03.jpg => 800 x 480
         
         Documentação de Rotas 
                 #Pagina responsável (routes)
