@@ -74,7 +74,7 @@ a:focus {
 
 a:hover {
 	text-decoration: none;
-  color: #d33f8d;
+  color: #1B63F2;
 }
 
 /*---------------------------------------------*/
@@ -161,7 +161,7 @@ iframe {
 }
 
 .hov1:hover {
-  border-color: #d33f8d;
+  border-color: #1B63F2;
 }
 
 
@@ -278,7 +278,7 @@ iframe {
   width: 100%;
   height: 100%;
   box-shadow: 0px 0px 0px 0px;
-  color: rgba(211,63,141, 0.6);
+  color: rgba(63, 122, 211, 0.6);
 }
 
 .input100:focus + .focus-input100 {
@@ -327,7 +327,7 @@ iframe {
 }
 
 .input100:focus + .focus-input100 + .symbol-input100 {
-  color: #d33f8d;
+  color: #1B63F2;
   padding-left: 18px;
 }
 
@@ -368,7 +368,7 @@ iframe {
   height: 18px;
   border-radius: 3px;
   background: #fff;
-  border: 2px solid #d33f8d;
+  border: 2px solid #1B63F2;
   left: 0;
   top: 48%;
   -webkit-transform: translateY(-50%);
@@ -379,7 +379,7 @@ iframe {
 }
 
 .input-checkbox100:checked + .label-checkbox100::before {
-  color: #d33f8d;
+  color: #1B63F2;
 }
 
 
@@ -406,7 +406,7 @@ iframe {
   width: 100%;
   height: 62px;
   border-radius: 3px;
-  background: #d33f8d;
+  background: #1B63F2;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -455,7 +455,7 @@ iframe {
 
 
 .btn-face {
-  color: #3b5998;
+  color: #1B63F2;
 }
 
 .btn-face i {
@@ -477,7 +477,7 @@ iframe {
 
 .btn-face:hover,
 .btn-google:hover {
-  border-color: #d33f8d;
+  border-color: #1B63F2;
 }
 
 
