@@ -7,6 +7,7 @@ const Usuarios = db.sequelize.define('usuario', {
     },
     email: {
         type: db.Sequelize.STRING(150),
+        unique: true,
         require: true
     },
     password: {
