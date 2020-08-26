@@ -4,6 +4,9 @@ const router = express.Router()
 //adionando models para carregar table para rotas menu
 const HeaderNav = require('../models/HeaderNav')
 const Footer = require('../models/Footer_models')
+const Menu = require('../models/Menu')
+const TemplateMenu = require('../models/TemplatesMenu')
+
 const MenuBurger = require('../models/MenuBurger')
 const MenuBebidas = require('../models/MenuBebidas')
 const MenuPizzas = require('../models/MenuPizza')
@@ -17,9 +20,11 @@ var pedidos = []
 router.get('/', (req, res) => {
     HeaderNav.findOne().then((nav) => {
         Footer.findOne().then((footer) => {
-            MenuBurger.findOne().then((burger) => {
-                const subTotal = pedidos.reduce((subtotal, pedido) => parseFloat(pedido.valor) + subtotal, 0)
-                res.render('menu/burger', { layout: 'menu.handlebars', nav: nav, footer: footer, burger: burger, pedidos: pedidos, subTotal: subTotal })
+            Menu.findAll({ where: { class: 'Hamburgue' } }).then((Burger) => {
+                TemplateMenu.findOne({ where: { class: 'Hamburgue' } }).then((TemplateBurger) => {
+                    const subTotal = pedidos.reduce((subtotal, pedido) => parseFloat(pedido.valor) + subtotal, 0)
+                    res.render('menu/burger', { layout: 'menu.handlebars', nav: nav, footer: footer, Burger: Burger, pedidos: pedidos, subTotal: subTotal, TemplateBurger: TemplateBurger })
+                })
             })
         })
     })
@@ -33,26 +38,19 @@ router.post('/add', (req, res) => {
     if (pedidos == null || pedidos == undefined) {
         res.send('pedido undefined ou null')
     } else {
-        //var quantidade = pedido.length + 1
         const Nvalor = parseFloat(req.body.valor)
         pedidos.push({ title: req.body.title, valor: Nvalor })
-            //res.send(pedido)
         req.flash('success_msg', 'Compra Adionanda ao Carrinho com Sucesso!')
         res.redirect('/menu')
-            //console.log(typeof req.body.valor)
-    }
-    for (pedido of pedidos) {
-        //console.log(pedido.valor)
     }
 })
 
 router.get('/bebidas', (req, res) => {
     HeaderNav.findOne().then((nav) => {
         Footer.findOne().then((footer) => {
-            MenuBebidas.findOne().then((bebidas) => {
+            Menu.findAll({ where: { class: 'Bebidas' } }).then((bebidas) => {
                 const subTotal = pedidos.reduce((subtotal, pedido) => pedido.valor + subtotal, 0)
                 res.render('menu/bebidas', { layout: 'menu.handlebars', nav: nav, footer: footer, bebidas: bebidas, pedidos: pedidos, subTotal: subTotal })
-
             })
         })
     })
@@ -62,8 +60,10 @@ router.get('/bebidas', (req, res) => {
 router.get('/pizza', (req, res) => {
     HeaderNav.findOne().then((nav) => {
         Footer.findOne().then((footer) => {
-            MenuPizzas.findOne().then((pizza) => {
-                res.render('menu/pizzas', { layout: 'menu.handlebars', nav: nav, footer: footer, pizza: pizza })
+            Menu.findAll({ where: { class: 'Pizza' } }).then((pizzas) => {
+                TemplateMenu.findOne({ where: { class: 'Pizza' } }).then((TemplatePizza) => {
+                    res.render('menu/pizzas', { layout: 'menu.handlebars', nav: nav, footer: footer, pizzas: pizzas, TemplatePizza: TemplatePizza })
+                })
             })
         })
     })
