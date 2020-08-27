@@ -6,11 +6,7 @@ const path = require('path')
 const session = require('express-session')
 const flash = require('connect-flash')
 const passport = require('passport')
-require('./config/auth')(passport)
-
-//const authenticate = require('./config/auth')
-//authenticate.passport
-
+require('./config/Authenticated')(passport)
 
 //adionando rotas
 const home = require('./routes/home')
