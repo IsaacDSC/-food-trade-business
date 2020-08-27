@@ -44,17 +44,15 @@ app.use((req, res, next) => {
     res.locals.success_msg = req.flash('success_msg')
     res.locals.error_msg = req.flash('error_msg')
     res.locals.message = req.flash('message')
+    res.locals.error = req.flash('error')
     next()
 })
-
-
 
 app.use('/', home)
 app.use('/menu', menu)
 app.use('/sobre', sobre)
 app.use('/contato', contato)
 app.use('/usuario', login_register)
-
 
 const PORT = 3000
 app.listen(PORT, () => {

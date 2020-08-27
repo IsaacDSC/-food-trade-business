@@ -1,0 +1,32 @@
+<div class="limiter">
+        {{>_msg}}
+    <div class="container-login100">
+        <img src="/images/pexels-jonathan-borba-2983099.jpg" class="img-fluid" alt="Img de Fundo" id="ImgFundo">
+        <div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30 mt-5">
+            <form class="login100-form validate-form" action="/usuario/verification" method="POST">
+                <span class="login100-form-title p-b-55">
+                    <img src="/images/logotipo.png" alt="Logotipo">
+                </span>
+                <div class="wrap-input100 validate-input m-b-16">
+                    <input class="input100" type="text" name="email" placeholder="Digite o E-mail Cadastrado">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <span class="lnr lnr-envelope"></span>
+                    </span>
+                </div>
+                <div class="wrap-input100 validate-input m-b-16">
+                    <input class="input100" type="text" name="verification" placeholder="Digite o numero de confimação">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <span class="lnr lnr-envelope"></span>
+                    </span>
+                </div>
+                <div class="container-login100-form-btn p-t-25">
+                    <button class="login100-form-btn">
+                        Verficar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

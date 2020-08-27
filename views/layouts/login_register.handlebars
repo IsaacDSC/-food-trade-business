@@ -34,13 +34,13 @@
     {{/if}}
 
 <body>
-    {{#if user}}
+    
     <div class="d-flex">
+        
         {{{body}}}
+    
     </div>
-    {{else}}
-    {{{body}}}
-    {{/if}}
+   
 
 
 <!--===============================================================================================-->	
@@ -52,6 +52,13 @@
 	<script src="/vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
 	<script src="/js/login/main.js"></script>
+    <script>
+        function abrirModalRegister(){
+            const topModal = document.querySelector('.topModal')
+           topModal.style.top = '50px'
+        
+        }
+    </script>
 
 </body>
 

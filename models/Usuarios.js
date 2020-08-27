@@ -14,25 +14,27 @@ const Usuarios = db.sequelize.define('usuario', {
         type: db.Sequelize.STRING,
         require: true
     },
+    code: {
+        type: db.Sequelize.STRING,
+        require: true
+    },
+    statusConfirmated: {
+        type: db.Sequelize.STRING,
+    },
     telefone: {
         type: db.Sequelize.INTEGER,
-        require: true
     },
     bairro: {
         type: db.Sequelize.STRING,
-        require: true
     },
     rua: {
         type: db.Sequelize.STRING,
-        require: true
     },
     residencia: {
         type: db.Sequelize.INTEGER,
-        require: true
     },
     complemento: {
         type: db.Sequelize.TEXT,
-        require: true
     }
 
 })

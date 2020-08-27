@@ -241,13 +241,14 @@ iframe {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background: #1B63F2;
+    /* background: #1B63F2;
     background: -webkit-linear-gradient(bottom, #1B63F2, #CFCEF2);
     background: -o-linear-gradient(bottom, #1B63F2, #CFCEF2);
     background: -moz-linear-gradient(bottom, #1B63F2, #CFCEF2);
-    background: linear-gradient(bottom, #1B63F2, #CFCEF2);
+    background: linear-gradient(bottom, #1B63F2, #CFCEF2); */
     position: relative;
     z-index: 1;
+    background: black;
 }
 
 .container-login100::before {
@@ -259,7 +260,8 @@ iframe {
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url('../images/img-01.png');
+    /* background-image: url('../images/img-01.png'); */
+    background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -274,6 +276,9 @@ iframe {
     background: linear-gradient(bottom, rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.815));
     border-radius: 3px;
     overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 999999999;
 }
 
 
@@ -608,4 +613,18 @@ iframe {
         padding-left: 15px;
         padding-right: 15px;
     }
+}
+
+#ImgFundo {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+}
+
+.topModal {
+    top: -99999999px;
+    transition: 500ms;
+    position: absolute;
+    margin-left: 32%;
+    z-index: 9999;
 }
